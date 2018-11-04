@@ -1,0 +1,353 @@
+body {
+  width: 100%;
+  margin: 0 auto;
+  
+  /* theiwaz (2017). Responsive full screen background . Retrieved June 7, 2017, from https://codepen.io/theiwaz/pen/vybjc */
+  /* Vexels.com (2017). Polygonal Backgound in Orange and Purple. Retrieved June 7, 2017, from https://www.vexels.com/vectors/preview/139489/polygonal-background-in-orange-and-purple */
+  background-image: url(image/background-geometric-005.png) ;
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size: cover;
+}
+/* end of reference */
+
+.align-right {
+	float: right;
+	margin-right: 70px;
+}
+
+.nav-bar {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+/* Phil Hoyt (2017). Simple Pure CSS Drop Down Menu . Retrieved June 7, 2017, from https://codepen.io/philhoyt/pen/ujHzd */
+#primary_nav_wrap
+{
+	margin-top: 0px;
+}
+
+#primary_nav_wrap ul
+{	
+	list-style: none;
+	position: relative;
+	float: left;
+	margin: 0;
+	padding: 0;
+	float: center;
+	background: #031424; /*black*/
+}
+
+#primary_nav_wrap ul a
+{
+	text-decoration:none;	
+	display: block;
+	color: #f6f6f6;
+	font-size: 12px;
+	padding: 0 15px;
+	font-family: 'Nunito';
+	font-weight: normal;
+	font-size: 15px;
+}
+
+#primary_nav_wrap ul li
+{
+	position: relative;
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+
+#primary_nav_wrap ul li.current-menu-item
+{
+	background: #CF6766; /*red*/
+}
+
+#primary_nav_wrap ul a.menu-item
+{
+	margin-top: 35px;
+	text-decoration:none;	
+	display: block;
+	color: #f6f6f6;
+	font-size: 12px;
+	line-height: 128px;
+	padding: 0 15px;
+	font-family: 'Roboto';
+	font-weight: bold;
+	font-size: 17px;
+}
+
+#primary_nav_wrap ul li:hover
+{
+	background: #8EAEBD; /*blue*/
+}
+
+#primary_nav_wrap ul li.sub-menu-item:hover
+{
+	background: #30415D; /*indigo*/
+}
+
+#primary_nav_wrap ul ul
+{
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	background: #8EAEBD; /*blue*/
+	padding: 0;
+}
+
+#primary_nav_wrap ul ul li
+{
+	float: none;
+	width: 154px;
+}
+
+#primary_nav_wrap ul ul a
+{
+	line-height: 120%;
+	padding: 10px 15px;
+}
+
+#primary_nav_wrap ul ul ul
+{
+	top: 0;
+	left: 100%;
+}
+
+#primary_nav_wrap ul li:hover > ul
+{
+	display: block;
+}
+/* end of reference */
+
+/* Saran Chamling (2017). 10 CSS HTML Form Designs . Retrieved June 7, 2017, from https://www.sanwebe.com/2014/08/css-html-forms-designs */	
+.form-style-1 {
+    margin:10px auto;
+    max-width: 400px;
+    padding: 20px 12px 10px 20px;
+    font-size: 13px;
+	font-family: 'Nunito';
+}
+.form-style-1 li {
+    padding: 0;
+    display: block;
+    list-style: none;
+    margin: 10px 0 0 0;
+}
+.form-style-1 label{
+    margin:0 0 3px 0;
+    padding:0px;
+    display:block;
+    font-weight: bold;
+}
+.form-style-1 input[type=text],
+.form-style-1 input[type=date],
+.form-style-1 input[type=datetime],
+.form-style-1 input[type=number],
+.form-style-1 input[type=search],
+.form-style-1 input[type=time],
+.form-style-1 input[type=url],
+.form-style-1 input[type=email],
+textarea,
+select{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border:1px solid #BEBEBE;
+    padding: 7px;
+    margin:0px;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none; 
+}
+.form-style-1 input[type=text]:focus,
+.form-style-1 input[type=date]:focus,
+.form-style-1 input[type=datetime]:focus,
+.form-style-1 input[type=number]:focus,
+.form-style-1 input[type=search]:focus,
+.form-style-1 input[type=time]:focus,
+.form-style-1 input[type=url]:focus,
+.form-style-1 input[type=email]:focus,
+.form-style-1 textarea:focus,
+.form-style-1 select:focus{
+    -moz-box-shadow: 0 0 8px #88D5E9;
+    -webkit-box-shadow: 0 0 8px #88D5E9;
+    box-shadow: 0 0 8px #88D5E9;
+    border: 1px solid #88D5E9;
+}
+.form-style-1 .field-divided{
+    width: 49%;
+}
+
+.form-style-1 .field-long{
+    width: 80%;
+}
+.form-style-1 .field-select{
+    width: 80%;
+}
+.form-style-1 .field-textarea{
+    height: 100px;
+}
+.form-style-1 input[type=submit], .form-style-1 input[type=button]{
+    background: #4B99AD;
+    padding: 8px 15px 8px 15px;
+    border: none;
+    color: #fff;
+}
+.form-style-1 input[type=submit]:hover, .form-style-1 input[type=button]:hover{
+    background: #4691A4;
+    box-shadow:none;
+    -moz-box-shadow:none;
+    -webkit-box-shadow:none;
+}
+.form-style-1 .required{
+    color:red;
+}
+/* end of reference */
+
+#container {
+	margin: 0 auto;
+	max-width: 80%;
+}
+.content {
+	padding-top: 150px;
+	padding-bottom: 240px;
+	background: #f6f6f6;
+}
+
+.breadcrumb {
+	background: #f6f6f6;
+	padding-top: 200px;
+	padding-left: 50px;
+}
+
+.breadcrumb a{	
+	
+	text-decoration:none;
+	color: #30415D; /*indigo*/
+	font-family: 'Roboto';
+	font-weight: normal;
+	font-size: 12px;
+}
+
+.breadcrumb a:before{	
+	content: " " '\005C' " ";
+}
+
+.logo {
+	float: left;
+	width: 165px;
+	margin-left: 33px;
+}
+
+.logo img {
+	margin-top: 17px;
+	margin-left: 83px;
+	float: left;
+	position: relative;
+}
+
+h1, h2 {
+	
+	float: left;
+	color: #f6f6f6;
+}
+
+h3, h4 {
+	text-align: center;
+	color: #CF6766; /*red*/
+	padding: 0;
+	margin: 0;
+}
+
+h1 {
+	margin-top: 36px;
+	font-family: 'Rubik Mono One';
+	font-size: 28px;
+	font-weight: light;
+	letter-spacing: -2px;
+	position: absolute;
+}
+
+h2 {
+	margin-top: 26px;
+	font-family: 'Nunito';
+	font-size: 11px;
+	font-weight: normal;
+	word-spacing: 4px;
+}
+
+h3 {
+	font-family: 'Nunito';
+	font-weight: normal;
+	font-size: 65px;
+}
+
+h4 {
+	font-family: 'Roboto';
+	font-weight: normal;
+	font-size: 30px;
+	text-transform: uppercase;
+}
+
+.text-wrap {
+	padding-left: 25%;
+	padding-right: 25%;
+}
+
+p {
+	font-family: 'Nunito';
+	font-weight: normal;
+	font-size: 16px;
+	text-indent: 30px;
+	text-align: justify;
+	text-justify: inner-word;
+	color: #031424; /*black*/
+}
+
+ul.sys-req-list {
+	font-family: 'Nunito';
+	font-weight: normal;
+	font-size: 16px;
+	color: #031424; /*black*/
+	text-indent: 10px;
+}
+
+.sys-req-list li {
+	padding-bottom: 15px;
+	margin-left: 10px;
+}
+
+img.gallery {
+	display:block;
+	margin: auto;
+	max-width:700px;
+	padding: 25px;
+}
+
+hr { 
+	margin-top: 10%;
+	margin-bottom: 10%;
+    display: block;
+    width: 50%;
+    height: 1px;
+	background-color: #30415D; /*indigo*/
+} 
+
+footer {
+	bottom:0;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	padding-left: 70px;
+	background: #30415D; /*indigo*/
+}
+
+footer p {
+	color: #f6f6f6;
+	text-decoration:none;
+}
