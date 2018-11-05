@@ -5,7 +5,7 @@ body > *{
   font-weight: 400;
 }
 .logo{
-  font-family: 'Righteous', cursive;
+  font-family: 'Righteous';
   font-size: 60px;
 }
 a{
@@ -18,6 +18,9 @@ h2{
 }
 h4{
   font-weight: 400;
+}
+h6{
+  font-size: 1.3rem;
 }
 
 /*
@@ -78,46 +81,30 @@ h2{
 /*
 FOOTER*/
 footer{
-  width: 100%;
-  margin-bottom: 0;
-  right: 0;
-  bottom: 0;
   padding: 0 6rem 0 6rem;
-}
-footer .row{
   display: flex;
   flex-direction: row;
-  align-items: center;
+  /* align-items: center; */
+  justify-content: space-between;
+  flex-flow: wrap;
+  flex-wrap: wrap;
 }
-footer .center{
-  text-align: center;
+footer img{
+  min-width: 3rem;
 }
-footer .left{
-  text-align: left;
-}
-.social-media{
-  width: 100%;
-
-  /* padding-top: 0.5rem; */
-  /* display: flex;
-  flex-direction: column;
-  justify-content: space-between; */
-}
-.social-media img{
-  width: 3rem;
-}
-.social-media a{
-  padding: 1rem 0 1rem 0;
+footer a{
   display: flex;
   align-items: center;
+  margin: 1rem;
 }
-.social-media p{
+footer p{
   display: inline-block;
   padding-left: 2rem;
   margin: 0;
 }
 h6{
   padding-top: 2rem;
+  text-align: center;
 }
 
 /*
@@ -146,9 +133,6 @@ RESPONSIVE UI */
     justify-content: space-between;
     align-items: center;
   }
-  .toggle .logo{
-
-  }
   nav .logo{
     display: none;
   }
@@ -162,13 +146,12 @@ RESPONSIVE UI */
     display: block;
     padding: 2rem 0 2rem 0;
   }
-  footer .row{
+  footer{
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  footer .one-third{
-    width: 100%;
-    display: block;
+  footer p{
+    display: none;
   }
 }
