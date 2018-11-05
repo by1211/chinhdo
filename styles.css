@@ -92,7 +92,6 @@ BODY*/
 .container {
   min-height: 100%;
   display: block;
-  margin-bottom: -8rem;
 }
 .banner{
   padding: 12rem 0 4rem 0;
