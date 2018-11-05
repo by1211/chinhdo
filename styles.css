@@ -20,7 +20,10 @@ h4{
   font-weight: 400;
 }
 h6{
-  font-size: 1.3rem;
+  /* font-size: 1.3rem; */
+}
+footer p{
+  /* font-size: 1.3rem; */
 }
 
 /*
@@ -84,18 +87,22 @@ footer{
   padding: 0 6rem 0 6rem;
   display: flex;
   flex-direction: row;
-  /* align-items: center; */
+  align-items: center;
   justify-content: space-between;
   flex-flow: wrap;
   flex-wrap: wrap;
 }
 footer img{
-  min-width: 3rem;
+  min-width: 2rem;
 }
 footer a{
+  width: 26rem;
   display: flex;
   align-items: center;
-  margin: 1rem;
+  justify-content: center;
+  margin: 1rem 0 1rem 0;
+  overflow: visible;
+  white-space: nowrap;
 }
 footer p{
   display: inline-block;
@@ -103,7 +110,8 @@ footer p{
   margin: 0;
 }
 h6{
-  padding-top: 2rem;
+  padding: 4rem 0 0 0;
+  margin-bottom: 1rem;
   text-align: center;
 }
 
@@ -138,9 +146,10 @@ RESPONSIVE UI */
   }
   ul{
     width: 100%;
-    text-align: center;
     padding: 0;
     margin: 0;
+    text-align: center;
+    display: none;
   }
   ul li{
     display: block;
@@ -148,10 +157,16 @@ RESPONSIVE UI */
   }
   footer{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+  }
+  footer a{
+    width: 10rem;
   }
   footer p{
     display: none;
+  }
+  .active{
+    display: block;
   }
 }
