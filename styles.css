@@ -1,6 +1,6 @@
 /*
 FONT */
-nav, body{
+body > *{
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
 }
@@ -15,7 +15,7 @@ NAVIGATION BAR */
 body{
   height: 100%;
   margin: 0;
-  background-color: rgba(51, 255, 204, 0.1);
+  /* background-color: rgba(51, 255, 204, 0.1); */
 }
 nav{
   max-width: 100%;
@@ -26,16 +26,23 @@ nav{
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  background-color: rgba(1, 1, 1, 0.1);
+  /* background-color: rgba(1, 1, 1, 0.1); */
 }
 .navigation-links{
   display: flex;
   flex-direction: row;
+  align-items: center;
   list-style: none;
-  background-color: rgba(1, 1, 1, 0.2);
+  /* background-color: rgba(1, 1, 1, 0.2); */
 }
 li {
   padding: 0 5rem 0 5rem;
+}
+
+/*
+BODY*/
+h1{
+  
 }
 
 /*
@@ -45,5 +52,13 @@ footer{
   width: 100%;
   position: fixed;
   bottom: 0;
-  background-color: rgba(1, 1, 1, 0.2);
+  display: flex;
+  /* background-color: rgba(1, 1, 1, 0.2); */
+}
+h6 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding-right: 1%;
+  margin-bottom: 1%;
 }
