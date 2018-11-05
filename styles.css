@@ -5,7 +5,7 @@ body > *{
   font-weight: 400;
 }
 .logo{
-  font-family: 'Righteous';
+  font-family: 'Righteous', cursive;
   font-size: 60px;
 }
 a{
@@ -72,6 +72,7 @@ h2, h4{
 h2{
   padding: 0;
   margin-bottom: -0.5rem;
+  overflow: visible;
 }
 
 /*
@@ -129,6 +130,12 @@ RESPONSIVE UI */
   background-color: rgba(1, 1, 1, 0.2);
 }
 @media(max-width: 768px){
+  h2{
+    font-size: 4rem;
+  }
+  h4{
+    font-size: 2rem;
+  }
   body, html{
     width: 100%;
     height: 100%;
