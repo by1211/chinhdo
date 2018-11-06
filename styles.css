@@ -171,11 +171,11 @@ RESPONSIVE UI */
   box-sizing: border-box;
   background-color: rgba(59, 59, 59, 1);
 }
-.nav-wrap{
-  padding: 0;
-  margin: 0;
-}
 @media(max-width: 768px){
+  .nav-wrap{
+    padding: 0;
+    margin: 0;
+  }
   h2{
     font-size: 4rem;
   }
