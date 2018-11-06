@@ -5,8 +5,9 @@ body > *{
   font-weight: 400;
 }
 .logo{
-  font-family: 'Montserrat';
+  font-family: 'Montserrat', sans-serif;
   font-size: 60px;
+  font-weight: 700;
 }
 a{
   color: inherit;
@@ -168,7 +169,11 @@ RESPONSIVE UI */
   padding: 0 6rem 0 6rem;
   display: none;
   box-sizing: border-box;
-  background-color: rgba(1, 1, 1, 0.2);
+  background-color: rgba(59, 59, 59, 1);
+}
+.nav-wrap{
+  padding: 0;
+  margin: 0;
 }
 @media(max-width: 768px){
   h2{
@@ -194,13 +199,15 @@ RESPONSIVE UI */
     width: 100%;
     padding: 0;
     margin: 0;
+    position: absolute;
     text-align: center;
     display: none;
+    background-color: rgba(59, 59, 59, 1);
   }
-  ul li{
+  li{
     display: block;
     padding: 2rem 0 2rem 0;
-    background-color: rgba(1, 1, 1, 0.2);
+    color: rgba(255, 255, 255, 0.3)
   }
   footer{
     display: flex;
