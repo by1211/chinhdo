@@ -93,7 +93,7 @@ footer{
   flex-wrap: wrap;
 }
 footer img{
-  min-width: 2rem;
+  width: 3rem;
 }
 footer a{
   width: 26rem;
@@ -161,7 +161,8 @@ RESPONSIVE UI */
     align-items: center;
   }
   footer a{
-    width: 10rem;
+    width: auto;
+    margin: 1rem;
   }
   footer p{
     display: none;
