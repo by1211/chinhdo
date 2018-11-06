@@ -20,10 +20,16 @@ h4{
   font-weight: 400;
 }
 h6{
-  /* font-size: 1.3rem; */
+  font-size: 1.2rem;
 }
-footer p{
-  /* font-size: 1.3rem; */
+footer a, h6{
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/*
+COLORS */
+footer, h6{
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
 /*
@@ -34,6 +40,10 @@ NAVIGATION BAR */
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+#hamburger{
+  width: 3rem;
+  opacity: 0.9;
+}
 html, body{
   height: 100%;
   margin: 0;
@@ -41,20 +51,15 @@ html, body{
 }
 nav{
   width: 100%;
+  height: inherit;
   position: sticky;
   position: -webkit-sticky;
+}
+.nav-wrap{
   padding: 0 6rem 0 6rem;
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  /* background-color: rgba(1, 1, 1, 0.1); */
-}
-ul{
-  /* padding-right: 4rem; */
-  /* display: flex;
-  flex-direction: row;
-  align-items: center; */
-  /* background-color: rgba(1, 1, 1, 0.2); */
 }
 li{
   display: inline-block;
@@ -64,13 +69,50 @@ li{
 
 /*
 BODY*/
-.container {
-  min-height: 100%;
-  display: block;
+.intro-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  display: table;
+  z-index: -1;
+
+   &:before {
+       content: '';
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       background: rgba(0,0,0,.3);
+       z-index: 1;
+    }
+
+
+
+  .header-content {
+    position: relative;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    z-index: 2;
+  }
+
+}
+
+.bg-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: url('http://cdn.magdeleine.co/wp-content/uploads/2015/02/YS4_5968_69_70-2-3-1400x933.jpg') center center no-repeat;
+  background-size: cover;
 }
 .banner{
   padding: 12rem 0 4rem 0;
-  /* background-color: rgba(1, 1, 1, 0.2); */
+  z-index: 2;
 }
 h2, h4{
   text-align: center;
@@ -84,7 +126,8 @@ h2{
 /*
 FOOTER*/
 footer{
-  padding: 0 6rem 0 6rem;
+  width: 100%;
+  padding: 3rem 6rem 1rem 6rem;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -92,11 +135,13 @@ footer{
   flex-flow: wrap;
   flex-wrap: wrap;
 }
-footer img{
-  width: 3rem;
+footer svg{
+  width: 2.5rem;
+  opacity: 0.3;
+  fill: white;
 }
 footer a{
-  width: 26rem;
+  width: 24.7rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -106,13 +151,14 @@ footer a{
 }
 footer p{
   display: inline-block;
-  padding-left: 2rem;
+  padding-left: 1rem;
   margin: 0;
 }
 h6{
-  padding: 4rem 0 0 0;
-  margin-bottom: 1rem;
+  padding: 0 6rem 1rem 0;
+  margin: 0;
   text-align: center;
+  text-transform: uppercase;
 }
 
 /*
