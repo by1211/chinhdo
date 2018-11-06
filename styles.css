@@ -5,7 +5,7 @@ body > *{
   font-weight: 400;
 }
 .logo{
-  font-family: 'Righteous';
+  font-family: 'Montserrat';
   font-size: 60px;
 }
 a{
@@ -200,6 +200,7 @@ RESPONSIVE UI */
   ul li{
     display: block;
     padding: 2rem 0 2rem 0;
+    background-color: rgba(1, 1, 1, 0.2);
   }
   footer{
     display: flex;
