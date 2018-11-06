@@ -114,8 +114,13 @@ footer{
   flex-flow: wrap;
   flex-wrap: wrap;
 }
+<<<<<<< HEAD
 footer svg{
   width: 2.5rem;
+=======
+footer img{
+  min-width: 2rem;
+>>>>>>> parent of ed39b2e... 6/11 Improve responsive social media links
 }
 footer a{
   width: 24.7rem;
@@ -194,8 +199,7 @@ RESPONSIVE UI */
     align-items: center;
   }
   footer a{
-    width: auto;
-    margin: 1rem;
+    width: 10rem;
   }
   footer p{
     display: none;
