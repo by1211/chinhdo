@@ -86,14 +86,20 @@ h2{
   margin-bottom: -0.5rem;
   overflow: visible;
 }
+.container{
+  min-height: 100%;
+  margin-bottom: 0;
+}
 
 /*
 FOOTER*/
 footer{
   width: 100%;
+  min-height: 9rem;
   padding: 3rem 6rem 0 6rem;
-  position: absolute;
-  bottom: 0;
+  margin: 0;
+  /* position: absolute;
+  bottom: 0; */
 }
 footer .social-media{
   width: 100%;
@@ -118,7 +124,8 @@ footer p{
   margin: 0;
 }
 h6{
-  padding: 0 0 1rem 0;
+  /* padding: 0 0 1rem 0; */
+  padding-bottom: 1rem;
   margin: 0;
   text-align: center;
   text-transform: uppercase;
@@ -182,8 +189,8 @@ RESPONSIVE UI */
     color: rgba(255, 255, 255, 0.3);
   }
   footer{
-    position: absolute;
-    bottom: 0;
+    /* position: absolute;
+    bottom: 0; */
   }
   footer .social-media{
     width: 100%;
