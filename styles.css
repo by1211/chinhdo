@@ -17,15 +17,18 @@ p{
 
 /*
 RESPONSIVE UI */
-
-/* Responsive Nav Bar and Footer */
 .toggle{
   width: 100%;
-  padding: 2rem 6rem 2rem 6rem;
+  padding: 2rem 0 2rem 0;
   display: none;
   background-color: rgba(0, 0, 0, 0.85);
 }
 @media(max-width: 768px){
+  body, html{
+    width: 100%;
+    height: 100%;
+    margin: 2rem;
+  }
   .toggle{
     display: flex;
     flex-direction: row;
@@ -40,13 +43,12 @@ RESPONSIVE UI */
   .active{
     display: block;
   }
-  body, html{
-    width: 100%;
-    height: 100%;
+  #hamburger{
+    margin-right: 3rem;
   }
   h1{
     padding: 0;
-    margin: 0;
+    margin: 0 0 0 3rem;
   }
   h2{
     font-size: 4rem;
@@ -115,9 +117,9 @@ footer svg, .toggle svg{
   background-color: rgba(255, 0, 0, 0.3);
 }
 .one-edge-shadow {
-	-webkit-box-shadow: 0 8px 6px -6px gray;
-	   -moz-box-shadow: 0 8px 6px -6px gray;
-	        box-shadow: 0 8px 6px -6px gray;
+  -webkit-box-shadow: 0 8px 6px -6px gray;
+  -moz-box-shadow: 0 8px 6px -6px gray;
+  box-shadow: 0 8px 6px -6px gray;
 }
 
 /*
@@ -177,11 +179,13 @@ h2{
 BODY */
 .container{
   min-height: 100%; /* pushes footer to the bottom, yay! */
-  margin-bottom: 0;
 }
 .about{
+  max-width: 70rem;
   padding-top: 6rem;
-  margin: 0 12rem 0 12rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 .about h4{
   text-align: center;
