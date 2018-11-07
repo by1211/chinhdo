@@ -48,9 +48,9 @@ footer a, footer h6{
   color: rgba(255, 255, 255, 0.3);
 }
 footer{
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: rgb(50, 50, 50);
 }
-footer svg, .toggle svg{
+footer svg{
   opacity: 0.4;
   fill: white;
 }
@@ -237,7 +237,7 @@ RESPONSIVE UI */
   width: 100%;
   padding: 1rem 0 1rem 0;
   display: none;
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: rgba(255, 255, 255, 1);
 }
 @media(max-width: 768px){
   body, html{
@@ -259,11 +259,12 @@ RESPONSIVE UI */
     position: absolute;
     display: block;
     text-align: center;
-    background-color: rgb(70, 70, 70);
+    background-color: rgb(50, 50, 50);
     z-index: 1;
   }
   #hamburger{
     margin-right: 3rem;
+    fill: rgb(50, 50, 50);
   }
   h1{
     padding: 0;
@@ -283,7 +284,6 @@ RESPONSIVE UI */
     display: none;
   }
   .toggle .logo{
-    color: rgba(255, 255, 255, 0.4);
   }
   ul{
     display: none;
@@ -292,7 +292,6 @@ RESPONSIVE UI */
     display: block;
     padding: 2rem 0 2rem 0;
     margin: 0;
-    color: rgba(255, 255, 255, 0.3);
   }
   footer .social-media{
     width: 100%;
