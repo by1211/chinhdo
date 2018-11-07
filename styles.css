@@ -1,6 +1,6 @@
 @import url('http://fonts.googleapis.com/css?family=Montserrat:400,400i,600i,700');
 @import url('http://fonts.googleapis.com/css?family=Righteous');
-@font-face {
+/* @font-face {
   font-family: "Montserrat";
   src:url("fonts/Montserrat-Regular.ttf");
   src:url("fonts/Montserrat-Italic.ttf");
@@ -11,7 +11,7 @@
 @font-face {
   font-family: "Righteous";
   src:url("fonts/Righteous-Regular");
-}
+} */
 /*
 FONT */
 html, body{
@@ -30,7 +30,13 @@ a{
   text-decoration-line: none;
   text-decoration-line: none;
 }
+a:visited{
+  text-decoration: none;
+  text-decoration-line: none;
+  text-decoration-line: none;
+}
 p{
+  line-height: 1.4rem;
   text-decoration: none;
   text-decoration-line: none;
   text-decoration-line: none;
@@ -66,14 +72,13 @@ footer svg, .toggle svg{
 }
 .parallax {
     /* The image used */
-    background-image: url('img_parallax.jpg');
+    background-image: url('images/banner-abandoned-v.6.jpg');
 
     /* Full height */
-    height: 100%;
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
-    background-position: center;
+    background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -102,7 +107,7 @@ nav{
   height: auto;
 }
 .nav-wrap{
-  padding: 0 6rem 0 6rem;
+  padding: 1rem 6rem 1rem 6rem;
   display: flex;
   align-items: baseline;
   justify-content: space-between;
@@ -111,12 +116,15 @@ nav{
   background-color: rgba(255, 255, 255, 1);
 }
 .logo p, h1{
-  margin-top: 1rem;
   font-size: 3rem;
   font-weight: 700;
 }
-.nav-wrap a{
-  color: inherit;
+.logo p{
+  margin-top: 1rem;
+}
+ul{
+  margin: 0;
+  padding: 0;
 }
 li{
   display: inline-block;
@@ -140,6 +148,9 @@ h4{
   font-size: 2rem;
   font-weight: 400;
   text-align: center;
+}
+.banner h2, .banner h4{
+  color: rgb(255, 255, 255);
 }
 
 /*
