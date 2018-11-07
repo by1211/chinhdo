@@ -78,7 +78,7 @@ footer svg, .toggle svg{
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
-    background-position: bottom;
+    background-position: left;
     background-repeat: no-repeat;
     background-size: cover;
 }
