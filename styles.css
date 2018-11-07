@@ -145,7 +145,7 @@ nav{
   align-items: baseline;
   justify-content: space-between;
 }
-.logo p{
+.logo p, h1{
   font-size: 5rem;
   font-weight: 700;
 }
