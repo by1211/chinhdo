@@ -1,18 +1,29 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,600i,700');
 @import url('https://fonts.googleapis.com/css?family=Righteous');
-
+@font-face {
+  font-family: "Montserrat";
+  src:url("fonts/Montserrat-Regular.ttf");
+  src:url("fonts/Montserrat-Italic.ttf");
+  src:url("fonts/Montserrat-SemiBoldItalic.ttf");
+  src:url("fonts/Montserrat-Bold.ttf");
+  src:url("fonts/Montserrat-BoldItalic.ttf");
+}
+@font-face {
+  font-family: "Righteous";
+  src:url("fonts/Righteous-Regular");
+}
 /*
 FONT */
 html, body{
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
 }
 h2, h3, h4, h5, h6, p, a{
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
 }
 h1, .logo p{
-  font-family: 'Righteous';
+  font-family: "Righteous";
 }
 a{
   text-decoration: none;
