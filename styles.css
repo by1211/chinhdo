@@ -16,88 +16,6 @@ p{
 }
 
 /*
-RESPONSIVE UI */
-.toggle{
-  width: 100%;
-  padding: 2rem 0 2rem 0;
-  display: none;
-  background-color: rgba(0, 0, 0, 0.85);
-}
-@media(max-width: 768px){
-  body, html{
-    width: 100%;
-    height: 100%;
-    margin: 2rem;
-  }
-  .toggle{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .nav-wrap{
-    width: 100%;
-    padding: 0;
-    margin: 0;
-  }
-  .active{
-    display: block;
-  }
-  #hamburger{
-    margin-right: 3rem;
-  }
-  h1{
-    padding: 0;
-    margin: 0 0 0 3rem;
-  }
-  h2{
-    font-size: 4rem;
-  }
-  h3{
-    font-weight: 700;
-  }
-  h4{
-    font-size: 2rem;
-  }
-  nav .logo{
-    display: none;
-  }
-  .toggle .logo{
-    color: rgba(255, 255, 255, 0.4);
-  }
-  ul{
-    width: 100%;
-    position: absolute;
-    text-align: center;
-    display: none;
-    background-color: rgb(70, 70, 70);
-    z-index: 1;
-  }
-  li{
-    display: block;
-    padding: 2rem 0 2rem 0;
-    color: rgba(255, 255, 255, 0.3);
-  }
-  footer .social-media{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-flow: row wrap;
-    justify-content: space-around;
-  }
-  footer a{
-    width: auto;
-    margin: 1rem;
-  }
-  footer p{
-    display: none;
-  }
-  footer h6{
-    text-align: center;
-  }
-}
-
-/*
 DECORATIONS */
 footer a, footer h6{
   color: rgba(255, 255, 255, 0.3);
@@ -121,6 +39,19 @@ footer svg, .toggle svg{
   -moz-box-shadow: 0 8px 6px -6px gray;
   box-shadow: 0 8px 6px -6px gray;
 }
+.parallax {
+    /* The image used */
+    background-image: url('img_parallax.jpg');
+
+    /* Full height */
+    height: 100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 /*
 NAVIGATION BAR */
@@ -128,6 +59,10 @@ NAVIGATION BAR */
   -moz-box-sizing: border-box; /* for padding without expanding */
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6, p, a{
+  padding: 0;
+  margin: 0;
 }
 #hamburger{
   width: 3rem;
@@ -142,10 +77,14 @@ nav{
   height: auto;
 }
 .nav-wrap{
-  padding: 2rem 6rem 2rem 6rem;
+  padding: 0 6rem 0 6rem;
+  margin-top: 1rem;
   display: flex;
   align-items: baseline;
   justify-content: space-between;
+  position: sticky;
+  top: 0;
+  background-color: rgba(255, 255, 255, 1);
 }
 .logo p, h1{
   font-size: 5rem;
@@ -160,16 +99,18 @@ li{
   list-style: none;
 }
 .banner{
-  padding: 16rem 0 16rem 0;
-  z-index: 2;
+  width: 100%;
+  height: 40rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 h4{
   font-weight: 400;
   text-align: center;
 }
 h2{
-  padding: 0;
-  overflow: visible;
   font-size: 5.5rem;
   font-weight: 700;
   text-align: center;
@@ -182,13 +123,26 @@ BODY */
 }
 .about{
   max-width: 70rem;
-  padding-top: 6rem;
+  padding: 6rem 0 6rem 0;
+  margin-left: auto;
+  margin-right: auto;
   display: block;
+  text-align: justify;
+  text-justify: inter-word;
+}
+.about h4, .portfolio h4{
+  font-weight: 700;
+  text-align: center;
+  padding-bottom: 3rem;
+}
+.portfolio{
+  max-width: 70rem;
+  padding: 6rem 0 6rem 0;
   margin-left: auto;
   margin-right: auto;
 }
-.about h4{
-  text-align: center;
+.portfolio h2{
+  padding-bottom: 4rem;
 }
 
 /*
@@ -235,4 +189,92 @@ footer h6{
   font-size: 1.2rem;
   text-align: center;
   text-transform: uppercase;
+}
+
+/*
+RESPONSIVE UI */
+.toggle{
+  width: 100%;
+  padding: 2rem 0 2rem 0;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+@media(max-width: 768px){
+  body, html{
+    width: 100%;
+    height: 100%;
+    /* margin: 2rem; */
+  }
+  .toggle{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .nav-wrap{
+    padding: 0;
+  }
+  .active{
+    width: 100%;
+    position: absolute;
+    display: block;
+    text-align: center;
+    background-color: rgb(70, 70, 70);
+    z-index: 1;
+  }
+  #hamburger{
+    margin-right: 3rem;
+  }
+  h1{
+    padding: 0;
+    margin: 0 0 0 3rem;
+  }
+  h2{
+    font-size: 4rem;
+  }
+  h3{
+    font-weight: 700;
+  }
+  h4{
+    font-size: 2rem;
+  }
+  nav .logo{
+    display: none;
+  }
+  .toggle .logo{
+    color: rgba(255, 255, 255, 0.4);
+  }
+  ul{
+    display: none;
+  }
+  li{
+    display: block;
+    padding: 2rem 0 2rem 0;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.3);
+  }
+  footer .social-media{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+  footer a{
+    width: auto;
+    margin: 1rem;
+  }
+  footer p{
+    display: none;
+  }
+  footer h6{
+    text-align: center;
+  }
+}
+
+/* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
+@media only screen and (max-width: 1366px) {
+    .parallax {
+        background-attachment: scroll;
+    }
 }
