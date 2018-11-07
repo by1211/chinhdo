@@ -1,4 +1,21 @@
 /*
+FONT */
+body{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+a{
+  text-decoration: none;
+  text-decoration-line: none;
+  text-decoration-line: none;
+}
+p{
+  text-decoration: none;
+  text-decoration-line: none;
+  text-decoration-line: none;
+}
+
+/*
 RESPONSIVE UI */
 
 /* Responsive Nav Bar and Footer */
@@ -79,13 +96,6 @@ RESPONSIVE UI */
 }
 
 /*
-FONT */
-body > *{
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
-}
-
-/*
 DECORATIONS */
 footer a, footer h6{
   color: rgba(255, 255, 255, 0.3);
@@ -141,7 +151,6 @@ nav{
 }
 .nav-wrap a{
   color: inherit;
-  text-decoration: none;
 }
 li{
   display: inline-block;
@@ -202,8 +211,8 @@ footer .social-media{
   justify-content: space-around;
 }
 footer a{
-  width: 24rem;
-  padding-bottom: 1rem;
+  /* width: 24rem; */
+  padding: 0 1rem 1rem 1rem;
   display: flex;
   flex-direction: row;
   align-items: center;
