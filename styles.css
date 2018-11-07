@@ -78,7 +78,6 @@ nav{
 }
 .nav-wrap{
   padding: 0 6rem 0 6rem;
-  margin-top: 1rem;
   display: flex;
   align-items: baseline;
   justify-content: space-between;
@@ -87,6 +86,7 @@ nav{
   background-color: rgba(255, 255, 255, 1);
 }
 .logo p, h1{
+  margin-top: 1rem;
   font-size: 5rem;
   font-weight: 700;
 }
