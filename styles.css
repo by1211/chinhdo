@@ -1,22 +1,22 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,600i,700');
 @import url('https://fonts.googleapis.com/css?family=Righteous');
 /* @font-face {
-  font-family: "Montserrat";
-  src:url("fonts/Montserrat-Regular.ttf");
-  src:url("fonts/Montserrat-Italic.ttf");
-  src:url("fonts/Montserrat-SemiBoldItalic.ttf");
-  src:url("fonts/Montserrat-Bold.ttf");
-  src:url("fonts/Montserrat-BoldItalic.ttf");
+font-family: "Montserrat";
+src:url("fonts/Montserrat-Regular.ttf");
+src:url("fonts/Montserrat-Italic.ttf");
+src:url("fonts/Montserrat-SemiBoldItalic.ttf");
+src:url("fonts/Montserrat-Bold.ttf");
+src:url("fonts/Montserrat-BoldItalic.ttf");
 }
 @font-face {
-  font-family: "Righteous";
-  src:url("fonts/Righteous-Regular");
+font-family: "Righteous";
+src:url("fonts/Righteous-Regular");
 } */
+
 /*
 FONT */
 html, body{
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
+  font-family: 'Montserrat', 'Righteous';
 }
 h2, h3, h4, h5, h6, p, a{
   font-family: "Montserrat", sans-serif;
@@ -32,31 +32,59 @@ a{
 }
 a:visited{
   text-decoration: none;
+  decoration: none;
   text-decoration-line: none;
   text-decoration-line: none;
 }
 p{
+  font-size: 1rem;
   line-height: 1.4rem;
   text-decoration: none;
+  decoration: none;
   text-decoration-line: none;
   text-decoration-line: none;
+}
+h2{
+  font-size: 4rem;
+  font-weight: 700;
+  text-align: center;
+}
+h4{
+  font-size: 2rem;
+  font-weight: 400;
+  text-align: center;
+}
+h5{
+  
 }
 
 /*
-DECORATIONS */
-footer a, footer h6{
-  color: rgba(255, 255, 255, 0.3);
+COLOR & DECORATIONS */
+.nav-wrap, .toggle{
+  background-color: rgba(0, 25, 110, 1);
 }
-footer{
-  background-color: rgb(50, 50, 50);
+.yellow-bg{
+  width: 100%;
+  background-color: rgba(186, 140, 40, 0.3);
+}
+.active, footer{
+  background-color: rgb(60, 60, 60);
+}
+#hamburger{
+  fill: rgba(26, 176, 66, 0.8);
+}
+.banner h2, .banner h4{
+  color: rgb(255, 255, 255);
 }
 footer svg{
   opacity: 0.4;
   fill: white;
 }
-.logo{
-  color: rgba(0, 0, 0, 1);
-  font-size: 1.3rem;
+.logo p, h1, .nav-wrap li, a, footer a, footer h6{
+  color: rgba(255, 255, 255, 0.5);
+}
+a:visited{
+  color: rgba(255, 255, 255, 0.9);
 }
 .red-highlight{
   background-color: rgba(255, 0, 0, 0.3);
@@ -71,16 +99,13 @@ footer svg{
   font-weight: 600;
 }
 .parallax {
-    /* The image used */
-    background-image: url('images/banner-abandoned-v.7.jpg');
-
-    /* Full height */
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: left;
-    background-repeat: no-repeat;
-    background-size: cover;
+  /* The image used */
+  background-image: url('images/banner-abandoned-v.12.jpg');
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /*
@@ -97,11 +122,6 @@ h1, h2, h3, h4, h5, h6, p, a{
 #hamburger{
   width: 2.5rem;
 }
-html, body{
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
 nav{
   width: 100%;
   height: auto;
@@ -113,10 +133,9 @@ nav{
   justify-content: space-between;
   position: sticky;
   top: 0;
-  background-color: rgba(255, 255, 255, 1);
 }
 .logo p, h1{
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: 700;
 }
 .logo p{
@@ -138,19 +157,6 @@ li{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-h2{
-  font-size: 4rem;
-  font-weight: 700;
-  text-align: center;
-}
-h4{
-  font-size: 2rem;
-  font-weight: 400;
-  text-align: center;
-}
-.banner h2, .banner h4{
-  color: rgb(255, 255, 255);
 }
 
 /*
@@ -180,9 +186,6 @@ BODY */
 }
 .portfolio h2{
   padding-bottom: 4rem;
-}
-p{
-  font-size: 1rem;
 }
 
 /*
@@ -237,7 +240,9 @@ RESPONSIVE UI */
   width: 100%;
   padding: 1rem 0 1rem 0;
   display: none;
-  background-color: rgba(255, 255, 255, 1);
+}
+.active{
+  display: none;
 }
 @media(max-width: 768px){
   body, html{
@@ -259,12 +264,10 @@ RESPONSIVE UI */
     position: absolute;
     display: block;
     text-align: center;
-    background-color: rgb(50, 50, 50);
     z-index: 1;
   }
   #hamburger{
     margin-right: 3rem;
-    fill: rgb(50, 50, 50);
   }
   h1{
     padding: 0;
@@ -314,7 +317,7 @@ RESPONSIVE UI */
 
 /* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
 @media only screen and (max-width: 1366px) {
-    .parallax {
-        background-attachment: scroll;
-    }
+  .parallax {
+    background-attachment: scroll;
+  }
 }
