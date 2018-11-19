@@ -97,7 +97,7 @@ ul {
 
 
 #footer {
-  background-color: Tomato;
+  background-color: #102027;
   grid-column: 1 / 6;
   grid-row: 10 / 11;
 }
