@@ -1,18 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,800');
 
-/* BASE
-   Definition: Default styling of the website. Includes pseudo classes and decendent selectors.
+/*
+BASE
+Definition: Default styling of the website. Includes pseudo classes and decendent selectors.
 */
 
 html {
   font-size: 16px;
   background-color: white;
 }
+
 @media screen and (min-width: 320px) {
   html {
     font-size: calc(16px + 6 * ((100vw - 320px) / 680));
   }
 }
+
 @media screen and (min-width: 1000px) {
   html {
     font-size: 22px;
@@ -23,8 +26,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Montserrat', sans-serif;
-  color: black;
   font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  color: black;
   background-color: white;
 }
 
@@ -38,8 +41,9 @@ ul {
   list-style: none;
 }
 
-/* LAYOUT
-   Definition: Major building blocks of the website. Mostly uses em unit.
+/*
+LAYOUT
+Definition: Major building blocks of the website. Mostly uses em unit.
 */
 
 .l-grid {
@@ -98,8 +102,9 @@ ul {
   grid-row: 10 / 11;
 }
 
-/* MODULE
-   Definition: Minor, unique, standalone components makes up of a section or the entire page. Avoid using IDs.
+/*
+MODULE
+Definition: Minor, unique, standalone components makes up of a section or the entire page. Avoid using IDs.
 */
 
 .banner {
@@ -134,16 +139,19 @@ ul {
 }
 
 .l-text {
-  font-size: 64px;
+  font-size: 4vw;
+  text-align: justify;
 }
 
 .s-text {
-  font-size: 32px;
+  font-size: 1.8vw;
   font-weight: 400;
+  text-align: center;
 }
 
-/* THEME
-   Defintion: Style definition that overwirtes basic ones. Limiting to color and graphic properties (such as border) for now.
+/*
+THEME
+Defintion: Style definition that overwirtes basic ones. Limiting to color and graphic properties (such as border) for now.
 */
 
 #logo h1 {
