@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,800');
+
+/* BASE
+   Definition: Default styling of the website. Includes pseudo classes and decendent selectors.
+*/
+
+html {
+  font-size: 16px;
+}
+@media screen and (min-width: 320px) {
+  html {
+    font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+  }
+}
+@media screen and (min-width: 1000px) {
+  html {
+    font-size: 22px;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  color: black;
+  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+}
+
+/* LAYOUT
+   Definition: Major building blocks of the website. Mostly uses em unit.
+*/
+
+.l-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: minmax(150px, auto);
+  /* grid-gap: 1rem; */
+  /* padding: 2em; */
+}
+
+.l-grid div {
+  /* padding: 1em; */
+}
+
+#logo {
+  padding: 4rem 0 0 2rem;
+  /* background-color: Tomato; */
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+#header {
+  /* background-color: SandyBrown; */
+  grid-column: 2 / 6;
+  grid-row: 1 / 2;
+}
+
+#sidebar {
+  padding: 2rem 0 2rem 2rem;
+  /* background-color: Turquoise; */
+  grid-column: 1 / 2;
+  grid-row: 2 / 5;
+}
+
+ul {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+#content {
+  grid-template-rows: repeat(5, 1fr);
+  /* background-color: DodgerBlue; */
+  grid-column: 2 / 6;
+  grid-row: 1 / 10;
+}
+
+
+#footer {
+  background-color: Tomato;
+  grid-column: 1 / 6;
+  grid-row: 10 / 11;
+}
+
+/* MODULE
+   Definition: Minor, unique, standalone components makes up of a section or the entire page. Avoid using IDs.
+*/
+
+.banner {
+  margin: 0;
+  padding: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: PaleGreen; */
+}
+
+.banner > h2 {
+  position: absolute;
+  margin: auto;
+}
+
+.banner > img {
+  width: 100%;
+  height: 100%;
+}
+
+.about {
+  padding: 2rem;
+  /* background-color: PaleGreen; */
+  text-align: center;
+}
+
+/* STATE */
+
+.image-filter {
+  filter: blur(2px) opacity(100%) brightness(80%);
+}
+
+.l-text {
+  font-size: 64px;
+}
+
+.s-text {
+  font-size: 32px;
+  font-weight: 400;
+}
+
+/* THEME
+   Defintion: Style definition that overwirtes basic ones. Limiting to color and graphic properties (such as border) for now.
+*/
+
+#logo h1 {
+  font-size: 3.2em;
+  font-weight: 800;
+  text-align: left;
+}
+
+.banner p {
+  margin: 0;
+  color: white;
+}
