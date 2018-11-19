@@ -10,23 +10,10 @@ html {
   background-color: white;
 }
 
-@media screen and (min-width: 320px) {
-  html {
-    font-size: calc(16px + 6 * ((100vw - 320px) / 680));
-  }
-}
-
-@media screen and (min-width: 1000px) {
-  html {
-    font-size: 22px;
-  }
-}
-
 body {
   margin: 0;
   padding: 0;
   font-family: 'Montserrat', sans-serif;
-  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
   color: black;
 }
 
@@ -36,8 +23,29 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 
+p {
+  padding: 0 2em 0 2em;
+  text-align: justify;
+  text-indent: 2em;
+}
+
 ul {
   list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:link,
+a:active,
+a:visited {
+  text-decoration: none;
+  color: black;
 }
 
 footer {
@@ -48,8 +56,8 @@ footer {
   position: absolute;
   width: 100%;
   background-image: url("../images/banner.png");
-  opacity: 0.3;
-  height: 470px;
+  opacity: 1;
+  height: 500px;
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
@@ -118,21 +126,8 @@ Definition: Minor, unique, standalone components makes up of a section or the en
 .banner {
   margin: 0;
   padding: 4rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
+  height: 6em;
   /* background-color: PaleGreen; */
-}
-
-.banner > h2 {
-  /* position: absolute; */
-  margin: auto;
-}
-
-.banner > img {
-  width: 1600px;
-  object-fit: none;
 }
 
 .about {
@@ -158,11 +153,6 @@ Defintion: Style definition that overwirtes basic ones. Limiting to color and gr
   text-align: left;
 }
 
-.banner p {
-  margin: 0;
-  /* color: white; */
-}
-
 .l-text {
   font-size: 5vw;
 }
@@ -177,6 +167,23 @@ Defintion: Style definition that overwirtes basic ones. Limiting to color and gr
   font-weight: 400;
 }
 
+.upright-text {
+  writing-mode: vertical-rl;
+  text-orientation: sideways;
+}
+
 .copyright {
   color: white;
+}
+
+@media screen and (min-width: 320px) {
+  html {
+    font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  html {
+    font-size: 22px;
+  }
 }
