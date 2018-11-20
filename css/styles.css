@@ -410,7 +410,7 @@ display: none;
 }
 } */
 
-@media (max-width: 768px) {
+@media screen and (max-width: 480px) {
   html {
     font-size: calc(14px + 6 * ((100vw - 320px) / 680));
   }
