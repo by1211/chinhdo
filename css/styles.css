@@ -148,12 +148,10 @@ Definition: Minor, unique, standalone components makes up of a section or the en
 */
 
 .parallax {
-  position: absolute;
   width: 100%;
-  background-image: url("../images/banner.png");
-  opacity: 1;
   height: 100%;
-  /* Create the parallax scrolling effect */
+  position: absolute;
+  background-image: url("../images/banner.png");
   background-attachment: fixed;
   background-position: right center;
   background-repeat: no-repeat;
@@ -291,6 +289,7 @@ Definition: Minor, unique, standalone components makes up of a section or the en
 
 svg {
   width: 2.5rem;
+  text-align: center;
   fill: white;
 }
 
@@ -326,6 +325,19 @@ footer {
   text-align: left;
 }
 
+.intro {
+  padding-bottom: 1em;
+}
+
+.tag-button p {
+  padding: 0 0 0 1em;
+  text-indent: 0;
+}
+
+.social-media p {
+  text-indent: 0.4em;
+}
+
 #traede-background {
   background-image: url(../images/traede-background.png);
 }
@@ -346,13 +358,8 @@ footer {
 
 #other-background {
   /* background-image: url(../images/neonSkies-background.jpg); */
+}
   background-color: LightGray;
-}
-
-.tag-button p {
-  padding: 0 0 0 1em;
-  text-indent: 0;
-}
 
 .circle {
   width: 1em;
@@ -381,10 +388,6 @@ footer {
   text-orientation: sideways;
 }
 
-.social-media p {
-  text-indent: 0;
-}
-
 /* @media screen and (max-width: 768px) {
 html {
 font-size: 18px;
@@ -410,6 +413,13 @@ display: none;
 @media screen and (max-width: 768px) {
   html {
     font-size: calc(14px + 6 * ((100vw - 320px) / 680));
+  }
+
+  .parallax {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
   }
 
   header,
