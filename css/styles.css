@@ -326,7 +326,7 @@ footer {
 }
 
 .intro {
-  padding-bottom: 1em;
+  padding-bottom: 2em;
 }
 
 .tag-button p {
@@ -416,7 +416,7 @@ display: none;
   }
 
   .parallax {
-    width: 100%;
+    max-width: 100%;
     height: 100%;
     background-position: center;
     background-size: cover;
@@ -433,10 +433,6 @@ display: none;
     display: grid;
     padding: 0;
     grid-template-columns: 1fr;
-  }
-
-  .tag-container {
-    width: 100%;
   }
 
   #sidebar {
@@ -458,7 +454,12 @@ display: none;
     grid-row: 8 / 9;
   }
 
-  /* .card-logo {
-    width:
-  } */
+  .tag-container {
+    width: 100%;
+  }
+
+  .card-logo {
+    height: 180px;
+    top: -35px;
+  }
 }
