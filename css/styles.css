@@ -154,6 +154,21 @@ grid-row: 1 / 3;
   grid-row: 7 / 8;
 }
 
+#blank-rows { /* Balancing space between modules */
+  grid-column: 2 / 3;
+  grid-row: 8 / 9;
+}
+
+#secondLevel-container {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+}
+
+#secondLevel-sidebar {
+  grid-column: 1 / 2;
+  grid-row: 2 / 4;
+}
+
 /*
 MODULE
 Definition: Minor, unique, standalone components makes up of a section or the entire page. Avoid using IDs.
@@ -179,7 +194,7 @@ Definition: Minor, unique, standalone components makes up of a section or the en
 
 /* only show if sidebar fits screen */
 @media (min-height: 900px) {
-  #sidebar ul {
+  .sidebar-styles ul {
     margin: 0;
     padding: 0;
     display: flex;
@@ -191,14 +206,14 @@ Definition: Minor, unique, standalone components makes up of a section or the en
   }
 }
 
-#sidebar li {
+.sidebar-styles li {
   padding: 1.5em;
   writing-mode: vertical-rl;
   text-orientation: sideways-right;
   transform: rotate(180deg);
 }
 
-#sidebar ul li a.current {
+.sidebar-styles ul li a.current {
   background: black;
 }
 
@@ -330,10 +345,10 @@ footer {
   background-color: #102027;
 }
 
-#sidebar a,
-#sidebar a:link,
-#sidebar a:active,
-#sidebar a:visited,
+.sidebar-styles a,
+.sidebar-styles a:link,
+.sidebar-styles a:active,
+.sidebar-styles a:visited,
 #contact a,
 #contact a:link,
 #contact a:active,
@@ -345,15 +360,15 @@ header a,
 header a:link,
 header a:active,
 header a:visited,
-#sidebar a,
-#sidebar a:link,
-#sidebar a:active,
-#sidebar a:visited {
+.sidebar-styles a,
+.sidebar-styles a:link,
+.sidebar-styles a:active,
+.sidebar-styles a:visited {
   text-transform: uppercase;
   font-weight: 700;
 }
 
-#sidebar li {
+.sidebar-styles li {
   font-style: italic;
 }
 
@@ -450,7 +465,7 @@ padding: 0;
 display: block;
 }
 
-#sidebar {
+.sidebar-styles {
 display: none;
 }
 } */
@@ -480,7 +495,7 @@ display: none;
     grid-template-columns: 1fr;
   }
 
-  #sidebar {
+  .sidebar-styles {
     display: none;
   }
 
@@ -497,6 +512,11 @@ display: none;
   #contact {
     grid-column: 1 / 2;
     grid-row: 8 / 9;
+  }
+
+  #blank {
+    grid-column: 1 / 2;
+    grid-row: 10 / 11;
   }
 
   .tag-container {
@@ -524,7 +544,7 @@ display: none;
 }
 /*
 @media only screen and (max-heght: 900px) {
-  #sidebar ul {
+  .sidebar-styles ul {
     display: none;
   }
 } */
