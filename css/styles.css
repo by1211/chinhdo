@@ -66,6 +66,12 @@ a:visited {
   color: white;
 }
 
+svg {
+  width: 2.5rem;
+  text-align: center;
+  fill: white;
+}
+
 /*
 LAYOUT
 Definition: Major building blocks of the website.
@@ -171,15 +177,18 @@ Definition: Minor, unique, standalone components makes up of a section or the en
   height: 6em;
 }
 
-#sidebar ul {
-  margin: 0 0 20em 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-content: flex-start;
-  position: sticky;
-  top: 0;
+/* only show if sidebar fits screen */
+@media (min-height: 900px) {
+  #sidebar ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    position: sticky;
+    top: 7%; /* fixing bar to the middle while scrolling */
+  }
 }
 
 #sidebar li {
@@ -293,12 +302,6 @@ Definition: Minor, unique, standalone components makes up of a section or the en
   justify-content: center;
 }
 
-svg {
-  width: 2.5rem;
-  text-align: center;
-  fill: white;
-}
-
 /* STATE */
 
 .image-filter {
@@ -345,6 +348,13 @@ footer {
   text-align: left;
 }
 
+.intro svg,
+.intro .social-media {
+  padding: 0 1em 0 1em;
+  justify-content: center;
+  fill: black;
+}
+
 .intro {
   padding-bottom: 2em;
 }
@@ -378,8 +388,8 @@ footer {
 
 #otherWorks-background {
   /* background-image: url(../images/neonSkies-background.jpg); */
-}
   background-color: LightGray;
+}
 
 .circle {
   width: 1em;
@@ -482,6 +492,13 @@ display: none;
     height: 180px;
     top: -35px;
   }
+
+  footer,
+  .social-media {
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+  }
 }
 
 /* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
@@ -490,3 +507,9 @@ display: none;
     background-attachment: scroll;
   }
 }
+/*
+@media only screen and (max-heght: 900px) {
+  #sidebar ul {
+    display: none;
+  }
+} */
