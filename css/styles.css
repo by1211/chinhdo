@@ -96,10 +96,11 @@ header li {
 
 .l-grid {
   display: grid;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: 1fr 4fr 1fr;
   grid-auto-rows: minmax(120px, auto);
-  /* justify-items: flex-start; */
-  align-items: center;
+  /* justify-content: flex-end;
+  align-content: flex-end; */
+  /* align-items: center; */
   padding: 0 4em 0 4em;
 }
 
@@ -114,37 +115,37 @@ grid-column: 1 / 2;
 grid-row: 1 / 3;
 } */
 
+#skills-list {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+  /* display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; */
+}
+
 #sidebar {
   /* padding: 2em 0 2em 2em; */
   /* background-color: Turquoise; */
   grid-column: 1 / 2;
-  grid-row-start: 4;
-}
-
-#content {
-  /* display: grid;
-  grid-template-columns: 1fr; */
-  /* grid-template-rows: 1fr 1fr; */
-  /* grid-auto-rows: minmax(150px, auto); */
-  /* background-color: DodgerBlue; */
-  /* grid-column: 2 / 3;
-  grid-row-start: 4; */
-  /* grid-row-end: 15; */
+  grid-row: 4 / 7;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
 }
 
 #about {
   grid-column: 2 / 3;
-  grid-row: 4 / 5;
+  grid-row: 3 / 4;
 }
 
 #portfolio {
   grid-column: 2 / 3;
-  grid-row: 6 / 7;
+  grid-row: 5 / 6;
 }
 
 #contact {
   grid-column: 2 / 3;
-  grid-row: 8 / 9;
+  grid-row: 7 / 8;
 }
 
 /*
@@ -170,14 +171,27 @@ Definition: Minor, unique, standalone components makes up of a section or the en
   height: 6em;
 }
 
-.l-grid ul {
-  height: 100%;
-  margin: 0;
+#sidebar ul {
+  margin: 0 0 20em 0;
   padding: 0;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content: space-around;
+  align-content: flex-start;
+  position: sticky;
+  top: 0;
+}
+
+#sidebar li {
+  padding: 1.5em;
+  writing-mode: vertical-rl;
+  text-orientation: sideways-right;
+  transform: rotate(180deg);
+  text-transform: uppercase;
+}
+
+#sidebar ul li a.current {
+  background: black;
 }
 
 .container {
@@ -204,30 +218,17 @@ Definition: Minor, unique, standalone components makes up of a section or the en
   position: relative;
 }
 
-#traede {
-  margin-top: 5em;
-}
-
 #traede-background,
 #skyTr33-background,
 #wanderSpace-background,
 #neonSkies-background,
-#other-background {
+#otherWorks-background {
   width: 100%;
   height: 14em;
   background-position: right center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-
-/* #traede-logo,
-#skyTr33-logo,
-#wanderSpace-logo,
-#neonSkies-logo,
-#other-logo {
-  margin: auto;
-  position: absolute;
-} */
 
 .card-logo {
   margin: auto;
@@ -310,6 +311,10 @@ svg {
   box-shadow: 6px 10px 6px -6px rgba(0, 0, 0, 0.4);
 }
 
+.reduce-gap {
+  margin-top: 5em;
+}
+
 /*
 THEME
 Defintion: Style definition that overwirtes basic ones. Limiting to color and graphic properties (such as border) for now.
@@ -321,7 +326,17 @@ header a:active,
 header a:visited,
 footer {
   background-color: #102027;
-  /* color: white; */
+}
+
+#sidebar a,
+#sidebar a:link,
+#sidebar a:active,
+#sidebar a:visited {
+  color: black;
+}
+
+#sidebar li {
+
 }
 
 #logo h1 {
@@ -361,7 +376,7 @@ footer {
   background-image: url(../images/neonSkies-background.jpg);
 }
 
-#other-background {
+#otherWorks-background {
   /* background-image: url(../images/neonSkies-background.jpg); */
 }
   background-color: LightGray;
