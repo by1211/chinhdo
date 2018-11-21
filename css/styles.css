@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,800');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,700i,800');
 
 /*
 BASE
@@ -161,7 +161,7 @@ Definition: Minor, unique, standalone components makes up of a section or the en
 
 .parallax {
   width: 100%;
-  height: 100%;
+  height: 95%;
   position: absolute;
   background-image: url("../images/banner.png");
   background-attachment: fixed;
@@ -196,7 +196,6 @@ Definition: Minor, unique, standalone components makes up of a section or the en
   writing-mode: vertical-rl;
   text-orientation: sideways-right;
   transform: rotate(180deg);
-  text-transform: uppercase;
 }
 
 #sidebar ul li a.current {
@@ -334,18 +333,42 @@ footer {
 #sidebar a,
 #sidebar a:link,
 #sidebar a:active,
-#sidebar a:visited {
+#sidebar a:visited,
+#contact a,
+#contact a:link,
+#contact a:active,
+#contact a:visited {
   color: black;
 }
 
-#sidebar li {
+header a,
+header a:link,
+header a:active,
+header a:visited,
+#sidebar a,
+#sidebar a:link,
+#sidebar a:active,
+#sidebar a:visited {
+  text-transform: uppercase;
+  font-weight: 700;
+}
 
+#sidebar li {
+  font-style: italic;
 }
 
 #logo h1 {
   font-size: 3.2em;
   font-weight: 800;
   text-align: left;
+}
+
+#home-url,
+#home-url a,
+#home-url a:link,
+#home-url a:active,
+#home-url a:visited, {
+  color: RoyalBlue;
 }
 
 .intro svg,
@@ -355,9 +378,13 @@ footer {
   fill: black;
 }
 
-.intro {
-  padding-bottom: 2em;
+.intro .social-media {
+  padding: 2em 0;
 }
+
+/* .intro {
+  padding-bottom: 2em;
+} */
 
 .tag-button p {
   padding: 0 0 0 1em;
@@ -366,10 +393,17 @@ footer {
 
 .social-media p {
   text-indent: 0.4em;
+  /* font-weight: 700;
+  font-style: italic; */
 }
 
 #traede-background {
   background-image: url(../images/traede-background.png);
+}
+
+#traede .circle,
+#traede .card-button {
+  background-color: #F9A159;
 }
 
 #skyTr33-background {
@@ -397,25 +431,6 @@ footer {
   border-radius: 50%;
   z-index: 10;
   background-color: RoyalBlue;
-}
-
-.l-text {
-  font-size: 5vw;
-}
-
-.s-text {
-  font-size: 2.3vw;
-  font-weight: 400;
-}
-
-.xs-text {
-  font-size: 1vw;
-  font-weight: 400;
-}
-
-.upright-text {
-  writing-mode: vertical-rl;
-  text-orientation: sideways;
 }
 
 /* @media screen and (max-width: 768px) {
