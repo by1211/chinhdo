@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,700i,800');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,600,700');
 
 /*
-BASE
-Definition: Default styling of the website. Includes pseudo classes and decendent selectors.
+** BASE
+** Definition: Default styling of the website. Includes pseudo classes and decendent
+** selectors.
 */
 
 html {
@@ -20,10 +21,10 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
   text-align: center;
+  font-weight: 700;
 }
 
 h1 {
-  /* padding: 1em 0 1em 0; */
   font-size: 48px;
   color: white;
 }
@@ -73,8 +74,8 @@ svg {
 }
 
 /*
-LAYOUT
-Definition: Major building blocks of the website.
+** LAYOUT
+** Definition: Major building blocks of the website.
 */
 
 header {
@@ -104,9 +105,6 @@ header li {
   display: grid;
   grid-template-columns: 1fr 4fr 1fr;
   grid-auto-rows: minmax(120px, auto);
-  /* justify-content: flex-end;
-  align-content: flex-end; */
-  /* align-items: center; */
   padding: 0 4em 0 4em;
 }
 
@@ -115,25 +113,14 @@ footer {
   position: sticky;
 }
 
-/* #logo {
-background-color: Tomato;
-grid-column: 1 / 2;
-grid-row: 1 / 3;
-} */
-
 #skills-list {
   grid-column: 1 / 2;
   grid-row: 3 / 4;
-  /* display: flex;
-  flex-direction: row;
-  flex-wrap: wrap; */
 }
 
 #sidebar {
-  /* padding: 2em 0 2em 2em; */
-  /* background-color: Turquoise; */
   grid-column: 1 / 2;
-  grid-row: 4 / 7;
+  grid-row: 5 / 7;
   position: sticky;
   position: -webkit-sticky;
   top: 0;
@@ -154,11 +141,6 @@ grid-row: 1 / 3;
   grid-row: 7 / 8;
 }
 
-#blank-rows { /* Balancing space between modules */
-  grid-column: 2 / 3;
-  grid-row: 8 / 9;
-}
-
 #secondLevel-container {
   grid-column: 2 / 3;
   grid-row: 3 / 4;
@@ -170,8 +152,9 @@ grid-row: 1 / 3;
 }
 
 /*
-MODULE
-Definition: Minor, unique, standalone components makes up of a section or the entire page. Avoid using IDs.
+** MODULE
+** Definition: Minor, unique, standalone components makes up of a section or the entire
+** page. Avoid using IDs.
 */
 
 .parallax {
@@ -192,29 +175,35 @@ Definition: Minor, unique, standalone components makes up of a section or the en
   height: 6em;
 }
 
-/* only show if sidebar fits screen */
+/* Sidebar Module
+** Will only show if sidebar fits screen */
 @media (min-height: 900px) {
-  .sidebar-styles ul {
-    margin: 0;
+  #sidebar ul {
+    margin-right: 5em;
     padding: 0;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    align-content: flex-start;
+    align-content: center;
     position: sticky;
-    top: 7%; /* fixing bar to the middle while scrolling */
+    top: 2.5em;
   }
-}
 
-.sidebar-styles li {
-  padding: 1.5em;
-  writing-mode: vertical-rl;
-  text-orientation: sideways-right;
-  transform: rotate(180deg);
-}
+  #sidebar li {
+    width: 90px;
+    height: 60px;
+    margin: 1em 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+  }
 
-.sidebar-styles ul li a.current {
-  background: black;
+  #sidebar li a {
+    transform: rotate(-30deg);
+    transform-origin: 50% 50%;
+  }
 }
 
 .container {
@@ -228,6 +217,8 @@ Definition: Minor, unique, standalone components makes up of a section or the en
   background: white;
 }
 
+/* Card Module
+** Displays design thumbnail & link to Second Level */
 .card-container {
   width: 100%;
   margin-top: 10em;
@@ -239,18 +230,6 @@ Definition: Minor, unique, standalone components makes up of a section or the en
   align-content: center;
   color: white;
   position: relative;
-}
-
-#traede-background,
-#skyTr33-background,
-#wanderSpace-background,
-#neonSkies-background,
-#otherWorks-background {
-  width: 100%;
-  height: 14em;
-  background-position: right center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .card-logo {
@@ -271,13 +250,11 @@ Definition: Minor, unique, standalone components makes up of a section or the en
 }
 
 .tag-container {
-  /* width: 75%; */
   padding: 1em 0 1em 0;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  /* justify-content: space-around; */
 }
 
 .tag-button {
@@ -293,6 +270,11 @@ Definition: Minor, unique, standalone components makes up of a section or the en
   border-radius: 40px;
 }
 
+.tag-button p {
+  padding: 0 0 0 1em;
+  text-indent: 0;
+}
+
 .card-button {
   width: 100%;
   padding: 1.5em 0 1.5em 0;
@@ -300,7 +282,9 @@ Definition: Minor, unique, standalone components makes up of a section or the en
   text-align: center;
   background-color: RoyalBlue;
 }
+/* End of Card Module: Displays design thumbnail */
 
+/* Social Media Icons & Link */
 .social-media {
   width: 100%;
   display: flex;
@@ -315,8 +299,12 @@ Definition: Minor, unique, standalone components makes up of a section or the en
   align-items: center;
   justify-content: center;
 }
+/* End of Social Media Icons & Link */
 
-/* STATE */
+/*
+** STATE
+** Definition:
+*/
 
 .image-filter {
   filter: opacity(100%) brightness(80%);
@@ -333,8 +321,9 @@ Definition: Minor, unique, standalone components makes up of a section or the en
 }
 
 /*
-THEME
-Defintion: Style definition that overwirtes basic ones. Limiting to color and graphic properties (such as border) for now.
+** THEME
+** Defintion: Style definition that overwirtes basic ones. Limiting to color and graphic
+** properties (such as border) for now.
 */
 
 header,
@@ -345,10 +334,6 @@ footer {
   background-color: #102027;
 }
 
-.sidebar-styles a,
-.sidebar-styles a:link,
-.sidebar-styles a:active,
-.sidebar-styles a:visited,
 #contact a,
 #contact a:link,
 #contact a:active,
@@ -359,17 +344,9 @@ footer {
 header a,
 header a:link,
 header a:active,
-header a:visited,
-.sidebar-styles a,
-.sidebar-styles a:link,
-.sidebar-styles a:active,
-.sidebar-styles a:visited {
+header a:visited {
   text-transform: uppercase;
   font-weight: 700;
-}
-
-.sidebar-styles li {
-  font-style: italic;
 }
 
 #logo h1 {
@@ -378,14 +355,41 @@ header a:visited,
   text-align: left;
 }
 
-#home-url,
-#home-url a,
-#home-url a:link,
-#home-url a:active,
-#home-url a:visited, {
-  color: RoyalBlue;
+.sidebar-style ul {
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: solid;
+	border-bottom-style: solid;
 }
 
+#sidebar a,
+#sidebar a:link,
+#sidebar a:visited {
+  color: Silver;
+  opacity: 0.5;
+  text-transform: uppercase;
+}
+
+#back-to-top {
+  width: 2em;
+  height: auto;
+  fill: black;
+  transform: rotate(30deg);
+}
+
+#back-to-top:hover {
+  fill: MediumSpringGreen;
+}
+
+#sidebar a:active,
+#sidebar a:hover {
+  color: MediumSpringGreen;
+  opacity: 1;
+  font-weight: 700;
+  transform: rotate(0deg);
+}
+
+/* 'About' Section Social Media Buttons */
 .intro svg,
 .intro .social-media {
   padding: 0 1em 0 1em;
@@ -396,29 +400,26 @@ header a:visited,
 .intro .social-media {
   padding: 2em 0;
 }
-
-/* .intro {
-  padding-bottom: 2em;
-} */
-
-.tag-button p {
-  padding: 0 0 0 1em;
-  text-indent: 0;
-}
+/* End of 'About' Section Social Media Buttons */
 
 .social-media p {
   text-indent: 0.4em;
-  /* font-weight: 700;
-  font-style: italic; */
+}
+
+#traede-background,
+#skyTr33-background,
+#wanderSpace-background,
+#neonSkies-background,
+#otherWorks-background {
+  width: 100%;
+  height: 14em;
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #traede-background {
   background-image: url(../images/traede-background.png);
-}
-
-#traede .circle,
-#traede .card-button {
-  background-color: #F9A159;
 }
 
 #skyTr33-background {
@@ -448,28 +449,6 @@ header a:visited,
   background-color: RoyalBlue;
 }
 
-/* @media screen and (max-width: 768px) {
-html {
-font-size: 18px;
-}
-
-.container,
-.card-description,
-.tag-container {
-padding: 2em;
-margin: 0;
-}
-
-.l-grid {
-padding: 0;
-display: block;
-}
-
-.sidebar-styles {
-display: none;
-}
-} */
-
 @media screen and (max-width: 768px) and (max-width:1024px) {
   html {
     font-size: calc(14px + 6 * ((100vw - 320px) / 680));
@@ -495,7 +474,7 @@ display: none;
     grid-template-columns: 1fr;
   }
 
-  .sidebar-styles {
+  #sidebar {
     display: none;
   }
 
@@ -542,9 +521,3 @@ display: none;
     background-attachment: scroll;
   }
 }
-/*
-@media only screen and (max-heght: 900px) {
-  .sidebar-styles ul {
-    display: none;
-  }
-} */
