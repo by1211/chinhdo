@@ -1,165 +1,72 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,600,700');
 
-/*
-** BASE
-** Definition: Default styling of the website. Includes pseudo classes and decendent
-** selectors.
-*/
+/* Basic Theme ********************************************/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, a:link, a:active, a:hover, a:visited, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  text-decoration: none;
+  list-style: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgb(33, 33, 33);
+}
+
+/* Block ************************************************/
 
 html {
-  background-color: white;
+  height: 100%;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Montserrat', sans-serif;
-  color: black;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: Snow;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  font-weight: 700;
+header,
+footer {
+  background-color: #212121;
 }
-
-h1 {
-  font-size: 48px;
-  color: white;
-}
-
-h2 {
-  padding: 1em 0 1em 0;
-  font-size: 34px;
-}
-
-h3 {
-  padding: 1em 0 1em 0;
-  font-size: 26px;
-}
-
-p {
-  max-width: 800px;
-  margin: 0;
-  padding: 1em 0 1em 0;
-  text-align: justify;
-  text-indent: 2em;
-  line-height: 25px;
-}
-
-ul {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: none;
-}
-
-a:link,
-a:active,
-a:visited {
-  text-decoration: none;
-  color: white;
-}
-
-svg {
-  width: 2.5rem;
-  text-align: center;
-  fill: white;
-}
-
-/*
-** LAYOUT
-** Definition: Major building blocks of the website.
-*/
 
 header {
-  margin: 0;
-  padding: 0 4em 0 4em;
-  display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  position: -webkit-sticky;
-  position: sticky;
+  justify-content: space-around;
 }
 
-header ul {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-header li {
-  padding: 0 1em 0 1em;
-}
-
-.l-grid {
+main {
+  flex: 1 0 auto;
   display: grid;
-  grid-template-columns: 1fr 4fr 1fr;
-  grid-auto-rows: minmax(120px, auto);
-  padding: 0 4em 0 4em;
+  grid-template-columns: repeat(5, 1fr);
+  position: relative;
+  align-items: center;
 }
 
 footer {
-  position: -webkit-sticky;
-  position: sticky;
+  position: relative;
+  flex-shrink: 0;
+  justify-content: space-evenly;
 }
-
-#skills-list {
-  grid-column: 1 / 2;
-  grid-row: 3 / 4;
-}
-
-#sidebar {
-  grid-column: 1 / 2;
-  grid-row: 5 / 7;
-  position: sticky;
-  position: -webkit-sticky;
-  top: 0;
-}
-
-#about {
-  grid-column: 2 / 3;
-  grid-row: 3 / 4;
-}
-
-#portfolio {
-  grid-column: 2 / 3;
-  grid-row: 5 / 6;
-}
-
-#contact {
-  grid-column: 2 / 3;
-  grid-row: 7 / 8;
-}
-
-#secondLevel-container {
-  grid-column: 2 / 3;
-  grid-row: 3 / 4;
-}
-
-#secondLevel-sidebar {
-  grid-column: 1 / 2;
-  grid-row: 2 / 4;
-}
-
-/*
-** MODULE
-** Definition: Minor, unique, standalone components makes up of a section or the entire
-** page. Avoid using IDs.
-*/
 
 .parallax {
   width: 100%;
-  height: 95%;
+  height: 100%;
   position: absolute;
   background-image: url("../images/banner.png");
   background-attachment: fixed;
@@ -169,327 +76,92 @@ footer {
   z-index: -1;
 }
 
-.banner {
-  margin: 0;
-  padding: 4em;
-  height: 6em;
+/* Element **********************************************/
+
+h1, h2 {
+	text-align: center;
 }
 
-.container {
-  padding: 4em;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  text-align: center;
-  background: white;
+h1 {
+	padding-bottom: 60px;
+	font-size: 36px;
+	font-weight: 700;
 }
 
-/* Card Module
-** Displays design thumbnail & link to Second Level */
-.card-container {
-  width: 100%;
-  margin-top: 10em;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  color: white;
-  position: relative;
+h2 {
+	padding-bottom: 28px;
+	font-size: 28px;
 }
 
-.card-logo {
-  margin: auto;
-  position: absolute;
-  height: 250px;
-  top: -65px;
+h3 {
+	padding-bottom: 18px;
+	font-size: 18px;
 }
 
-.card-description {
-  padding: 2em 4em 2em 4em;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-  color: black;
-  background-color: white;
+p {
+	text-indent: 14px;
+	line-height: 1.6;
 }
 
-.tag-container {
-  padding: 1em 0 1em 0;
-  display: flex;
+b {
+	font-weight: 700;
+}
+
+a:hover,
+a:active {
+	fill: rgb(230, 0, 115);
+	color: rgb(230, 0, 115);
+}
+
+.__content {
+  grid-column: 2 / 5;
+  padding: 60px 10%;
+  background-color: Snow;
+}
+
+.__profile-card {
   flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+
 }
 
-.tag-button {
-  height: 30px;
-  padding: 0 10px;
-  margin: 3px 5px;
+.__profile-picture {
+  width: 200px;
+  height: 100px;
+  background-color: gray;
+}
+
+/* Modifier *********************************************/
+
+#--flex {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  background-color: Lavender;
-  border-radius: 40px;
 }
 
-.tag-button p {
-  padding: 0 0 0 1em;
-  text-indent: 0;
-}
-
-.card-button {
-  width: 100%;
-  padding: 1.5em 0 1.5em 0;
+header #--button {
   text-transform: uppercase;
-  text-align: center;
-  background-color: RoyalBlue;
-}
-/* End of Card Module: Displays design thumbnail */
-
-/* Social Media Icons & Link */
-.social-media {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
 }
 
-.social-media a {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-/* End of Social Media Icons & Link */
-
-/*
-** STATE
-** Definition:
-*/
-
-.image-filter {
-  filter: opacity(100%) brightness(80%);
-}
-
-.one-edge-shadow {
-  -webkit-box-shadow: 6px 10px 6px -6px black;
-  -moz-box-shadow: 6px 10px 6px -6px black;
-  box-shadow: 6px 10px 6px -6px rgba(0, 0, 0, 0.4);
-}
-
-.reduce-gap {
-  margin-top: 5em;
-}
-
-/*
-** THEME
-** Defintion: Style definition that overwirtes basic ones. Limiting to color and graphic
-** properties (such as border) for now.
-*/
-
-header,
-header a:link,
-header a:active,
-header a:visited,
-footer {
-  background-color: #102027;
-}
-
-#contact a,
-#contact a:link,
-#contact a:active,
-#contact a:visited {
-  color: black;
-}
-
-header a,
-header a:link,
-header a:active,
-header a:visited {
-  text-transform: uppercase;
+#--button {
+  padding: 0.8em;
+  background-color: rgb(58, 207, 115);
+  color: Snow;
   font-weight: 700;
 }
 
-#logo h1 {
-  font-size: 3.2em;
-  font-weight: 800;
-  text-align: left;
+#--button:hover,
+#--button:active {
+  background-color: rgb(230, 0, 115);
 }
 
-.sidebar-style ul {
-	border-top-width: 1px;
-	border-bottom-width: 1px;
-	border-top-style: solid;
-	border-bottom-style: solid;
+#--white * {
+  color: Snow;
+  fill: Snow;
 }
 
-#sidebar a,
-#sidebar a:link,
-#sidebar a:visited {
-  color: Silver;
-  opacity: 0.5;
-  text-transform: uppercase;
-}
-
-#back-to-top {
-  width: 2em;
-  height: auto;
-  fill: black;
-  transform: rotate(30deg);
-}
-
-#back-to-top:hover {
-  fill: MediumSpringGreen;
-}
-
-#sidebar a:active,
-#sidebar a:hover {
-  color: MediumSpringGreen;
-  opacity: 1;
-  font-weight: 700;
-  transform: rotate(0deg);
-}
-
-/* 'About' Section Social Media Buttons */
-.intro svg,
-.intro .social-media {
-  padding: 0 1em 0 1em;
-  justify-content: center;
-  fill: black;
-}
-
-.intro .social-media {
-  padding: 2em 0;
-}
-/* End of 'About' Section Social Media Buttons */
-
-.social-media p {
-  text-indent: 0.4em;
-}
-
-#traede-background,
-#skyTr33-background,
-#wanderSpace-background,
-#neonSkies-background,
-#otherWorks-background {
-  width: 100%;
-  height: 14em;
-  background-position: right center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-#traede-background {
-  background-image: url(../images/traede-background.png);
-}
-
-#skyTr33-background {
-  /* background-image: url(../images/traede-background.png); */
-  background-color: LightGray;
-}
-
-#wanderSpace-background {
-  /* background-image: url(../images/traede-background.png); */
-  background-color: LightGray;
-}
-
-#neonSkies-background {
-  background-image: url(../images/neonSkies-background.jpg);
-}
-
-#otherWorks-background {
-  /* background-image: url(../images/neonSkies-background.jpg); */
-  background-color: LightGray;
-}
-
-.circle {
-  width: 1em;
-  height: 1em;
-  border-radius: 50%;
-  z-index: 10;
-  background-color: RoyalBlue;
-}
-
-/* Sidebar Module
-** Will only show if sidebar fits screen */
-@media (min-height: 900px) {
-  #sidebar ul {
-
-  }
-}
+/* Responsive Layout*************************************/
 
 @media (max-width: 800px) {
-  html {
-    font-size: calc(14px + 6 * ((100vw - 320px) / 680));
-  }
 
-  .parallax {
-    background-size: 100%;
-    background-position: center;
-    background-size: cover;
-    object-fit: contain;
-  }
-
-  header,
-  .container,
-  .card-description {
-    padding: 2em;
-    margin: 0;
-  }
-
-  .l-grid {
-    display: grid;
-    padding: 0;
-    grid-template-columns: 1fr;
-  }
-
-  #sidebar {
-    display: none;
-  }
-
-  #about {
-    grid-column: 1 / 2;
-    grid-row: 4 / 5;
-  }
-
-  #portfolio {
-    grid-column: 1 / 2;
-    grid-row: 6 / 7;
-  }
-
-  #contact {
-    grid-column: 1 / 2;
-    grid-row: 8 / 9;
-  }
-
-  #blank {
-    grid-column: 1 / 2;
-    grid-row: 10 / 11;
-  }
-
-  .tag-container {
-    width: 100%;
-  }
-
-  .card-logo {
-    height: 180px;
-    top: -35px;
-  }
-
-  footer,
-  .social-media {
-    flex-direction: row;
-    justify-content: center;
-    align-content: center;
-  }
 }
 
 /* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
