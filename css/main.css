@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,600,700');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Caption');
 
 /* Basic Theme ********************************************/
 html, body, div, span, applet, object, iframe,
@@ -51,18 +52,19 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 nav {
   display: none;
 }
 
 main {
+  padding: 120px 0;
   flex: 1 0 auto;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: 1fr 7fr 1fr;
+  grid-row-gap: 120px;
   position: relative;
-  align-items: center;
 }
 
 footer {
@@ -80,24 +82,32 @@ footer {
   background-position: right center;
   background-repeat: no-repeat;
   background-size: cover;
-  z-index: -1;
+  z-index: 0;
 }
 
 /* Element **********************************************/
 
-h1, h2 {
-  text-align: center;
-}
-
 h1 {
-  padding-bottom: 60px;
-  font-size: 36px;
+  /* padding-bottom: 60px; */
+  position: absolute;
+  top: -0.4em;
+  right: 0.1em;
+  font-family: 'PT Sans Caption', sans-serif;
+  font-size: 150px;
   font-weight: 700;
+  text-transform: lowercase;
+  color: #ff0064;
+  text-shadow: -4px 3px 0 Snow, -14px 7px 0 #0000ff;
+  /* text-shadow: 0 1px 0px #0000ff, 1px 0 0px #0000ff, 1px 2px 1px #0000ff, 2px 1px 1px #0000ff, 2px 3px 2px #0000ff, 3px 2px 2px #0000ff, 3px 4px 2px #0000ff, 4px 3px 3px #ff0064, 4px 5px 3px #ff0064, 5px 4px 2px #ff0064, 5px 6px 2px #ff0064, 6px 5px 2px #ff0064, 6px 7px 1px #ff0064, 7px 6px 1px #ff0064, 7px 8px 0px #ff0064, 8px 7px 0px #ff0064; */
+  /* transform: skew(20deg); */
+  text-align: left;
+  z-index: 1;
 }
 
 h2 {
   padding-bottom: 28px;
   font-size: 28px;
+  text-align: center;
 }
 
 h3 {
@@ -108,10 +118,17 @@ h3 {
 p {
   text-indent: 14px;
   line-height: 1.6;
+  text-align: justify;
+  z-index: 1;
 }
 
 b {
   font-weight: 700;
+}
+
+svg {
+  width: 35px;
+  height: auto;
 }
 
 a:hover,
@@ -121,21 +138,62 @@ a:active {
 }
 
 .__content {
-  grid-column: 2 / 5;
-  padding: 60px 10%;
+  grid-column: 2 / 3;
+  padding: 180px 10% 60px 10%;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-color: Snow;
+  /* overflow: hidden; */
+}
+
+.__content div {
+  padding-bottom: 60px;
+}
+
+.__content div:last-child {
+  padding-bottom: 0;
 }
 
 .__profile-card {
+  min-height: 350px;
+  max-width: 80%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 30px;
 }
 
 .__profile-picture {
-  width: 100%;
-  height: 100%;
-  background-color: gray;
+  width: 500px;
+  height: 200px;
+  padding-bottom: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: LightGray;
+  z-index: 0;
+}
+
+.__profile-card p {
+  grid-column: 2 / 3;
+}
+
+.__social-media {
+  grid-column: 2 / 3;
+  max-width: 100%;
+  justify-content: space-evenly;
+}
+
+.__social-media a {
+  fill: LightGray;
+  z-index: 1;
+}
+
+.__social-media a:hover,
+.__social-media a:active {
+  fill: rgb(230, 0, 115);
+  color: rgb(230, 0, 115);
 }
 
 .__copyright::before {
@@ -143,13 +201,25 @@ a:active {
 }
 
 .__parallelogram {
-  width: 100px;
+  width: 50%;
   height: 100%;
   position: absolute;
   top: 0;
-  right: -20px;
-  transform: skew(20deg);
-  background-color: red;
+  right: 20px;
+  /* transform: skew(20deg); */
+  background-color: #6500fa;
+}
+
+.__parallelogram::before {
+  content: " ";
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 100px solid red;
 }
 
 /* Modifier *********************************************/
