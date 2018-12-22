@@ -42,12 +42,19 @@ body {
 
 header,
 footer {
+  padding: 1% 5%;
+  position: relative;
   background-color: #212121;
 }
 
 header {
+  flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  overflow: hidden;
+}
+nav {
+  display: none;
 }
 
 main {
@@ -79,38 +86,38 @@ footer {
 /* Element **********************************************/
 
 h1, h2 {
-	text-align: center;
+  text-align: center;
 }
 
 h1 {
-	padding-bottom: 60px;
-	font-size: 36px;
-	font-weight: 700;
+  padding-bottom: 60px;
+  font-size: 36px;
+  font-weight: 700;
 }
 
 h2 {
-	padding-bottom: 28px;
-	font-size: 28px;
+  padding-bottom: 28px;
+  font-size: 28px;
 }
 
 h3 {
-	padding-bottom: 18px;
-	font-size: 18px;
+  padding-bottom: 18px;
+  font-size: 18px;
 }
 
 p {
-	text-indent: 14px;
-	line-height: 1.6;
+  text-indent: 14px;
+  line-height: 1.6;
 }
 
 b {
-	font-weight: 700;
+  font-weight: 700;
 }
 
 a:hover,
 a:active {
-	fill: rgb(230, 0, 115);
-	color: rgb(230, 0, 115);
+  fill: rgb(230, 0, 115);
+  color: rgb(230, 0, 115);
 }
 
 .__content {
@@ -120,19 +127,34 @@ a:active {
 }
 
 .__profile-card {
-  flex-direction: row;
-
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
 }
 
 .__profile-picture {
-  width: 200px;
-  height: 100px;
+  width: 100%;
+  height: 100%;
   background-color: gray;
+}
+
+.__copyright::before {
+  content: "\00a9" "\00a0";
+}
+
+.__parallelogram {
+  width: 100px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: -20px;
+  transform: skew(20deg);
+  background-color: red;
 }
 
 /* Modifier *********************************************/
 
-#--flex {
+.--flex {
   display: flex;
   flex-wrap: wrap;
 }
