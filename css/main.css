@@ -27,6 +27,56 @@ time, mark, audio, video {
   color: rgb(33, 33, 33);
 }
 
+h1 { /* Comic style header */
+  /* padding-bottom: 60px; */
+  position: absolute;
+  top: -0.4em;
+  right: 0.1em;
+  font-family: 'PT Sans Caption', sans-serif;
+  font-size: 150px;
+  font-weight: 700;
+  text-transform: lowercase;
+  color: #ff0064;
+  text-shadow: -4px 3px 0 Snow, -14px 7px 0 #0000ff;
+  /* text-shadow: 0 1px 0px #0000ff, 1px 0 0px #0000ff, 1px 2px 1px #0000ff, 2px 1px 1px #0000ff, 2px 3px 2px #0000ff, 3px 2px 2px #0000ff, 3px 4px 2px #0000ff, 4px 3px 3px #ff0064, 4px 5px 3px #ff0064, 5px 4px 2px #ff0064, 5px 6px 2px #ff0064, 6px 5px 2px #ff0064, 6px 7px 1px #ff0064, 7px 6px 1px #ff0064, 7px 8px 0px #ff0064, 8px 7px 0px #ff0064; */
+  /* transform: skew(20deg); */
+  text-align: left;
+  z-index: 1;
+}
+
+h2 {
+  padding-bottom: 28px;
+  font-size: 28px;
+  text-align: center;
+}
+
+h3 {
+  padding-bottom: 18px;
+  font-size: 18px;
+}
+
+p {
+  text-indent: 14px;
+  line-height: 1.6;
+  text-align: justify;
+  z-index: 1;
+}
+
+b {
+  font-weight: 700;
+}
+
+svg {
+  width: 35px;
+  height: auto;
+}
+
+a:hover,
+a:active {
+  fill: rgb(230, 0, 115);
+  color: rgb(230, 0, 115);
+}
+
 /* Block ************************************************/
 
 html {
@@ -87,54 +137,10 @@ footer {
 
 /* Element **********************************************/
 
-h1 {
-  /* padding-bottom: 60px; */
-  position: absolute;
-  top: -0.4em;
-  right: 0.1em;
-  font-family: 'PT Sans Caption', sans-serif;
-  font-size: 150px;
-  font-weight: 700;
-  text-transform: lowercase;
-  color: #ff0064;
-  text-shadow: -4px 3px 0 Snow, -14px 7px 0 #0000ff;
-  /* text-shadow: 0 1px 0px #0000ff, 1px 0 0px #0000ff, 1px 2px 1px #0000ff, 2px 1px 1px #0000ff, 2px 3px 2px #0000ff, 3px 2px 2px #0000ff, 3px 4px 2px #0000ff, 4px 3px 3px #ff0064, 4px 5px 3px #ff0064, 5px 4px 2px #ff0064, 5px 6px 2px #ff0064, 6px 5px 2px #ff0064, 6px 7px 1px #ff0064, 7px 6px 1px #ff0064, 7px 8px 0px #ff0064, 8px 7px 0px #ff0064; */
-  /* transform: skew(20deg); */
-  text-align: left;
-  z-index: 1;
-}
-
-h2 {
-  padding-bottom: 28px;
-  font-size: 28px;
-  text-align: center;
-}
-
-h3 {
-  padding-bottom: 18px;
-  font-size: 18px;
-}
-
-p {
-  text-indent: 14px;
-  line-height: 1.6;
-  text-align: justify;
-  z-index: 1;
-}
-
-b {
-  font-weight: 700;
-}
-
-svg {
-  width: 35px;
-  height: auto;
-}
-
-a:hover,
-a:active {
-  fill: rgb(230, 0, 115);
-  color: rgb(230, 0, 115);
+.__side-bar {
+  grid-column: 1 / 2;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
 .__content {
@@ -194,6 +200,11 @@ a:active {
 .__social-media a:active {
   fill: rgb(230, 0, 115);
   color: rgb(230, 0, 115);
+}
+
+.__logo {
+  width: 250px;
+  height: auto;
 }
 
 .__copyright::before {
