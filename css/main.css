@@ -142,6 +142,13 @@ footer {
 
 /* Element **********************************************/
 
+.bg-card {
+  width: 300px;
+  height: 250px;
+  margin: 1em;
+  background-color: lightgray;
+}
+
 .content {
   width: 70%;
   padding: 8em 8em;
@@ -163,11 +170,6 @@ footer {
   content: "\00a9" "\00a0";
 }
 
-.profile-card {
-  min-height: 350px;
-  max-width: 80%;
-}
-
 .social-media {
   width: 100%;
   justify-content: space-evenly;
@@ -176,6 +178,11 @@ footer {
 .logo {
   /* width: 250px; */
   height: auto;
+}
+
+.logo-portfolio {
+  flex-direction: row;
+  justify-content: center;
 }
 
 .parallelogram {
