@@ -4,7 +4,7 @@
 /* Basic Theme ********************************************/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, a:link, a:active, a:hover, a:visited, abbr, acronym, address, big, cite, code,
+abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
@@ -19,10 +19,16 @@ time, mark, audio, video {
   padding: 0;
   border: 0;
   vertical-align: baseline;
-  text-decoration: none;
   list-style: none;
   font-family: 'Montserrat', sans-serif;
   color: rgb(33, 33, 33);
+}
+
+a, a:link, a:active, a:hover, a:visited {
+  margin: 0;
+  text-decoration: none;
+  /* font-weight: 400; */
+  color: rgb(33, 33, 33); 
 }
 
 a:hover,
@@ -58,7 +64,7 @@ h2, h3 {
 
 h3 {
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 700;
 }
 
 header, footer {
@@ -66,7 +72,8 @@ header, footer {
 }
 
 p {
-  margin: 1em 8em;
+  width: 75%;
+  margin: 1em 0;
   font-size: 16px;
   font-weight: 400;
   text-indent: 14px;
@@ -91,8 +98,6 @@ p {
 body {
   width: 100%;
   height: 100%;
-  display: flex;
-  flex-direction: column;
   background-color: Snow;
 }
 
@@ -176,6 +181,8 @@ svg {
   width: 75%;
   padding: 8em 0 16em 0;
   position: relative;
+  display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -191,8 +198,8 @@ svg {
 } */
 
 .copyright {
+  width: 100%;
   margin: 0;
-  text-align: right;
   color: white;
 }
 
@@ -249,6 +256,16 @@ svg {
   z-index: 1;
 }
 
+.screenshot-card {
+  padding: 2em 0;
+  flex-direction: column;
+  align-items: center;
+}
+
+.screenshot-card a {
+  margin-bottom: 2em;
+}
+
 .social-media a:hover tooltip {
   visibility: visible;
 }
@@ -259,16 +276,19 @@ header #button {
   text-transform: uppercase;
 }
 
-#button {
-  padding: 0.8em;
-  background-color: #3acf73;
-  color: Snow;
+.button {
+  width: 800px;
+  padding: 1.5em 0;
   font-weight: 700;
+  text-align: center;
+  /* color: Snow; */
+  background-color: lightgray;
 }
 
-#button:hover,
-#button:active {
-  background-color: #e60073;
+.button:hover,
+.button:active {
+  color: Snow;
+  background-color: #ff0064;
 }
 
 .--flex {
