@@ -98,7 +98,7 @@ p {
 body {
   width: 100%;
   height: 100%;
-  background-color: Snow;
+  background-color: snow;
 }
 
 footer {
@@ -177,6 +177,21 @@ svg {
   filter: brightness(50%); */
 }
 
+.button {
+  width: 800px;
+  padding: 1.5em 0;
+  font-weight: 700;
+  text-align: center;
+  /* color: Snow; */
+  background-color: lightgray;
+}
+
+.button:hover,
+.button:active {
+  color: Snow;
+  background-color: #ff0064;
+}
+
 .content {
   width: 75%;
   padding: 8em 0 16em 0;
@@ -239,21 +254,27 @@ svg {
   border-top: 100px solid red;
 }
 
-.social-media {
-  width: 100%;
-  margin: 1em 0;
-  justify-content: space-evenly;
+.tint {
+  width: 800px;
+  height: 422px;
+  /* background-color: #FFB74D; */
 }
 
 .tooltip {
   /* visibility: hidden; */
   width: 120px;
-  background-color: black;
+  background-color: #ff0064;
   color: #fff;
   text-align: center;
   border-radius: 6px;
   /* Position the tooltip */
   z-index: 1;
+}
+
+.social-media {
+  width: 100%;
+  margin: 1em 0;
+  justify-content: space-evenly;
 }
 
 .screenshot-card {
@@ -266,37 +287,22 @@ svg {
   margin-bottom: 2em;
 }
 
+.screenshot-card img {  
+  width: 800px;
+  height: 422px;
+  opacity: 1;
+}
+
 .social-media a:hover tooltip {
   visibility: visible;
 }
 
 /* Modifier *********************************************/
 
-header #button {
-  text-transform: uppercase;
-}
-
-.button {
-  width: 800px;
-  padding: 1.5em 0;
-  font-weight: 700;
-  text-align: center;
-  /* color: Snow; */
-  background-color: lightgray;
-}
-
-.button:hover,
-.button:active {
-  color: Snow;
-  background-color: #ff0064;
-}
-
 .--flex {
   display: flex;
   flex-wrap: wrap;
 }
-
-/* START of Logo Backgrounds */
 
 .bg-card:nth-child(2) {
   background-image: url("../images/backgrounds/NS-bg.jpg");
@@ -329,8 +335,6 @@ header #button {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
-/* END of Logo Backgrounds */
 
 /* Responsive Layout*************************************/
 
