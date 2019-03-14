@@ -54,6 +54,11 @@ h1 {   /* Comic style header */
   text-shadow: -5px 4px 0 Snow, -14px 7px 0 #0000ff;
 }
 
+h3 {
+  font-size: 16px;
+  font-weight: 400;
+}
+
 p {
   font-size: 16px;
   font-weight: 400;
@@ -109,7 +114,7 @@ nav {
 }
 
 main {
-  padding: 8em 0;
+  padding: 8em 0 6em 0;
   flex: 1 0 auto;
   position: relative;
   flex-direction: column;
@@ -140,16 +145,23 @@ footer {
   z-index: 0;
 }
 
+.placeholder {
+  width: 768px;
+  height: 400px;
+  background-color: lightgray;
+}
+
 /* Element **********************************************/
 
 p {
-  margin: 0 8em;
+  margin: 1em 8em;
 }
 
 .bg-card {
   width: 350px;
   height: 250px;
   margin: 1em;
+  display: flex;
   align-items: center;
   justify-content: center;
   background-color: lightgray;
@@ -172,9 +184,13 @@ p {
   padding-bottom: 0;
 }
 
-.content div:last-child {
+/* .content div:last-child {
   padding-bottom: 0;
   margin-bottom: 0;
+} */
+
+.copyright {
+  margin: 0;
 }
 
 .copyright::before {
@@ -183,6 +199,7 @@ p {
 
 .social-media {
   width: 100%;
+  margin: 1em 0;
   justify-content: space-evenly;
 }
 
