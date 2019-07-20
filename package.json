@@ -5,13 +5,17 @@
   "main": "index.js",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build ./"
+    "build": "parcel build index.html"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/doinby/chinhdo.co.git"
   },
-  "author": "Chinh K. Do | @doinby",
+  "author": {
+    "name": "Chinh K. Do",
+    "email": "contact@chinhdo.co",
+    "url": "https://chinhdo.co"
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/doinby/chinhdo.co/issues"
@@ -19,9 +23,6 @@
   "homepage": "https://github.com/doinby/chinhdo.co#readme",
   "devDependencies": {
     "bootstrap": "^4.3.1",
-    "jquery": "^3.4.1",
-    "parcel-bundler": "^1.12.3",
-    "popper.js": "^1.15.0",
-    "sass": "^1.22.7"
+    "parcel-bundler": "^1.12.3"
   }
 }

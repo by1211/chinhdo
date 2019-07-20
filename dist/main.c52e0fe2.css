@@ -1,2 +1,97 @@
 
+/* This stylesheet is organized using BEM methology *******/
+/* Basic Theme ********************************************/
+
+html {
+    font-family: 'Montserrat', sans-serif;
+    color: #212121;
+}
+
+header {
+    background: #212121;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 28px;
+}
+
+h4 {
+    font-size: 22px;
+}
+
+p {
+    font-size: 14px;
+    line-height: 24px;
+}
+
+
+/* Block ************************************************/
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    width: 100%;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+footer {
+    flex-shrink: 0;
+}
+
+
+/* Element **********************************************/
+
+#logo {
+    width: 48px;
+}
+
+#welcome-section {
+    height: 100vh;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Modifier *********************************************/
+
+footer .copyright-holder:before {
+    content: "\00a9" "\00a0";
+}
+
+.--flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+/* Responsive *******************************************/
+
+@media (max-width: 800px) {}
+
 /*# sourceMappingURL=/main.c52e0fe2.css.map */
