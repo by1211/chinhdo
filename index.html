@@ -15,32 +15,41 @@
 </head>
 <body>
   <header>
-    <img id="logo" src="images/logos/cd-rgbInvert.svg" alt="CD Logo">
-    <nav id="navbar">
-      <ul class="nav">
-        <li class="nav-item">
-          <a href="" class="nav-link active">Home</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
-          aria-expanded="false">Dropdown</a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Tr&#230;de</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Separated link</a>
-          </div>
-        </li>
-        <li class="nav-item"></li>
-        <li class="nav-item"></li>
-      </ul>
+    <nav id="navbar" class="navbar fixed-top navbar-expand navbar-dark bg-dark" role="navigation">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+        <img id="logo" src="images/logos/cd-rgbInvert.svg" alt="CD Logo">
+      </a>
+      
+      <div class="collapse navbar-collapse" id="navbar">
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a href="#welcome-section" class="nav-link active">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+            aria-expanded="false">Portfolio</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#portfolio">Tr&#230;de</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Separated link</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link">Contact</a>
+          </li>
+        </ul>
+      </div>
     </nav>
   </header>
   
   <main>
     <article class="container">
-      <section id="welcome-section">
+      <section id="welcome-section" class="jumbotron">
         <h1 class="text-primary">Profile</h1>
         <p>My name is Chinh, I'm a designer based in Sydney who specializes in communication and interactivity production. Computer
           graphic, still or otherwise, is my biggest passion and have always been the centrality for all my creative process and
@@ -49,35 +58,17 @@
           <p>On the occasion when I'm not nudging pixels, my time is spent on exploring local food scene, runnng, playing video game
             or doing volunteering service. Like most millenials, I'm addicted to memes, dad jokes and coffee.</p>
           </section>
-          <section id="projects">
+          
+          <section id="portfolio" class="section">
             <h1 class="text-primary">Portfolio</h1>
             
           </section>
+          <section id="contact" class="section">
+            <h1 class="text-primary">Contact</h1>
+          
+          </section>
         </article>
       </main>
-      
-      <ul class="nav nav-pills">
-        <li class="nav-item">
-          <a class="nav-link active" href="#">Active</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
-          aria-expanded="false">Dropdown</a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Separated link</a>
-          </div>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
       
       <footer>
         <address><a id="profile-link" href="https://github.com/doinby" target="_blank">@doinby</a></address>
@@ -85,8 +76,12 @@
       </footer>
       
       <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
-      <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-      <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
       <script src="js/script.js"></script>
     </body>
     </html>

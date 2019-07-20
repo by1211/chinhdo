@@ -43,6 +43,7 @@
 @import "../node_modules/bootstrap/scss/print";
 
 /* Variables ********************************************/
+
 @mixin flex-element($direction) {
     display: flex;
     flex-wrap: wrap;
@@ -59,15 +60,8 @@ body {
     display: flex;
     flex-direction: column;
     margin: 0;
+    position: realtive;
 }
-
-// header {
-//     nav {
-//         ul {
-//             @include flex-element(row);
-//         }
-//     }
-// }
 
 main {
     flex: 1 0 auto;
@@ -84,6 +78,10 @@ footer {
 }
 
 #welcome-section {
+    height: 100vh;
+}
+
+#portfolio, #contact {
     height: 100vh;
 }
 
