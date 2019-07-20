@@ -1,0 +1,27 @@
+{
+  "name": "chinhdo.co",
+  "version": "1.0.0",
+  "description": "My Portfolio",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/doinby/chinhdo.co.git"
+  },
+  "author": "Chinh K. Do | @doinby",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/doinby/chinhdo.co/issues"
+  },
+  "homepage": "https://github.com/doinby/chinhdo.co#readme",
+  "devDependencies": {
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.1",
+    "parcel-bundler": "^1.12.3",
+    "popper.js": "^1.15.0",
+    "sass": "^1.22.7"
+  }
+}
