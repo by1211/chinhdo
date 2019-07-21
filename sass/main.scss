@@ -3,8 +3,8 @@
 // @import '../node_modules/bootstrap/scss/bootstrap.scss';
 
 @import "../node_modules/bootstrap/scss/functions";
-@import "customVariables";
 @import "../node_modules/bootstrap/scss/variables";
+@import "customVariables";
 @import "../node_modules/bootstrap/scss/mixins";
 
 @import "../node_modules/bootstrap/scss/root";
@@ -65,6 +65,10 @@ body {
 
 main {
     flex: 1 0 auto;
+    section {
+        // add the 5th biggest space from $spacer
+        padding: map-get($spacers, 5); 
+    }
 }
 
 footer {
@@ -81,8 +85,13 @@ footer {
     height: 100vh;
 }
 
-#portfolio, #contact {
-    height: 100vh;
+.jumbotron {
+    @include flex-element(row);
+    align-content: center;
+}
+
+.badge-container span {
+    margin: map-get($spacers, 1); 
 }
 
 /* Modifier *********************************************/

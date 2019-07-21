@@ -1,10 +1,36 @@
 $font-family-sans-serif: Montserrat; 
+
+$blue:    #007bff !default;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #e83e8c !default;
+$red:     #dc3545 !default;
+$orange:  #fd7e14 !default;
+$yellow:  #ffc107 !default;
+$green:   #28a745 !default;
+$teal:    #20c997 !default;
+$cyan:    #17a2b8 !default;
+
 $primary: #2979FF;
 $secondary: #F50057;
-$body-bg: #FAFAFA; 
+$body-bg: $white; 
+
+$custom-colors: (
+"graphic":       $blue,
+"illustration":  $yellow,
+"branding":      $purple,
+"prototype":     $teal,
+"webdesign":     $orange
+);
+
+// Create custom badges for design jobs
+@each $job-type, $color-label in $custom-colors {
+    .badge-#{$job-type} {
+        background: $color-label;
+        color: $white;
+    }
+}
+
 $jumbotron-bg: $body-bg;
-// header {background: #212121};
 
 $enable-responsive-font-sizes: true;
-
-$jumbotron-padding: 8rem;
