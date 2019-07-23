@@ -61,6 +61,8 @@ body {
     flex-direction: column;
     margin: 0;
     position: realtive;
+    font-family: 'Montserrat', sans-serif;
+    // line-height: map-get($spacers, 4);
 }
 
 main {
@@ -78,7 +80,11 @@ footer {
 /* Element **********************************************/
 
 #logo {
-    width: 48px;
+    width: 64px;
+}
+
+.nav-link, .dropdown-item {
+    color: $white;
 }
 
 #welcome-section {
