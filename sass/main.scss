@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
 
+@import "../node_modules/materialize-css/sass/materialize.scss";
+@import 'customVariables';
+
 /* Variables ********************************************/
 
 @mixin flex-element($direction) {
@@ -13,14 +16,61 @@
     padding: 0;
 }
 
+$custom-colors: (
+"graphic":       #00B0FF,
+"illustration":  #FFEA00,
+"logo":          #D500F9,   
+"branding":      #651FFF,
+"prototype":     #1DE9B6,
+"webdesign":     #FF9100
+);
+
+// Create custom badges for design jobs
+@each $job-type, $color-label in $custom-colors {
+    .chip-#{$job-type} {
+        background: $color-label;
+        color: #fff;
+    }
+}
+
+$spacer: 1em !default;
+$spacers: () !default;
+$spacers: map-merge(
+(
+0: 0,
+1: ($spacer * .25),
+2: ($spacer * .5),
+3: $spacer,
+4: ($spacer * 1.5),
+5: ($spacer * 3)
+),
+$spacers
+);
+
 /* Block ************************************************/
 
 html {
     height: 100%;
 }
 
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {    
+    position: relative;
+}
+
+nav {
+    @extend .grey, .darken-4;
+    @extend .white-text;
+}
+
 main {
     flex: 1 0 auto;
+    section:first-child {
+        margin-top: 10em;
+    }
 }
 
 footer {
@@ -28,5 +78,81 @@ footer {
 }
 
 /* Element **********************************************/
+
+#logo {
+    width: 64px;
+}
+
+.parallax {
+    width: 100%;
+    height: 600px;
+    position: absolute;
+    background-image: url("../images/backgrounds/banner.png");
+    background-attachment: fixed;
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+
+h1 {
+    position: absolute;
+    margin: 0;
+    top: -48px;
+    right: -48px;
+    font-size: 90px;
+    font-weight: 700;
+    text-transform: lowercase;
+    color: $secondary-color;
+    text-shadow: -3px 2px 0 Snow, -11px 4px 0 #0000ff;
+}
+
+h3 {
+    text-transform: capitalize;
+}
+
+section {
+    @extend .section;
+    position: relative;
+    padding: 4em 4em;
+    background: white;
+    margin: 4em 0;
+}
+
+article {
+    @include flex-element(column);
+    align-items: center;
+    padding: 4em 0;
+    
+    .chip-container {
+        @include flex-element(row);
+        align-items: center;
+        margin: map-get($spacers, 3);
+        h3, .chip {
+            margin: 0 map-get($spacers, 1) 0 0;
+        }
+    }
+    
+    p, .chip-container {
+        width: 100%;
+    }
+    
+    div {
+        margin: map-get($spacers, 1);
+    }
+
+    .p-banner {
+        position: relative;
+    }
+
+    .p-logo {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+}
 
 /* Modifier *********************************************/

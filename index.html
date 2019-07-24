@@ -13,48 +13,97 @@
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body data-spy="scroll" data-target="#navbar" data-offset="0">
-  <header>
-    <a class="navbar-brand" href="#">
+  <header class="navbar-fixed">
+    <nav role="navigation">
       <img id="logo" src="images/logos/cd-rgbInvert.svg" alt="CD Logo">
-    </a>
-    
-  </header>
-  
-  <main data-spy="scroll" data-target="#navbar" data-offset="0">
-    <article class="container" data-spy="scroll" data-target="#navbar" data-offset="0">
-      <section id="welcome-section" class="jumbotron">
-        <h1 class="text-primary">Profile</h1>
-        <p>My name is Chinh, I'm a designer based in Sydney who specializes in communication and interactivity production. Computer
-          graphic, still or otherwise, is my biggest passion and have always been the centrality for all my creative process and
-          craftmanship. My workflow is highly adaptable within agile developement context, though I also excel in working
-          independently.</p>
-          <p>On the occasion when I'm not nudging pixels, my time is spent on exploring local food scene, runnng, playing video game
-            or doing volunteering service. Like most millenials, I'm addicted to memes, dad jokes and coffee.</p>
-          </section>
-          
-          <section id="projects">
-            <h1 class="text-primary">Portfolio</h1>
-            <div id="traede">
-              <h2>Tr&#230;de</h2>
-            </div>
-            <div id="skytr33">
-              <h2>SkyTr33</h2>
-              <a href="https://doinby.github.io/skytr33.com/">Live Demo</a>
-            </div>
-          </section>
-          <section id="contact">
-            <h1 class="text-primary">Contact</h1>
-            
-          </section>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Home</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#other-project">Others Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      
+      <!-- Mobile menu -->
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+</header>
+
+<div class="parallax"></div>
+<main class="container">
+  <section id="hero-banner">
+    <h1>Profile</h1>
+    <p class="text-flow">My name is Chinh, I'm a designer based in Sydney who specializes in communication and interactivity production. Computer
+      graphic, still or otherwise, is my biggest passion and have always been the centrality for all my creative process and
+      craftmanship. My workflow is highly adaptable within agile developement context, though I also excel in working
+      independently.</p>
+      <p>On the occasion when I'm not nudging pixels, my time is spent on exploring local food scene, runnng, playing video game
+        or doing volunteering service. Like most millenials, I'm addicted to memes, dad jokes and coffee.</p>
+      </section>
+      
+      <section>
+        <h1 id="portfolio">Portfolio</h1>
+        <article id="Traede" class="scrollspy">
+          <div class="p-banner"></div>
+          <div class="chip-container">
+            <h3>Tr&#230;de</h3>
+          </div>
+          <p class="text-flow">Træde is a financial blockchain trading platform for secure real and virtual assets transaction. At Træde, I worked closely with the CEO and Marketer to create a modern, trust-worthy brand. Træde was my first exposure to the startup ecosystem, in which I learned to be independent and think in big picture. I also learned to take advantage of public domain, CC, royalty-free resources and engage with startup community for advice and mentorship.</p>    
+          <a href="" class="waves-effect waves-light btn">View More</a>      
         </article>
-      </main>
-      
-      <footer>
-        <address><a id="profile-link" href="https://github.com/doinby" target="_blank">@doinby</a></address>
-        <address><a href="https://www.linkedin.com/in/chinhkdo/">/chinhkdo</a></address>
-      </footer>
-      
-     <script src="js/jquery-3.4.1.js"></script>
-      <script src="js/script.js"></script>
-    </body>
-    </html>
+        <article id="Skytr33" class="scrollspy">
+          <div class="p-banner"></div>
+          <div class="chip-container">
+            <h3>SkyTr33</h3>
+          </div>
+          <p class="text-flow">Previously known as 'Quantum Mechanics', SkyTr33 had completely rebranded itself in hope of capturing world-wide attention of future virtual reality and augmented reality consumers. 
+          </p>          
+        </article>
+        <article id="WanderSpace" class="scrollspy">
+          <div class="p-banner"></div>
+          <div class="chip-container">
+            <h3>Wander Space</h3>
+          </div>
+          <p class="text-flow">Embark on an immersive, simulated journey through the solar system with Alexa, a virtual
+            assistant. Play fetch with the space puppy, Enzo, and discover gravitational differences between planet.
+          </p>
+        </article>
+        <article id="FoodGiving" class="scrollspy">
+          <div class="p-banner"></div>
+          <div class="chip-container">
+            <h3>Food Giving</h3>
+          </div>
+          <p class="text-flow">Food Giving is a P2P web application aiming to reduce food waste by connecting people who want to give food away with those who need them.
+          </p>
+        </article>
+        <!-- <article id="NeonSkies" class="scrollspy">
+          <div class="p-banner"></div>
+          <div class="chip-container">
+            <h3>Neon Skies</h3>
+          </div>
+          <p class="text-flow">
+          </p>
+        </article> -->
+      </section>
+      <section id="other-projects">
+        <h1>Other Projects</h1>
+      </section>
+      <section id="contact">
+        <h1>Contact</h1>
+        
+      </section>
+    </main>
+    
+    <footer>
+      <address><a id="profile-link" href="https://github.com/doinby" target="_blank">@doinby</a></address>
+      <address><a href="https://www.linkedin.com/in/chinhkdo/">/chinhkdo</a></address>
+    </footer>
+    
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="node_modules/materialize-css/dist/js/materialize.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+  </html>
