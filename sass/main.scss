@@ -50,6 +50,11 @@
     flex-direction: $direction;
 }
 
+@mixin no-space() {
+    margin: 0;
+    padding: 0;
+}
+
 /* Block ************************************************/
 
 html {
@@ -79,13 +84,18 @@ footer {
 
 /* Element **********************************************/
 
-#logo {
-    width: 64px;
+.navbar-brand {
+    @include no-space();
+    #logo {width: 64px;}
 }
 
 .nav-link, .dropdown-item {
     color: $white;
 }
+
+// .active {
+//     color: $red;
+// }
 
 #welcome-section {
     height: 100vh;
