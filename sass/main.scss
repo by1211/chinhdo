@@ -61,7 +61,7 @@ header {
     position: relative;
 }
 
-nav {
+nav, footer {
     @extend .grey, .darken-4;
     @extend .white-text;
 }
@@ -80,7 +80,7 @@ footer {
 /* Element **********************************************/
 
 #logo {
-    width: 64px;
+    height: 64px;
 }
 
 .parallax {
@@ -119,39 +119,72 @@ section {
     margin: 4em 0;
 }
 
-article {
-    @include flex-element(column);
-    align-items: center;
-    padding: 4em 0;
-    
+.collapsible {    
+    img { 
+        width: 50%; 
+    }    
+    h5 { 
+        color: $input-disabled-color; 
+    }    
+    p { 
+        width: 100%; 
+    }
     .chip-container {
         @include flex-element(row);
         align-items: center;
-        margin: map-get($spacers, 3);
         h3, .chip {
             margin: 0 map-get($spacers, 1) 0 0;
         }
     }
-    
-    p, .chip-container {
-        width: 100%;
+    .p-banner {        
+        @include flex-element(row);
+        align-content: center;
+        height: 200px;
+        overflow: hidden;
+        img {
+            width: 100%;
+        }
     }
-    
-    div {
-        margin: map-get($spacers, 1);
+    .collection {
+        @include flex-element(row);
+        justify-items: center;
+        align-items: center;
+        padding: map-get($spacers, 2);
+        @extend .z-depth-0;
+        @extend .grey, .lighten-3;
+        .thumbnail {
+            width: 120px;
+            max-height: 80px;     
+            margin-right: map-get($spacers, 2);  
+            @extend .z-depth-2;
+            overflow: hidden;
+            img {
+                width: 150%;
+            }
+        }
     }
-
-    .p-banner {
-        position: relative;
+    .palette {
+        display: grid;
+        grid-template-columns: repeat(4, 96px);
+        grid-template-rows: 64px;
     }
-
-    .p-logo {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: auto;
+    .mark-container {
+        display: grid;
+        grid-template-columns: repeat(4, 128px);
+        grid-template-rows: 128px;
+        justify-items: center;
+        align-items: center;
+        div {
+            @include flex-element(row);
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+        img {
+            width: auto;
+            height: 96px;
+        }
     }
 }
 

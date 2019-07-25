@@ -15,20 +15,22 @@
 <body data-spy="scroll" data-target="#navbar" data-offset="0">
   <header class="navbar-fixed">
     <nav role="navigation">
-      <img id="logo" src="images/logos/cd-rgbInvert.svg" alt="CD Logo">
-      <ul class="right hide-on-med-and-down">
-        <li><a href="#">Home</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#other-project">Others Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+      <div class="container">
+        <img id="logo" src="images/logos/cd-rgbInvert.png" alt="CD Logo">
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#">Home</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#other-project">Others Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
       
       <!-- Mobile menu -->
-      <ul id="nav-mobile" class="sidenav">
+      <!-- <ul id="nav-mobile" class="sidenav">
         <li><a href="#">Navbar Link</a></li>
       </ul>
       <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-    </div>
+    </div> -->
   </nav>
 </header>
 
@@ -45,15 +47,22 @@
       </section>
       
       <section>
-        <h1 id="portfolio">Portfolio</h1>
-        <article id="Traede" class="scrollspy">
-          <div class="p-banner"></div>
-          <div class="chip-container">
-            <h3>Tr&#230;de</h3>
-          </div>
-          <p class="text-flow">Træde is a financial blockchain trading platform for secure real and virtual assets transaction. At Træde, I worked closely with the CEO and Marketer to create a modern, trust-worthy brand. Træde was my first exposure to the startup ecosystem, in which I learned to be independent and think in big picture. I also learned to take advantage of public domain, CC, royalty-free resources and engage with startup community for advice and mentorship.</p>    
-          <a href="" class="waves-effect waves-light btn">View More</a>      
-        </article>
+        <h1 id="portfolio">Portfolio</h1>        
+        <ul class="collapsible">
+          <li id="Traede">
+            <div class="chip-container collapsible-header">
+              <h3>Tr&#230;de</h3>
+            </div>
+            <div class="collapsible-body">
+              <div class="p-banner">
+                <img src="images/Traede/banner.jpg" alt="" class="materialboxed">
+              </div>
+                <ul class="collection"></ul>
+              <h5 id="palette">Palette</h5>
+              <h5 id="logomark">Logo Mark</h5>
+            </div>
+          </li>
+        </ul>
         <article id="Skytr33" class="scrollspy">
           <div class="p-banner"></div>
           <div class="chip-container">
@@ -79,14 +88,6 @@
           <p class="text-flow">Food Giving is a P2P web application aiming to reduce food waste by connecting people who want to give food away with those who need them.
           </p>
         </article>
-        <!-- <article id="NeonSkies" class="scrollspy">
-          <div class="p-banner"></div>
-          <div class="chip-container">
-            <h3>Neon Skies</h3>
-          </div>
-          <p class="text-flow">
-          </p>
-        </article> -->
       </section>
       <section id="other-projects">
         <h1>Other Projects</h1>
@@ -98,8 +99,10 @@
     </main>
     
     <footer>
-      <address><a id="profile-link" href="https://github.com/doinby" target="_blank">@doinby</a></address>
-      <address><a href="https://www.linkedin.com/in/chinhkdo/">/chinhkdo</a></address>
+      <div class="container">
+        <address><a id="profile-link" href="https://github.com/doinby" target="_blank">@doinby</a></address>
+        <address><a href="https://www.linkedin.com/in/chinhkdo/">/chinhkdo</a></address>
+      </div>
     </footer>
     
     <script src="js/jquery-3.4.1.js"></script>
