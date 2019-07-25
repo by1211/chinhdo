@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+@import "../node_modules/materialize-css/sass/materialize.scss";
+
+/* Variables ********************************************/
+
+@mixin flex-element($direction) {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: $direction;
+}
+
+@mixin no-space() {
+    margin: 0;
+    padding: 0;
+}
+
+$custom-colors: (
+"graphic":       #00B0FF,
+"illustration":  #FFEA00,
+"logo":          #D500F9,   
+"branding":      #651FFF,
+"prototype":     #1DE9B6,
+"webdesign":     #FF9100
+);
+
+// Create custom badges for design jobs
+@each $job-type, $color-label in $custom-colors {
+    .chip-#{$job-type} {
+        background: $color-label;
+        color: #fff;
+    }
+}
+
+$spacer: 1em !default;
+$spacers: () !default;
+$spacers: map-merge(
+(
+0: 0,
+1: ($spacer * .25),
+2: ($spacer * .5),
+3: $spacer,
+4: ($spacer * 1.5),
+5: ($spacer * 3)
+),
+$spacers
+);
+
+/* Responsive *******************************************/
+
+@mixin for-phone-only {
+    @media (max-width: 599px) { @content; }
+}@mixin for-tablet-portrait-up {
+    @media (min-width: 600px) { @content; }
+}@mixin for-tablet-landscape-up {
+    @media (min-width: 900px) { @content; }
+}@mixin for-desktop-up {
+    @media (min-width: 1200px) { @content; }
+}@mixin for-big-desktop-up {
+    @media (min-width: 1800px) { @content; }
+}
+
+/* Block ************************************************/
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {    
+    position: relative;
+    height: 48px;
+    nav, .container, #logo, ul, li, a {
+        height: 48px;
+    }
+    nav .container {
+        @include flex-element(row);
+        justify-content: space-between;
+        @include for-phone-only {
+            justify-content: space-between;
+        }
+        ul li a {
+            line-height: 3;
+        }
+    }
+    #logo {
+        padding:  map-get($spacers, 2);
+    }
+}
+
+nav {
+    @extend .grey, .darken-4;
+    @extend .white-text;
+}
+
+main {
+    flex: 1 0 auto;
+    section:first-child {
+        margin-top: 10em;
+        @include for-phone-only {
+            margin-top: 2em;
+        }
+    }
+}
+
+footer {
+    flex-shrink: 0;
+    .container {
+        @include flex-element(row);
+        justify-content: space-between;
+        align-content: center;
+        height: 48px;
+        a {
+            text-decoration: none;
+        }
+        .copyright-holder:before { 
+            content:"\00a9" "\00a0"; 
+        }
+    }
+}
+
+/* Element **********************************************/
+
+// Fix issue with navbar overlay
+.navbar-fixed {
+   z-index: 999; 
+}
+
+#logo {
+    height: 64px;
+}
+
+.parallax {
+    width: 100%;
+    height: 650px;
+    position: absolute;
+    top: 0;
+    background-image: url("../images/p-banner.png");
+    background-attachment: fixed;
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+
+h1 {
+    position: absolute;
+    margin: 0;
+    top: -48px;
+    right: -38px;
+    font-size: 96px;
+    font-weight: 700;
+    text-transform: lowercase;
+    color: $secondary-color;
+    text-shadow: -4px 3px 0 Snow, -13px 6px 0 #0000ff;
+    @include for-phone-only {
+        left: 0.5em;
+        top: 0;
+        font-size: 42px;
+        text-shadow: -3px 2px 0 Snow, -7px 4px 0 #0000ff;
+    }
+}
+
+h3 {
+    text-transform: capitalize;
+}
+
+section {
+    @extend .section;
+    position: relative;
+    padding: 4em 4em;
+    background: white;
+    margin: 4em 0;
+    @include for-phone-only {
+        padding: 3em 1em;
+        margin: 1em 0;
+    }
+}
+
+.contact {
+    @include flex-element(row);
+    justify-content: space-evenly;
+    li a svg {
+        width: 32px;
+        height: 32px;
+        fill: #bdbdbd ; 
+    }
+}
+
+.collapsible {    
+    margin: 4em 0;
+    @include for-phone-only {
+        margin: 1.5em 0;
+    }
+    img { 
+        width: 50%; 
+    }    
+    h5 { 
+        color: $input-disabled-color; 
+    }    
+    p { 
+        width: 100%; 
+    }
+    .expand-button {
+        width: 100%;
+        background: rgba(0,0,0,0);
+    }
+    .waves-effect.waves-pink .waves-ripple {
+        background-color: rgba(245,0,87 ,0.65);
+    }
+    .waves-effect.waves-blue .waves-ripple {
+        background-color: rgba(61,90,254 ,1);
+    }
+    .chip-container {
+        @include flex-element(row);
+        align-items: center;
+        h3 {
+            width: 100%;
+        }
+        .chip {
+            position: relative;
+            padding-left: 2.5em;
+            margin: map-get($spacers, 1);
+            @extend .grey, .lighten-3;            
+            #circle {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0.35em;
+                height: 24px;
+                width: 24px;
+                margin: auto;
+                border-radius: 50%
+            }
+        }
+    }
+    .collapsible-body {
+        overflow: hidden;
+        @include for-phone-only {
+            padding: map-get($spacers, 2);
+        }
+        .p-banner {        
+            @include flex-element(row);
+            align-content: center;
+            height: 200px;
+            overflow: hidden;
+            @include for-phone-only {
+                width: 100vw;
+                position: relative;
+                left: 50%;
+                right: 50%;
+                margin-left: -50vw;
+                margin-right: -50vw;
+            }
+            img {
+                width: 100%;
+            }
+        }
+        .collection {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: 4em;
+            width: 100%;
+            padding: map-get($spacers, 2);  
+            @extend .grey, .lighten-3;
+            .thumbnail {
+                width: 6em;
+                max-height: 4em;  
+                margin: map-get($spacers, 2); 
+                @extend .z-depth-2; 
+                overflow: hidden;
+                img {
+                    width: 150%;
+                }
+            }
+            @include for-phone-only {
+                @include flex-element(row);
+                padding: map-get($spacers, 1);
+                .thumbnail {
+                    margin: map-get($spacers, 1);
+                }
+            }
+        }
+        .palette {
+            display: grid;
+            grid-template-columns: repeat(4, 96px);
+            grid-template-rows: 64px;
+            @include for-phone-only {
+                grid-template-columns: repeat(4, 32px);
+                grid-template-rows: 16px;
+            }
+        }
+        .mark-container {
+            display: grid;
+            grid-template-columns: repeat(4, 128px);
+            grid-template-rows: 128px;
+            justify-items: center;
+            align-items: center;
+            @include for-phone-only {
+                grid-template-columns: repeat(4, 80px);
+                grid-template-rows: 80px;
+            }
+            div {
+                @include flex-element(row);
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+            }
+            img {
+                width: auto;
+                height: 96px;
+                @include for-phone-only {
+                    height: 64px;
+                }
+            }
+        }
+        .web-container a {
+            display: block;
+            width: 14.5em;
+            margin-bottom: map-get($spacers, 3);  
+        }
+    }    
+}
