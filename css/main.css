@@ -8196,7 +8196,7 @@ footer .container .copyright-holder:before {
 
 .parallax {
   width: 100%;
-  height: 100%;
+  height: 24%;
   position: absolute;
   top: 0;
   background-image: url("../images/p-banner.png");
@@ -8254,19 +8254,6 @@ section:first-child {
   padding: 2em;
   background: white;
 }
-#hero-banner img {
-  position: absolute;
-  top: -80px;
-  height: 14em;
-  z-index: -1;
-}
-@media (max-width: 599px) {
-  #hero-banner img {
-    top: -50px;
-    right: 0;
-    height: 10em;
-  }
-}
 #hero-banner .social-media {
   display: flex;
   flex-wrap: wrap;
@@ -8277,6 +8264,20 @@ section:first-child {
   width: 32px;
   height: 32px;
   fill: #bdbdbd;
+}
+
+.pug {
+  position: absolute;
+  top: -80px;
+  height: 14em;
+  z-index: -1;
+}
+@media (max-width: 599px) {
+  .pug {
+    top: -50px;
+    right: 0;
+    height: 10em;
+  }
 }
 
 .collapsible {
@@ -8454,6 +8455,7 @@ section:first-child {
 
 #contact article {
   padding: 2em;
+  background: white;
 }
 
 #circle {
