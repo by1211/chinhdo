@@ -72,23 +72,21 @@ body {
 
 header {    
     position: relative;
-    height: 48px;
+    height: 48px !important;
     nav, .container, #logo, ul, li, a {
         height: 48px;
     }
     nav .container {
-        @include flex-element(row);
-        justify-content: space-between;
-        @include for-phone-only {
-            justify-content: space-between;
-        }
+        @include flex-element(row-reverse);
         ul li a {
             line-height: 3;
         }
     }
-    #logo {
-        padding:  map-get($spacers, 2);
-    }
+}
+
+#logo {
+    padding:  map-get($spacers, 2);
+    height: 96px;
 }
 
 nav {
@@ -98,12 +96,6 @@ nav {
 
 main {
     flex: 1 0 auto;
-    section:first-child {
-        margin-top: 10em;
-        @include for-phone-only {
-            margin-top: 2em;
-        }
-    }
 }
 
 footer {
@@ -116,8 +108,19 @@ footer {
         a {
             text-decoration: none;
         }
+        .copyright-holder {
+            text-align: right;
+        }
         .copyright-holder:before { 
             content:"\00a9" "\00a0"; 
+        }
+        @include for-phone-only {
+            flex-direction: column;
+            align-content: flex-start;
+            height: auto;
+            footer .container a, div {
+                width: 100%;
+            }
         }
     }
 }
@@ -126,16 +129,13 @@ footer {
 
 // Fix issue with navbar overlay
 .navbar-fixed {
-   z-index: 999; 
-}
-
-#logo {
-    height: 64px;
+    z-index: 999; 
 }
 
 .parallax {
     width: 100%;
-    height: 650px;
+    height: 100%;
+    // height: 650px;
     position: absolute;
     top: 0;
     background-image: url("../images/p-banner.png");
@@ -149,7 +149,7 @@ footer {
 h1 {
     position: absolute;
     margin: 0;
-    top: -48px;
+    top: -104px;
     right: -38px;
     font-size: 96px;
     font-weight: 700;
@@ -157,9 +157,9 @@ h1 {
     color: $secondary-color;
     text-shadow: -4px 3px 0 Snow, -13px 6px 0 #0000ff;
     @include for-phone-only {
-        left: 0.5em;
-        top: 0;
-        font-size: 42px;
+        left: 0.1em;
+        top: -1em;
+        font-size: 48px;
         text-shadow: -3px 2px 0 Snow, -7px 4px 0 #0000ff;
     }
 }
@@ -171,12 +171,33 @@ h3 {
 section {
     @extend .section;
     position: relative;
-    padding: 4em 4em;
-    background: white;
-    margin: 4em 0;
+    margin: 8em 0;
     @include for-phone-only {
-        padding: 3em 1em;
-        margin: 1em 0;
+        margin: 4em 0;
+    }
+}
+section:first-child {
+    margin-top: 12em;
+    @include for-phone-only {
+        margin-top: 8em;
+    }
+}
+
+#hero-banner {
+    article {
+        padding: 2em; 
+        background: white;
+    }
+    img {
+        position: absolute;
+        top: -80px;
+        height: 14em;
+        z-index: -1;
+        @include for-phone-only {
+            top: -50px;
+            right: 0;
+            height: 10em;
+        }
     }
 }
 
@@ -191,7 +212,7 @@ section {
 }
 
 .collapsible {    
-    margin: 4em 0;
+    margin: 0 0 4em 0;
     @include for-phone-only {
         margin: 1.5em 0;
     }
@@ -204,9 +225,45 @@ section {
     p { 
         width: 100%; 
     }
+    .collapsible-header {
+        flex-direction: column;
+        position: relative;
+        .chip-container {
+            @include flex-element(row);
+            align-items: center;
+            position: absolute;
+            top: 1em;
+            right: 1em;
+            @include for-phone-only {
+                position: static;
+                margin-left: 0;
+            }
+            h3 {
+                width: 100%;
+            }
+            .chip {
+                position: relative;
+                padding-left: 2.5em;
+                margin: map-get($spacers, 1);
+                @extend .grey, .lighten-3;          
+                #circle {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0.35em;
+                    height: 24px;
+                    width: 24px;
+                    margin: auto;
+                    border-radius: 50%
+                }
+            }
+        }
+    }
     .expand-button {
         width: 100%;
+        margin-bottom: -2em;
         background: rgba(0,0,0,0);
+        @extend .grey-text, .text-darken-2;
     }
     .waves-effect.waves-pink .waves-ripple {
         background-color: rgba(245,0,87 ,0.65);
@@ -214,29 +271,7 @@ section {
     .waves-effect.waves-blue .waves-ripple {
         background-color: rgba(61,90,254 ,1);
     }
-    .chip-container {
-        @include flex-element(row);
-        align-items: center;
-        h3 {
-            width: 100%;
-        }
-        .chip {
-            position: relative;
-            padding-left: 2.5em;
-            margin: map-get($spacers, 1);
-            @extend .grey, .lighten-3;            
-            #circle {
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                left: 0.35em;
-                height: 24px;
-                width: 24px;
-                margin: auto;
-                border-radius: 50%
-            }
-        }
-    }
+    
     .collapsible-body {
         overflow: hidden;
         @include for-phone-only {
@@ -260,16 +295,14 @@ section {
             }
         }
         .collection {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            grid-template-rows: 4em;
-            width: 100%;
+            @include flex-element(row);
+            align-items: center;
             padding: map-get($spacers, 2);  
             @extend .grey, .lighten-3;
             .thumbnail {
-                width: 6em;
-                max-height: 4em;  
-                margin: map-get($spacers, 2); 
+                width: 108px;
+                max-height: 64px;  
+                margin: map-get($spacers, 1); 
                 @extend .z-depth-2; 
                 overflow: hidden;
                 img {
@@ -280,7 +313,8 @@ section {
                 @include flex-element(row);
                 padding: map-get($spacers, 1);
                 .thumbnail {
-                    margin: map-get($spacers, 1);
+                    width: 96px;
+                    height: 48px;
                 }
             }
         }

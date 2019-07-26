@@ -71,7 +71,7 @@ $(document).ready(function () {
         });
         
         // Alternate ripple effect's color
-        $('#' + myProjects[i].name).children('.chip-container').addClass(function() {
+        $('#' + myProjects[i].name).children('.collapsible-header').addClass(function() {
             if (i % 2 === 0) {
                 return 'waves-effect waves-pink';
             } else return 'waves-effect waves-blue'
@@ -82,13 +82,18 @@ $(document).ready(function () {
             .append('<div id="circle" class="chip-' + myProjects[i].job[j] + '"></div>')
             .append(myProjects[i].job[j])
             .addClass('chip')
-            .appendTo($('#' + myProjects[i].name).children('.chip-container'));
+            .appendTo($('#' + myProjects[i].name).find('.chip-container'));
         }
         
         // Add comapny's profile text AFTER badges are generated
-        $('#' + myProjects[i].name).children('.chip-container')
-        .append('<p class="text-flow">' + myProjects[i].about + '</p>')
+        // $('#' + myProjects[i].name).children('.chip-container')
+        // .append('<p class="text-flow">' + myProjects[i].about + '</p>')
+        // .append('<a class="expand-button btn-flat btn-small">view more</a>');
+        $companyProfile = $('<p class="text-flow">')
+        .text(myProjects[i].about)
+        .insertAfter($('#' + myProjects[i].name).find('.chip-container'))
         .append('<a class="expand-button btn-flat btn-small">view more</a>');
+        
         
         // Create image album
         for (j = 0; j < mediaList.length; j++) { 
@@ -159,4 +164,5 @@ $(document).ready(function () {
     });
     $('.slider').slider();
     $('.collapsible').collapsible();
+    $('.dropdown-trigger').dropdown();
 });
