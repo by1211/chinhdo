@@ -11,25 +11,29 @@ $(document).ready(function () {
             name: "Traede",
             job: ["branding", "graphic", "prototype"],
             about: "Træde is a financial blockchain trading platform for real and virtual assets transaction",
-            palette: ["#1f2640", "#2d3b60", "#f57921"]
+            palette: ["#1f2640", "#2d3b60", "#f57921"],
+            tool: ["adobe-photoshop", "adobe-illustrator", "adobe-indesign"]
         },
         {
             name: "Skytr33",
             job: ["branding", "webdesign"],
             about: "Previously known as 'Quantum Mechanics', SkyTr33 had completely rebranded itself in hope of capturing world-wide attention of future virtual reality and augmented reality consumers",
-            palette: ["black", "white", "#d0f2fb"]
+            palette: ["black", "white", "#d0f2fb"],
+            tool: ["adobe-illustrator", "adobe-indesign", "html-5", "css3"]
         },
         {
             name: "FoodGiving",
             job: ["branding", "webdesign", "prototype"],
             about: "Food Giving is a P2P web application aiming to reduce food waste by connecting people who want to give food away with those who need them.",
-            palette: ["#E60073", "#00E676", "#2A2C33"]
+            palette: ["#E60073", "#00E676", "#2A2C33"],
+            tool: ["adobe-illustrator", "html-5", "css3", "javascript"]
         },
         {
             name: "WanderSpace",
             job: ["branding"],
             about: "Embark on an immersive, simulated journey through the solar system with Alexa, a virtual assistant. Play fetch with the space puppy Enzo, and discover gravitational differences between planet",
-            palette: ["#4ad9d9", "#5e646c", "#f22430", "#ffcb05"]
+            palette: ["#4ad9d9", "#5e646c", "#f22430", "#ffcb05"],
+            tool: ["adobe-illustrator", "blender-3d"]
         }
     ]
     
@@ -84,11 +88,6 @@ $(document).ready(function () {
             .addClass('chip')
             .appendTo($('#' + myProjects[i].name).find('.chip-container'));
         }
-        
-        // Add comapny's profile text AFTER badges are generated
-        // $('#' + myProjects[i].name).children('.chip-container')
-        // .append('<p class="text-flow">' + myProjects[i].about + '</p>')
-        // .append('<a class="expand-button btn-flat btn-small">view more</a>');
         $companyProfile = $('<p class="text-flow">')
         .text(myProjects[i].about)
         .insertAfter($('#' + myProjects[i].name).find('.chip-container'))
@@ -151,6 +150,14 @@ $(document).ready(function () {
             $(this).parent('.material-placeholder').parent('.thumbnail').remove();
             $(this).parent('.mark-bg').remove();
         });   
+        
+        // Create list of tools
+        $tool = $('<div class="tool">').insertAfter($('#' + myProjects[i].name + ' #tool'));
+        for (j = 0; j < myProjects[i].tool.length; j++) {
+            $colorBlock = $('<img>')
+                .attr('src', 'images/tool-icons/icons8-' + myProjects[i].tool[j] + '-48.png')
+            .appendTo($('#' + myProjects[i].name).find('.tool'));
+        }
     }    
     
     // Materialize JS components

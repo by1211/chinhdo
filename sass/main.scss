@@ -302,8 +302,8 @@ section:first-child {
         }
         .palette {
             display: grid;
-            grid-template-columns: repeat(4, 96px);
-            grid-template-rows: 64px;
+            grid-template-columns: repeat(4, 128px);
+            grid-template-rows: 32px;
             @include for-phone-only {
                 grid-template-columns: repeat(4, 32px);
                 grid-template-rows: 16px;
@@ -334,7 +334,11 @@ section:first-child {
                 }
             }
         }
-        .web-container a {
+        .tool img {
+            height: 48px;
+            width: auto;
+        }
+        .url-container a {
             display: block;
             width: 14.5em;
             margin-bottom: map-get($spacers, 3);  

@@ -8388,8 +8388,8 @@ section:first-child {
 }
 .collapsible .collapsible-body .palette {
   display: grid;
-  grid-template-columns: repeat(4, 96px);
-  grid-template-rows: 64px;
+  grid-template-columns: repeat(4, 128px);
+  grid-template-rows: 32px;
 }
 @media (max-width: 599px) {
   .collapsible .collapsible-body .palette {
@@ -8428,7 +8428,11 @@ section:first-child {
     height: 64px;
   }
 }
-.collapsible .collapsible-body .web-container a {
+.collapsible .collapsible-body .tool img {
+  height: 48px;
+  width: auto;
+}
+.collapsible .collapsible-body .url-container a {
   display: block;
   width: 14.5em;
   margin-bottom: 1em;
