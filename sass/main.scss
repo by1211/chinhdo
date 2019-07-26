@@ -198,16 +198,15 @@ section:first-child {
             right: 0;
             height: 10em;
         }
-    }
-}
-
-.contact {
-    @include flex-element(row);
-    justify-content: space-evenly;
-    li a svg {
-        width: 32px;
-        height: 32px;
-        fill: #bdbdbd ; 
+    }    
+    .social-media {
+        @include flex-element(row);
+        justify-content: space-evenly;
+        li a svg {
+            width: 32px;
+            height: 32px;
+            fill: #bdbdbd ; 
+        }
     }
 }
 
@@ -241,22 +240,6 @@ section:first-child {
             h3 {
                 width: 100%;
             }
-            .chip {
-                position: relative;
-                padding-left: 2.5em;
-                margin: map-get($spacers, 1);
-                @extend .grey, .lighten-3;          
-                #circle {
-                    position: absolute;
-                    top: 0;
-                    bottom: 0;
-                    left: 0.35em;
-                    height: 24px;
-                    width: 24px;
-                    margin: auto;
-                    border-radius: 50%
-                }
-            }
         }
     }
     .expand-button {
@@ -271,7 +254,6 @@ section:first-child {
     .waves-effect.waves-blue .waves-ripple {
         background-color: rgba(61,90,254 ,1);
     }
-    
     .collapsible-body {
         overflow: hidden;
         @include for-phone-only {
@@ -358,4 +340,34 @@ section:first-child {
             margin-bottom: map-get($spacers, 3);  
         }
     }    
+}
+
+.chip {
+    position: relative;
+    padding-left: 2.5em;
+    margin: map-get($spacers, 1);
+    @extend .grey, .lighten-3;   
+}
+
+#small-project .card {
+    width: 12em;
+    padding: map-get($spacers, 2);
+    .card-content {
+        padding: 0;
+    }
+}
+
+#contact article {
+    padding: 2em;
+}
+
+#circle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0.35em;
+    height: 24px;
+    width: 24px;
+    margin: auto;
+    border-radius: 50%
 }
