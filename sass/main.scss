@@ -135,7 +135,6 @@ footer {
 .parallax {
     width: 100%;
     height: 24%;
-    // height: 650px;
     position: absolute;
     top: 0;
     background-image: url("../images/p-banner.png");
@@ -144,6 +143,13 @@ footer {
     background-repeat: no-repeat;
     background-size: cover;
     z-index: -1;
+    @include for-phone-only {
+        width: 100vw;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+    }
 }
 
 h1 {
@@ -198,19 +204,6 @@ section:first-child {
         }
     }
 }
-
-
-.pug {
-    position: absolute;
-    top: -80px;
-    height: 14em;
-    z-index: -1;
-    @include for-phone-only {
-        top: -50px;
-        right: 0;
-        height: 10em;
-    }
-}    
 
 .collapsible {    
     margin: 0 0 4em 0;
@@ -336,10 +329,6 @@ section:first-child {
                 }
             }
         }
-        .tool img {
-            height: 48px;
-            width: auto;
-        }
         .url-container a {
             display: block;
             width: 14.5em;
@@ -355,17 +344,76 @@ section:first-child {
     @extend .grey, .lighten-3;   
 }
 
-#small-project .card {
-    width: 12em;
-    padding: map-get($spacers, 2);
-    .card-content {
-        padding: 0;
-    }
+.tool img {
+    height: 48px;
+    width: auto;
 }
 
-#contact article {
-    padding: 2em;
-    background: white;
+#small-project {
+    @include flex-element(row);
+    justify-content: center;
+    .card {
+        width: 16em;
+        padding: map-get($spacers, 2);
+        margin: map-get($spacers, 2);
+        .card-image {
+            @include flex-element(column);
+            justify-content: center;
+            height: 16em;
+            overflow: hidden;
+            img {
+                width: 100%;
+            }
+        }
+        .card-content {
+            padding: 0;
+        }
+        .card-action {
+            @include no-space();
+            a {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+} 
+
+#contact {
+    margin-top: 10em;
+    margin-bottom: 2em;
+    article {
+        padding: 2em;
+        background: white;
+    }
+} 
+
+
+
+.pug-container {
+    position: relative;
+    width: 100%;
+    height: 5.5em;
+    overflow: hidden;
+    .pug-array {
+        @include flex-element(column);
+        justify-content: space-evenly;
+        position: absolute;    
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        width: 100vw;
+        max-height: 10em;
+        bottom: -75px;
+        z-index: -1;
+        .pug {
+            // width: auto;
+            @include for-phone-only {
+                max-height: 8em;
+                width: auto;
+            }
+        } 
+    }   
 }
 
 #circle {

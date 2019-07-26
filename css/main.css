@@ -8206,6 +8206,15 @@ footer .container .copyright-holder:before {
   background-size: cover;
   z-index: -1;
 }
+@media (max-width: 599px) {
+  .parallax {
+    width: 100vw;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
+}
 
 h1 {
   position: absolute;
@@ -8264,20 +8273,6 @@ section:first-child {
   width: 32px;
   height: 32px;
   fill: #bdbdbd;
-}
-
-.pug {
-  position: absolute;
-  top: -80px;
-  height: 14em;
-  z-index: -1;
-}
-@media (max-width: 599px) {
-  .pug {
-    top: -50px;
-    right: 0;
-    height: 10em;
-  }
 }
 
 .collapsible {
@@ -8429,10 +8424,6 @@ section:first-child {
     height: 64px;
   }
 }
-.collapsible .collapsible-body .tool img {
-  height: 48px;
-  width: auto;
-}
 .collapsible .collapsible-body .url-container a {
   display: block;
   width: 14.5em;
@@ -8445,17 +8436,80 @@ section:first-child {
   margin: 0.25em;
 }
 
+.tool img {
+  height: 48px;
+  width: auto;
+}
+
+#small-project {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
 #small-project .card {
-  width: 12em;
+  width: 16em;
   padding: 0.5em;
+  margin: 0.5em;
+}
+#small-project .card .card-image {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  height: 16em;
+  overflow: hidden;
+}
+#small-project .card .card-image img {
+  width: 100%;
 }
 #small-project .card .card-content {
   padding: 0;
 }
+#small-project .card .card-action {
+  margin: 0;
+  padding: 0;
+}
+#small-project .card .card-action a {
+  width: 100%;
+  height: 100%;
+}
 
+#contact {
+  margin-top: 10em;
+  margin-bottom: 2em;
+}
 #contact article {
   padding: 2em;
   background: white;
+}
+
+.pug-container {
+  position: relative;
+  width: 100%;
+  height: 5.5em;
+  overflow: hidden;
+}
+.pug-container .pug-array {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;
+  max-height: 10em;
+  bottom: -75px;
+  z-index: -1;
+}
+@media (max-width: 599px) {
+  .pug-container .pug-array .pug {
+    max-height: 8em;
+    width: auto;
+  }
 }
 
 #circle {
