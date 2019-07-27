@@ -351,7 +351,7 @@ section:first-child {
 
 #small-project {
     @include flex-element(row);
-    justify-content: center;
+    justify-content: space-between;
     .card {
         width: 16em;
         padding: map-get($spacers, 2);
@@ -367,6 +367,11 @@ section:first-child {
         }
         .card-content {
             padding: 0;
+            .chip {
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
         }
         .card-action {
             @include no-space();
@@ -390,29 +395,32 @@ section:first-child {
 
 
 .pug-container {
-    position: relative;
+    @include flex-element(row);
+    justify-content: center;
     width: 100%;
-    height: 5.5em;
+    height: 128px;
     overflow: hidden;
+    position: relative;
+    @include for-phone-only {
+        height: 72px;
+    }
     .pug-array {
-        @include flex-element(column);
-        justify-content: space-evenly;
-        position: absolute;    
-        left: 50%;
-        right: 50%;
-        margin-left: -50vw;
-        margin-right: -50vw;
-        width: 100vw;
-        max-height: 10em;
-        bottom: -75px;
-        z-index: -1;
-        .pug {
-            // width: auto;
-            @include for-phone-only {
-                max-height: 8em;
-                width: auto;
-            }
-        } 
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        position: absolute;
+        bottom: -4em;
+        height: inherit;
+        @include for-phone-only {
+            grid-template-columns: repeat(4, 1fr);
+            bottom: -2.5em;
+        }
+    } 
+    .pug {
+        width: 128px;
+        height: inherit;
+        @include for-phone-only {
+            width: 72px;
+        }
     }   
 }
 

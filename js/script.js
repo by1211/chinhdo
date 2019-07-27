@@ -206,7 +206,6 @@ $(document).ready(function () {
                 $('#' + currentProjectName).find('.card-image').addClass('materialboxed');
             break; 
         }
-        
         killEmptyParent();
     }
     
@@ -219,7 +218,7 @@ $(document).ready(function () {
     }
 
     // Spawn pug array
-    for (i = 0; i < 8; i++) {
+    for (i = 0; i < 6; i++) {
         $('.pug-array')
         .append('<img class="pug" src="images/cdPug-rgbPrimary.svg" alt="">');
         
