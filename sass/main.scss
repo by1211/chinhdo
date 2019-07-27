@@ -169,9 +169,10 @@ h1 {
         text-shadow: -3px 2px 0 Snow, -7px 4px 0 #0000ff;
     }
     @include for-tablet-portrait-up {
-        font-size: 48px;
+        font-size: 72px;
+        top: -1.2em;
     }
-    @include for-desktop-up {
+    @include for-tablet-landscape-up() {
         font-size: 96px;
     }
 }
@@ -309,8 +310,8 @@ section:first-child {
         }
         .palette {
             display: grid;
-            grid-template-columns: repeat(4, 128px);
-            grid-template-rows: 32px;
+            grid-template-columns: repeat(4, 3em);
+            grid-template-rows: 128px;
             @include for-phone-only {
                 grid-template-columns: repeat(4, 32px);
                 grid-template-rows: 16px;
@@ -416,21 +417,32 @@ section:first-child {
     @include flex-element(row);
     justify-content: center;
     width: 100%;
-    height: 128px;
-    overflow: hidden;
+    // overflow: hidden;
     position: relative;
+    z-index: -1;
     @include for-phone-only {
         height: 72px;
+    }
+    @include for-tablet-portrait-up() {
+        height: 72px;
+    }
+    @include for-tablet-landscape-up() {
+        height: 128px;
     }
     .pug-array {
         display: grid;
         grid-template-columns: repeat(6, 1fr);
         position: absolute;
-        bottom: -4em;
         height: inherit;
         @include for-phone-only {
             grid-template-columns: repeat(4, 1fr);
             bottom: -2.5em;
+        }
+        @include for-tablet-portrait-up() {
+            bottom: -1.9em;
+        }
+        @include for-tablet-landscape-up() {
+            bottom: -4em;
         }
     } 
     .pug {

@@ -8237,10 +8237,11 @@ h1 {
 }
 @media (min-width: 600px) {
   h1 {
-    font-size: 48px;
+    font-size: 72px;
+    top: -1.2em;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 900px) {
   h1 {
     font-size: 96px;
   }
@@ -8400,8 +8401,8 @@ section:first-child {
 }
 .collapsible .collapsible-body .palette {
   display: grid;
-  grid-template-columns: repeat(4, 128px);
-  grid-template-rows: 32px;
+  grid-template-columns: repeat(4, 3em);
+  grid-template-rows: 128px;
 }
 @media (max-width: 599px) {
   .collapsible .collapsible-body .palette {
@@ -8518,26 +8519,44 @@ section:first-child {
   flex-direction: row;
   justify-content: center;
   width: 100%;
-  height: 128px;
-  overflow: hidden;
   position: relative;
+  z-index: -1;
 }
 @media (max-width: 599px) {
   .pug-container {
     height: 72px;
   }
 }
+@media (min-width: 600px) {
+  .pug-container {
+    height: 72px;
+  }
+}
+@media (min-width: 900px) {
+  .pug-container {
+    height: 128px;
+  }
+}
 .pug-container .pug-array {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   position: absolute;
-  bottom: -4em;
   height: inherit;
 }
 @media (max-width: 599px) {
   .pug-container .pug-array {
     grid-template-columns: repeat(4, 1fr);
     bottom: -2.5em;
+  }
+}
+@media (min-width: 600px) {
+  .pug-container .pug-array {
+    bottom: -1.9em;
+  }
+}
+@media (min-width: 900px) {
+  .pug-container .pug-array {
+    bottom: -4em;
   }
 }
 .pug-container .pug {
