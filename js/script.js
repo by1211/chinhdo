@@ -33,42 +33,45 @@ $(document).ready(function () {
             job: ["branding"],
             about: "Embark on an immersive, simulated journey through the solar system with Alexa, a virtual assistant. Play fetch with the space puppy Enzo, and discover gravitational differences between planet",
             palette: ["#4ad9d9", "#5e646c", "#f22430", "#ffcb05"],
-            tool: ["adobe-photoshop", "adobe-illustrator", "blender-3d"]
+            tool: ["adobe-illustrator", "blender-3d"]
         }
     ]
     
-    var smallProjects = [
+    var otherProjects = [
         {
+<<<<<<< HEAD
             name: "Neon Skies",
             job: ["logo"],
             tool: ["adobe-photoshop"],
             link: ["https://youtu.be/O2VjoI1QUrg", "Watch Demo"]
+=======
+            name: "HeliLabs",
+            job: ["logo"]
+        },
+        {
+            name: "NeonSkies",
+            job: ["logo"]
+>>>>>>> parent of 573b747... finished small project section, added pug array
         },
         {
             name: "Rush",
-            job: ["logo"],
-            tool: ["adobe-illustrator"],
-            link: []
+            job: ["logo"]
         },
         {
-            name: "DrEgg Adventure",
-            job: ["illustration"],
-            tool: ["adobe-photoshop"],
-            link: ["https://www.dreggadventures.com/", "Visit Website"]
+            name: "Dr.Egg Adventure",
+            job: ["illustration"]
         },
         {
-            name: "Blanket Ninja",
-            job: ["webdesign"],
-            tool: ["adobe-photoshop", "html-5", "css3", "javascript"],
-            link: ["https://doinby.github.io/BlanketNinja/", "View Demo"]
+            name: "BlanketNinja",
+            job: ["prototype"]
         }
     ]
     
-    var mediaList = ["namecard", "cover", "eventbrite", "mockup", "render", "screenshot", "sketch", "slogan", "tshirt"];
+    var mediaList = ["namecard", "cover", "eventbrite", "mockup", "tshirt", "screenshot", "slogan"];
     
     // HTML output ///////////////////////////////////// 
     
-    // Generate content for #portfolio
+    // Look through each project in myProjects array and create individual job badges
     for (i = 0; i < myProjects.length; i++) {
         // Create banner
         $projectBanner = $('#' + myProjects[i].name).find('.materialboxed')
@@ -149,18 +152,22 @@ $(document).ready(function () {
                 };
             })
         }
+        // Hide image bound if not found
+        $("img").on("error", function () {
+            $(this).parent('.material-placeholder').parent('.thumbnail').remove();
+            $(this).parent('.mark-bg').remove();
+        });   
         
         // Create list of tools
         $tool = $('<div class="tool">').insertAfter($('#' + myProjects[i].name + ' #tool'));
         for (j = 0; j < myProjects[i].tool.length; j++) {
             $colorBlock = $('<img>')
-            .attr('src', 'images/tool-icons/icons8-' + myProjects[i].tool[j] + '-48.png')
+                .attr('src', 'images/tool-icons/icons8-' + myProjects[i].tool[j] + '-48.png')
             .appendTo($('#' + myProjects[i].name).find('.tool'));
         }
-        
-        killEmptyParent();
     }    
     
+<<<<<<< HEAD
     // Generate content for #small-projects
     for (i = 0; i < smallProjects.length; i++) {
         currentProjectName = smallProjects[i].name.replace(/\s/g, '');
@@ -224,6 +231,8 @@ $(document).ready(function () {
         .append('<img class="pug" src="images/cdPug-rgbPrimary.svg" alt="">');
     }
     
+=======
+>>>>>>> parent of 573b747... finished small project section, added pug array
     // Materialize JS components
     $('.sidenav').sidenav({
         'edge': 'right'

@@ -135,6 +135,7 @@ footer {
 .parallax {
     width: 100%;
     height: 24%;
+    // height: 650px;
     position: absolute;
     top: 0;
     background-image: url("../images/p-banner.png");
@@ -143,9 +144,12 @@ footer {
     background-repeat: no-repeat;
     background-size: cover;
     z-index: -1;
+<<<<<<< HEAD
     @include for-phone-only {
         width: 100%;
     }
+=======
+>>>>>>> parent of 573b747... finished small project section, added pug array
 }
 
 h1 {
@@ -210,6 +214,19 @@ section:first-child {
         }
     }
 }
+
+
+.pug {
+    position: absolute;
+    top: -80px;
+    height: 14em;
+    z-index: -1;
+    @include for-phone-only {
+        top: -50px;
+        right: 0;
+        height: 10em;
+    }
+}    
 
 .collapsible {    
     margin: 0 0 4em 0;
@@ -332,6 +349,10 @@ section:first-child {
                 }
             }
         }
+        .tool img {
+            height: 48px;
+            width: auto;
+        }
         .url-container a {
             display: block;
             width: 14.5em;
@@ -347,6 +368,7 @@ section:first-child {
     @extend .grey, .lighten-3;   
 }
 
+<<<<<<< HEAD
 .tool img {
     height: 48px;
     width: auto;
@@ -425,6 +447,19 @@ section:first-child {
             width: 72px;
         }
     }   
+=======
+#small-project .card {
+    width: 12em;
+    padding: map-get($spacers, 2);
+    .card-content {
+        padding: 0;
+    }
+}
+
+#contact article {
+    padding: 2em;
+    background: white;
+>>>>>>> parent of 573b747... finished small project section, added pug array
 }
 
 #circle {

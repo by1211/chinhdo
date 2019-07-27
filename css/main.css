@@ -8206,11 +8206,14 @@ footer .container .copyright-holder:before {
   background-size: cover;
   z-index: -1;
 }
+<<<<<<< HEAD
 @media (max-width: 599px) {
   .parallax {
     width: 100%;
   }
 }
+=======
+>>>>>>> parent of 573b747... finished small project section, added pug array
 
 h1 {
   position: absolute;
@@ -8281,6 +8284,20 @@ section:first-child {
   width: 32px;
   height: 32px;
   fill: #bdbdbd;
+}
+
+.pug {
+  position: absolute;
+  top: -80px;
+  height: 14em;
+  z-index: -1;
+}
+@media (max-width: 599px) {
+  .pug {
+    top: -50px;
+    right: 0;
+    height: 10em;
+  }
 }
 
 .collapsible {
@@ -8429,6 +8446,10 @@ section:first-child {
     height: 64px;
   }
 }
+.collapsible .collapsible-body .tool img {
+  height: 48px;
+  width: auto;
+}
 .collapsible .collapsible-body .url-container a {
   display: block;
   width: 14.5em;
@@ -8441,6 +8462,7 @@ section:first-child {
   margin: 0.25em;
 }
 
+<<<<<<< HEAD
 .tool img {
   height: 48px;
   width: auto;
@@ -8463,6 +8485,11 @@ section:first-child {
 }
 #small-project .card .card-title {
   font-size: 18px;
+=======
+#small-project .card {
+  width: 12em;
+  padding: 0.5em;
+>>>>>>> parent of 573b747... finished small project section, added pug array
 }
 #small-project .card .card-content {
   padding: 0;
@@ -8473,6 +8500,7 @@ section:first-child {
   top: 0;
   right: 0;
 }
+<<<<<<< HEAD
 #small-project .card .card-action {
   position: absolute;
   bottom: 0;
@@ -8484,16 +8512,15 @@ section:first-child {
 #small-project .card .card-action a {
   width: 100%;
 }
+=======
+>>>>>>> parent of 573b747... finished small project section, added pug array
 
-#contact {
-  margin-top: 10em;
-  margin-bottom: 2em;
-}
 #contact article {
   padding: 2em;
   background: white;
 }
 
+<<<<<<< HEAD
 .pug-container {
   display: flex;
   flex-wrap: wrap;
@@ -8532,6 +8559,8 @@ section:first-child {
   }
 }
 
+=======
+>>>>>>> parent of 573b747... finished small project section, added pug array
 #circle {
   position: absolute;
   top: 0;
