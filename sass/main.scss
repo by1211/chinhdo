@@ -154,30 +154,6 @@ footer {
     }
 }
 
-h1 {
-    position: absolute;
-    margin: 0;
-    top: -104px;
-    right: -38px;
-    font-weight: 700;
-    text-transform: lowercase;
-    color: $secondary-color;
-    text-shadow: -4px 3px 0 Snow, -13px 6px 0 #0000ff;
-    @include for-phone-only {
-        left: 0.1em;
-        top: -0.6em;
-        font-size: 44px;
-        text-shadow: -3px 2px 0 Snow, -7px 4px 0 #0000ff;
-    }
-    @include for-tablet-portrait-up {
-        font-size: 72px;
-        top: -1.2em;
-    }
-    @include for-tablet-landscape-up() {
-        font-size: 96px;
-    }
-}
-
 h3 {
     text-transform: capitalize;
 }
@@ -194,6 +170,29 @@ section {
     margin: 8em 0;
     @include for-phone-only {
         margin: 4em 0;
+    } 
+    h1 {
+        position: absolute;
+        margin: 0;
+        top: -104px;
+        right: -38px;
+        font-weight: 700;
+        text-transform: lowercase;
+        color: $secondary-color;
+        text-shadow: -4px 3px 0 Snow, -13px 6px 0 #0000ff;
+        @include for-phone-only {
+            top: -1em;
+            left: 0.1em;
+            font-size: 44px;
+            text-shadow: -3px 2px 0 Snow, -7px 4px 0 #0000ff;
+        }
+        @include for-tablet-portrait-up {
+            font-size: 72px;
+            top: -1.2em;
+        }
+        @include for-tablet-landscape-up() {
+            font-size: 96px;
+        }
     }
 }
 section:first-child {
@@ -205,7 +204,7 @@ section:first-child {
 
 #hero-banner {
     article {
-        padding: 2em; 
+        padding: 0 2em; 
         background: white;
     }
     .social-media {
@@ -220,7 +219,7 @@ section:first-child {
 }
 
 .collapsible {    
-    margin: 0 0 4em 0;
+    margin: 2em 0;
     @include for-phone-only {
         margin: 1.5em 0;
     }
@@ -363,16 +362,36 @@ section:first-child {
     width: auto;
 }
 
-#small-project {
-    @include flex-element(row);
-    justify-content: space-between;
+#project-list {
+    display: grid;
+    margin-bottom: 2em;
+    @include for-phone-only() {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: map-get($spacers, 3);
+    }
+    @include for-tablet-portrait-up() {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: map-get($spacers, 3);
+    }
+    @include for-tablet-landscape-up() {
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: map-get($spacers, 4);
+    }
     .card {
         position: relative;
-        width: 11em;
+        max-width: 14em;
+        margin: 0;
         padding: map-get($spacers, 2);
-        margin: map-get($spacers, 2);
         .card-title {
-            font-size: 16px;
+            @include for-phone-only() {
+                font-size: 15px;
+            }
+            @include for-tablet-portrait-up() {
+                font-size: 15px;
+            }
+            @include for-tablet-landscape-up() {
+                font-size: 16px;
+            }
         }
         .card-image {
             @include flex-element(column);
@@ -404,8 +423,6 @@ section:first-child {
 } 
 
 #contact {
-    margin-top: 10em;
-    margin-bottom: 2em;
     article {
         padding: 2em;
         background: white;
@@ -418,40 +435,31 @@ section:first-child {
     @include flex-element(row);
     justify-content: center;
     width: 100%;
-    // overflow: hidden;
     position: relative;
     z-index: -1;
-    @include for-phone-only {
-        height: 72px;
-    }
-    @include for-tablet-portrait-up() {
-        height: 72px;
-    }
-    @include for-tablet-landscape-up() {
-        height: 128px;
-    }
+    height: 64px;
+    overflow: hidden;
     .pug-array {
         display: grid;
-        grid-template-columns: repeat(6, 1fr);
         position: absolute;
-        height: inherit;
         @include for-phone-only {
-            grid-template-columns: repeat(4, 1fr);
-            bottom: -2.5em;
+            grid-template-columns: repeat(3, 1fr);
+            height: 104px;
         }
         @include for-tablet-portrait-up() {
-            bottom: -1.9em;
+            grid-template-columns: repeat(4, 1fr);
+            height: 112px;
         }
         @include for-tablet-landscape-up() {
+            grid-template-columns: repeat(6, 1fr);
+            height: 128px;
             bottom: -4em;
         }
     } 
     .pug {
-        width: 128px;
+        max-width: 128px;
         height: inherit;
-        @include for-phone-only {
-            width: 72px;
-        }
+        height: inherit;
     }   
 }
 

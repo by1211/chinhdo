@@ -8220,36 +8220,6 @@ footer .container .copyright-holder:before {
   }
 }
 
-h1 {
-  position: absolute;
-  margin: 0;
-  top: -104px;
-  right: -38px;
-  font-weight: 700;
-  text-transform: lowercase;
-  color: #f50057;
-  text-shadow: -4px 3px 0 Snow, -13px 6px 0 #0000ff;
-}
-@media (max-width: 599px) {
-  h1 {
-    left: 0.1em;
-    top: -0.6em;
-    font-size: 44px;
-    text-shadow: -3px 2px 0 Snow, -7px 4px 0 #0000ff;
-  }
-}
-@media (min-width: 600px) {
-  h1 {
-    font-size: 72px;
-    top: -1.2em;
-  }
-}
-@media (min-width: 900px) {
-  h1 {
-    font-size: 96px;
-  }
-}
-
 h3 {
   text-transform: capitalize;
 }
@@ -8269,6 +8239,35 @@ section {
     margin: 4em 0;
   }
 }
+section h1 {
+  position: absolute;
+  margin: 0;
+  top: -104px;
+  right: -38px;
+  font-weight: 700;
+  text-transform: lowercase;
+  color: #f50057;
+  text-shadow: -4px 3px 0 Snow, -13px 6px 0 #0000ff;
+}
+@media (max-width: 599px) {
+  section h1 {
+    top: -1em;
+    left: 0.1em;
+    font-size: 44px;
+    text-shadow: -3px 2px 0 Snow, -7px 4px 0 #0000ff;
+  }
+}
+@media (min-width: 600px) {
+  section h1 {
+    font-size: 72px;
+    top: -1.2em;
+  }
+}
+@media (min-width: 900px) {
+  section h1 {
+    font-size: 96px;
+  }
+}
 
 section:first-child {
   margin-top: 12em;
@@ -8280,7 +8279,7 @@ section:first-child {
 }
 
 #hero-banner article {
-  padding: 2em;
+  padding: 0 2em;
   background: white;
 }
 #hero-banner .social-media {
@@ -8296,7 +8295,7 @@ section:first-child {
 }
 
 .collapsible {
-  margin: 0 0 4em 0;
+  margin: 2em 0;
 }
 @media (max-width: 599px) {
   .collapsible {
@@ -8461,22 +8460,50 @@ section:first-child {
   width: auto;
 }
 
-#small-project {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-between;
+#project-list {
+  display: grid;
+  margin-bottom: 2em;
 }
-#small-project .card {
+@media (max-width: 599px) {
+  #project-list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1em;
+  }
+}
+@media (min-width: 600px) {
+  #project-list {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1em;
+  }
+}
+@media (min-width: 900px) {
+  #project-list {
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1.5em;
+  }
+}
+#project-list .card {
   position: relative;
-  width: 11em;
+  max-width: 14em;
+  margin: 0;
   padding: 0.5em;
-  margin: 0.5em;
 }
-#small-project .card .card-title {
-  font-size: 16px;
+@media (max-width: 599px) {
+  #project-list .card .card-title {
+    font-size: 15px;
+  }
 }
-#small-project .card .card-image {
+@media (min-width: 600px) {
+  #project-list .card .card-title {
+    font-size: 15px;
+  }
+}
+@media (min-width: 900px) {
+  #project-list .card .card-title {
+    font-size: 16px;
+  }
+}
+#project-list .card .card-image {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -8484,33 +8511,29 @@ section:first-child {
   height: 10em;
   overflow: hidden;
 }
-#small-project .card .card-image img {
+#project-list .card .card-image img {
   width: 100%;
 }
-#small-project .card .card-content {
+#project-list .card .card-content {
   margin: 0;
   padding: 0;
   height: 10em;
 }
-#small-project .card .card-content .chip {
+#project-list .card .card-content .chip {
   position: absolute;
   top: 0;
   right: 0;
 }
-#small-project .card .card-action {
+#project-list .card .card-action {
   margin: 0;
   padding: 0;
 }
-#small-project .card .card-action a {
+#project-list .card .card-action a {
   position: absolute;
   bottom: 0;
   width: 100%;
 }
 
-#contact {
-  margin-top: 10em;
-  margin-bottom: 2em;
-}
 #contact article {
   padding: 2em;
   background: white;
@@ -8524,52 +8547,36 @@ section:first-child {
   width: 100%;
   position: relative;
   z-index: -1;
-}
-@media (max-width: 599px) {
-  .pug-container {
-    height: 72px;
-  }
-}
-@media (min-width: 600px) {
-  .pug-container {
-    height: 72px;
-  }
-}
-@media (min-width: 900px) {
-  .pug-container {
-    height: 128px;
-  }
+  height: 64px;
+  overflow: hidden;
 }
 .pug-container .pug-array {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
   position: absolute;
-  height: inherit;
 }
 @media (max-width: 599px) {
   .pug-container .pug-array {
-    grid-template-columns: repeat(4, 1fr);
-    bottom: -2.5em;
+    grid-template-columns: repeat(3, 1fr);
+    height: 104px;
   }
 }
 @media (min-width: 600px) {
   .pug-container .pug-array {
-    bottom: -1.9em;
+    grid-template-columns: repeat(4, 1fr);
+    height: 112px;
   }
 }
 @media (min-width: 900px) {
   .pug-container .pug-array {
+    grid-template-columns: repeat(6, 1fr);
+    height: 128px;
     bottom: -4em;
   }
 }
 .pug-container .pug {
-  width: 128px;
+  max-width: 128px;
   height: inherit;
-}
-@media (max-width: 599px) {
-  .pug-container .pug {
-    width: 72px;
-  }
+  height: inherit;
 }
 
 #circle {

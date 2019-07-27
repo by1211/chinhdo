@@ -165,12 +165,12 @@ $(document).ready(function () {
     // Generate content for #small-projects
     for (i = 0; i < smallProjects.length; i++) {
         currentProjectName = smallProjects[i].name.replace(/\s/g, '');
-        $('<div class="card">')
+        $card = $('<div class="card">')
             .attr('id', currentProjectName)
             .append('<div class="card-image">')
             .append('<div class="card-title">' + smallProjects[i].name + '</div>')
             .append('<div class="card-content">')
-            .appendTo($('#small-project'));
+            .appendTo($('#project-list'));
 
         // Add badge(s)
         for (j = 0; j < smallProjects[i].job.length; j++) {
