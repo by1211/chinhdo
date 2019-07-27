@@ -8250,6 +8250,12 @@ h3 {
   text-transform: capitalize;
 }
 
+@media (max-width: 599px) {
+  .container {
+    width: 95%;
+  }
+}
+
 section {
   position: relative;
   margin: 8em 0;

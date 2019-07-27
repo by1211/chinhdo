@@ -180,6 +180,12 @@ h3 {
     text-transform: capitalize;
 }
 
+.container {
+    @include for-phone-only() {
+        width: 95%;
+    }
+}
+
 section {
     @extend .section;
     position: relative;
