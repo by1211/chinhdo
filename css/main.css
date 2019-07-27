@@ -8170,6 +8170,16 @@ footer .container {
   align-content: center;
   height: 48px;
 }
+@media (max-width: 599px) {
+  footer .container {
+    flex-direction: column;
+    align-content: flex-end;
+    height: auto;
+  }
+  footer .container a {
+    text-align: right;
+  }
+}
 footer .container a {
   text-decoration: none;
 }
@@ -8178,16 +8188,6 @@ footer .container .copyright-holder {
 }
 footer .container .copyright-holder:before {
   content: "©" " ";
-}
-@media (max-width: 599px) {
-  footer .container {
-    flex-direction: column;
-    align-content: flex-start;
-    height: auto;
-  }
-  footer .container footer .container a, footer .container div {
-    width: 100%;
-  }
 }
 
 /* Element **********************************************/

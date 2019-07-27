@@ -106,6 +106,14 @@ footer {
         justify-content: space-between;
         align-content: center;
         height: 48px;
+        @include for-phone-only() {
+            flex-direction: column;
+            align-content: flex-end;
+            height: auto; 
+            a {
+                text-align: right;
+            }
+        }
         a {
             text-decoration: none;
         }
@@ -114,14 +122,6 @@ footer {
         }
         .copyright-holder:before { 
             content:"\00a9" "\00a0"; 
-        }
-        @include for-phone-only {
-            flex-direction: column;
-            align-content: flex-start;
-            height: auto;
-            footer .container a, div {
-                width: 100%;
-            }
         }
     }
 }
