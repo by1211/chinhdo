@@ -42,7 +42,7 @@ $(document).ready(function () {
             name: "Neon Skies",
             job: ["logo"],
             tool: ["adobe-photoshop"],
-            link: ["https://youtu.be/O2VjoI1QUrg", "Youube"]
+            link: ["https://youtu.be/O2VjoI1QUrg", "Watch Demo"]
         },
         {
             name: "Rush",
