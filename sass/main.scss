@@ -68,6 +68,7 @@ html {
 
 body {
     font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
 }
 
 header {    
@@ -157,16 +158,21 @@ h1 {
     margin: 0;
     top: -104px;
     right: -38px;
-    font-size: 96px;
     font-weight: 700;
     text-transform: lowercase;
     color: $secondary-color;
     text-shadow: -4px 3px 0 Snow, -13px 6px 0 #0000ff;
     @include for-phone-only {
         left: 0.1em;
-        top: -1em;
-        font-size: 48px;
+        top: -0.6em;
+        font-size: 44px;
         text-shadow: -3px 2px 0 Snow, -7px 4px 0 #0000ff;
+    }
+    @include for-tablet-portrait-up {
+        font-size: 48px;
+    }
+    @include for-desktop-up {
+        font-size: 96px;
     }
 }
 
@@ -353,20 +359,25 @@ section:first-child {
     @include flex-element(row);
     justify-content: space-between;
     .card {
-        width: 16em;
+        position: relative;
+        width: 12em;
         padding: map-get($spacers, 2);
         margin: map-get($spacers, 2);
+        .card-title {
+            font-size: 16px;
+        }
         .card-image {
             @include flex-element(column);
             justify-content: center;
-            height: 16em;
+            height: 10em;
             overflow: hidden;
             img {
                 width: 100%;
             }
         }
         .card-content {
-            padding: 0;
+            @include no-space();
+            height: 10em;
             .chip {
                 position: absolute;
                 top: 0;
@@ -376,8 +387,9 @@ section:first-child {
         .card-action {
             @include no-space();
             a {
+                position: absolute;
+                bottom: 0;
                 width: 100%;
-                height: 100%;
             }
         }
     }

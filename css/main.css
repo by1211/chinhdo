@@ -8131,6 +8131,7 @@ html {
 
 body {
   font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
 }
 
 header {
@@ -8221,7 +8222,6 @@ h1 {
   margin: 0;
   top: -104px;
   right: -38px;
-  font-size: 96px;
   font-weight: 700;
   text-transform: lowercase;
   color: #f50057;
@@ -8230,9 +8230,19 @@ h1 {
 @media (max-width: 599px) {
   h1 {
     left: 0.1em;
-    top: -1em;
-    font-size: 48px;
+    top: -0.6em;
+    font-size: 44px;
     text-shadow: -3px 2px 0 Snow, -7px 4px 0 #0000ff;
+  }
+}
+@media (min-width: 600px) {
+  h1 {
+    font-size: 48px;
+  }
+}
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 96px;
   }
 }
 
@@ -8445,34 +8455,46 @@ section:first-child {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
 }
 #small-project .card {
-  width: 16em;
+  position: relative;
+  width: 12em;
   padding: 0.5em;
   margin: 0.5em;
+}
+#small-project .card .card-title {
+  font-size: 16px;
 }
 #small-project .card .card-image {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
-  height: 16em;
+  height: 10em;
   overflow: hidden;
 }
 #small-project .card .card-image img {
   width: 100%;
 }
 #small-project .card .card-content {
+  margin: 0;
   padding: 0;
+  height: 10em;
+}
+#small-project .card .card-content .chip {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 #small-project .card .card-action {
   margin: 0;
   padding: 0;
 }
 #small-project .card .card-action a {
+  position: absolute;
+  bottom: 0;
   width: 100%;
-  height: 100%;
 }
 
 #contact {
@@ -8485,30 +8507,40 @@ section:first-child {
 }
 
 .pug-container {
-  position: relative;
-  width: 100%;
-  height: 5.5em;
-  overflow: hidden;
-}
-.pug-container .pug-array {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: space-evenly;
-  position: absolute;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  width: 100vw;
-  max-height: 10em;
-  bottom: -75px;
-  z-index: -1;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: 128px;
+  overflow: hidden;
+  position: relative;
 }
 @media (max-width: 599px) {
-  .pug-container .pug-array .pug {
-    max-height: 8em;
-    width: auto;
+  .pug-container {
+    height: 72px;
+  }
+}
+.pug-container .pug-array {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  position: absolute;
+  bottom: -4em;
+  height: inherit;
+}
+@media (max-width: 599px) {
+  .pug-container .pug-array {
+    grid-template-columns: repeat(4, 1fr);
+    bottom: -2.5em;
+  }
+}
+.pug-container .pug {
+  width: 128px;
+  height: inherit;
+}
+@media (max-width: 599px) {
+  .pug-container .pug {
+    width: 72px;
   }
 }
 
