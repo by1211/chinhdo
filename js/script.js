@@ -183,7 +183,7 @@ $(document).ready(function () {
             .append('<img src="images/tool-icons/icons8-' + smallProjects[i].tool[j] + '-48.png">');
         }
         // Add link url to project
-        $('#' + currentProjectName).append('<div class="card-action"><a class="waves-effect waves-light btn btn-flat" href="' + smallProjects[i].link[0] + 'target="_blank"">' + smallProjects[i].link[1]);
+        $('#' + currentProjectName).append('<div class="card-action"><a class="waves-effect waves-light btn btn-flat" href="' + smallProjects[i].link[0] + '"target="_blank">' + smallProjects[i].link[1]);
         
         // Add image
         $('#' + currentProjectName).find('.card-image').append('<img src="images/misc/' + currentProjectName + '.png">');
