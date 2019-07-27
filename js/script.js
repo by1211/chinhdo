@@ -33,51 +33,42 @@ $(document).ready(function () {
             job: ["branding"],
             about: "Embark on an immersive, simulated journey through the solar system with Alexa, a virtual assistant. Play fetch with the space puppy Enzo, and discover gravitational differences between planet",
             palette: ["#4ad9d9", "#5e646c", "#f22430", "#ffcb05"],
-            tool: ["adobe-illustrator", "blender-3d"]
+            tool: ["adobe-photoshop", "adobe-illustrator", "blender-3d"]
         }
     ]
     
-    var otherProjects = [
+    var smallProjects = [
         {
-<<<<<<< HEAD
-<<<<<<< HEAD
             name: "Neon Skies",
             job: ["logo"],
             tool: ["adobe-photoshop"],
-            link: ["https://youtu.be/O2VjoI1QUrg", "Watch Demo"]
-=======
-=======
->>>>>>> parent of 573b747... finished small project section, added pug array
-            name: "HeliLabs",
-            job: ["logo"]
-        },
-        {
-            name: "NeonSkies",
-            job: ["logo"]
-<<<<<<< HEAD
->>>>>>> parent of 573b747... finished small project section, added pug array
-=======
->>>>>>> parent of 573b747... finished small project section, added pug array
+            link: ["https://youtu.be/O2VjoI1QUrg", "Youube"]
         },
         {
             name: "Rush",
-            job: ["logo"]
+            job: ["logo"],
+            tool: ["adobe-illustrator"],
+            link: []
         },
         {
-            name: "Dr.Egg Adventure",
-            job: ["illustration"]
+            name: "DrEgg Adventure",
+            job: ["illustration"],
+            tool: ["adobe-photoshop"],
+            link: ["https://www.dreggadventures.com/", "Visit Website"]
         },
         {
-            name: "BlanketNinja",
-            job: ["prototype"]
+            name: "Blanket Ninja",
+            job: ["webdesign"],
+            tool: ["adobe-photoshop", "html-5", "css3", "javascript"],
+            link: ["https://doinby.github.io/BlanketNinja/", "View Demo"]
         }
     ]
     
-    var mediaList = ["namecard", "cover", "eventbrite", "mockup", "tshirt", "screenshot", "slogan"];
+    var mediaList = ["namecard", "cover", "eventbrite", "mockup", "render", "screenshot", "sketch", "slogan", "tshirt"];
     
     // HTML output ///////////////////////////////////// 
     
-    // Look through each project in myProjects array and create individual job badges
+    // Generate content for #portfolio
     for (i = 0; i < myProjects.length; i++) {
         // Create banner
         $projectBanner = $('#' + myProjects[i].name).find('.materialboxed')
@@ -87,7 +78,7 @@ $(document).ready(function () {
             src: 'images/' + myProjects[i].name + '/banner.jpg',
         });
         
-        // Alternate clicking ripple effect's color
+        // Alternate ripple effect's color
         $('#' + myProjects[i].name).children('.collapsible-header').addClass(function() {
             if (i % 2 === 0) {
                 return 'waves-effect waves-pink';
@@ -158,30 +149,25 @@ $(document).ready(function () {
                 };
             })
         }
-        // Hide image bound if not found
-        $("img").on("error", function () {
-            $(this).parent('.material-placeholder').parent('.thumbnail').remove();
-            $(this).parent('.mark-bg').remove();
-        });   
         
         // Create list of tools
         $tool = $('<div class="tool">').insertAfter($('#' + myProjects[i].name + ' #tool'));
         for (j = 0; j < myProjects[i].tool.length; j++) {
             $colorBlock = $('<img>')
-                .attr('src', 'images/tool-icons/icons8-' + myProjects[i].tool[j] + '-48.png')
+            .attr('src', 'images/tool-icons/icons8-' + myProjects[i].tool[j] + '-48.png')
             .appendTo($('#' + myProjects[i].name).find('.tool'));
         }
+        
+        killEmptyParent();
     }    
     
-<<<<<<< HEAD
-<<<<<<< HEAD
     // Generate content for #small-projects
     for (i = 0; i < smallProjects.length; i++) {
         currentProjectName = smallProjects[i].name.replace(/\s/g, '');
         $('<div class="card">')
         .attr('id', currentProjectName)
         .append('<div class="card-image">')
-        .append('<div class="card-title">' + smallProjects[i].name + '</div>')
+        .append('<span class="card-title">' + smallProjects[i].name + '</div>')
         .append('<div class="card-content">')
         .appendTo($('#small-project'));
         
@@ -193,11 +179,11 @@ $(document).ready(function () {
         
         // Add tool used
         for (j = 0; j < smallProjects[i].tool.length; j++) {
-            $('#' + currentProjectName + ' .card-content')
+            $('#' + currentProjectName)
             .append('<img src="images/tool-icons/icons8-' + smallProjects[i].tool[j] + '-48.png">');
         }
         // Add link url to project
-        $('#' + currentProjectName).append('<div class="card-action"><a class="waves-effect waves-light btn btn-flat" href="' + smallProjects[i].link[0] + '"target="_blank">' + smallProjects[i].link[1]);
+        $('#' + currentProjectName).append('<div class="card-action"><a class="waves-effect waves-light btn btn-flat" href="' + smallProjects[i].link[0] + 'target="_blank"">' + smallProjects[i].link[1]);
         
         // Add image
         $('#' + currentProjectName).find('.card-image').append('<img src="images/misc/' + currentProjectName + '.png">');
@@ -205,7 +191,7 @@ $(document).ready(function () {
         switch (currentProjectName) {
             case "DrEggAdventure":
             // Correct the title
-            $('#' + currentProjectName + ' .card-title').text('Dr.Egg Adventure').css('font-size', '17px')
+            $('#' + currentProjectName + ' .card-title').text('Dr.Egg Adventure');
             $('#' + currentProjectName)
             .find('.card-image img')
             .addClass('materialboxed')
@@ -216,11 +202,11 @@ $(document).ready(function () {
             case "Rush":
             $('#' + currentProjectName).find('.card-action').remove();
             break;     
-            
             case "BlanketNinja":
-            $('#' + currentProjectName).find('.card-image').addClass('materialboxed');
+                $('#' + currentProjectName).find('.card-image').addClass('materialboxed');
             break; 
         }
+        
         killEmptyParent();
     }
     
@@ -231,17 +217,14 @@ $(document).ready(function () {
             $(this).parent().remove();
         });   
     }
-    
+
     // Spawn pug array
-    for (i = 0; i < 6; i++) {
+    for (i = 0; i < 8; i++) {
         $('.pug-array')
         .append('<img class="pug" src="images/cdPug-rgbPrimary.svg" alt="">');
+        
     }
     
-=======
->>>>>>> parent of 573b747... finished small project section, added pug array
-=======
->>>>>>> parent of 573b747... finished small project section, added pug array
     // Materialize JS components
     $('.sidenav').sidenav({
         'edge': 'right'

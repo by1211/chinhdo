@@ -135,7 +135,6 @@ footer {
 .parallax {
     width: 100%;
     height: 24%;
-    // height: 650px;
     position: absolute;
     top: 0;
     background-image: url("../images/p-banner.png");
@@ -144,15 +143,13 @@ footer {
     background-repeat: no-repeat;
     background-size: cover;
     z-index: -1;
-<<<<<<< HEAD
-<<<<<<< HEAD
     @include for-phone-only {
-        width: 100%;
+        width: 100vw;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
     }
-=======
->>>>>>> parent of 573b747... finished small project section, added pug array
-=======
->>>>>>> parent of 573b747... finished small project section, added pug array
 }
 
 h1 {
@@ -192,16 +189,6 @@ section:first-child {
     }
 }
 
-.material-placeholder, .thumbnail, .materialboxed {
-    @include flex-element(row);
-    align-content: center;
-    justify-content: center;
-}
-
-.material-placeholder img, .material-placeholder .card-image img {
-    width: 150%;
-}
-
 #hero-banner {
     article {
         padding: 2em; 
@@ -217,19 +204,6 @@ section:first-child {
         }
     }
 }
-
-
-.pug {
-    position: absolute;
-    top: -80px;
-    height: 14em;
-    z-index: -1;
-    @include for-phone-only {
-        top: -50px;
-        right: 0;
-        height: 10em;
-    }
-}    
 
 .collapsible {    
     margin: 0 0 4em 0;
@@ -308,6 +282,9 @@ section:first-child {
                 margin: map-get($spacers, 1); 
                 @extend .z-depth-2; 
                 overflow: hidden;
+                img {
+                    width: 150%;
+                }
             }
             @include for-phone-only {
                 @include flex-element(row);
@@ -352,10 +329,6 @@ section:first-child {
                 }
             }
         }
-        .tool img {
-            height: 48px;
-            width: auto;
-        }
         .url-container a {
             display: block;
             width: 14.5em;
@@ -371,8 +344,6 @@ section:first-child {
     @extend .grey, .lighten-3;   
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 .tool img {
     height: 48px;
     width: auto;
@@ -380,39 +351,32 @@ section:first-child {
 
 #small-project {
     @include flex-element(row);
-    justify-content: space-between;
+    justify-content: center;
     .card {
-        position: relative;
-        width: 12em;
+        width: 16em;
         padding: map-get($spacers, 2);
+        margin: map-get($spacers, 2);
         .card-image {
-            height: 8em;
+            @include flex-element(column);
+            justify-content: center;
+            height: 16em;
             overflow: hidden;
-        }
-        .card-title {
-            font-size: 18px;
-        }
-        .card-content {
-            padding: 0;
-            height: 9.5em;
-            .chip {
-                position: absolute;
-                top: 0;
-                right: 0;
-            }
-        }
-        .card-action {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            @include no-space();
-            a {
+            img {
                 width: 100%;
             }
         }
+        .card-content {
+            padding: 0;
+        }
+        .card-action {
+            @include no-space();
+            a {
+                width: 100%;
+                height: 100%;
+            }
+        }
     }
-}
+} 
 
 #contact {
     margin-top: 10em;
@@ -423,58 +387,33 @@ section:first-child {
     }
 } 
 
-.pug-container {
-    @include flex-element(row);
-    justify-content: center;
-    width: 100%;
-    height: 128px;
-    overflow: hidden;
-    position: relative;
-    @include for-phone-only {
-        height: 72px;
-    }
-    .pug-array {
-        display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        position: absolute;
-        bottom: -4em;
-        height: inherit;
-        @include for-phone-only {
-            grid-template-columns: repeat(4, 1fr);
-            bottom: -2.5em;
-        }
-    } 
-    .pug {
-        width: 128px;
-        height: inherit;
-        @include for-phone-only {
-            width: 72px;
-        }
-    }   
-=======
-#small-project .card {
-    width: 12em;
-    padding: map-get($spacers, 2);
-    .card-content {
-        padding: 0;
-    }
-=======
-#small-project .card {
-    width: 12em;
-    padding: map-get($spacers, 2);
-    .card-content {
-        padding: 0;
-    }
->>>>>>> parent of 573b747... finished small project section, added pug array
-}
 
-#contact article {
-    padding: 2em;
-    background: white;
-<<<<<<< HEAD
->>>>>>> parent of 573b747... finished small project section, added pug array
-=======
->>>>>>> parent of 573b747... finished small project section, added pug array
+
+.pug-container {
+    position: relative;
+    width: 100%;
+    height: 5.5em;
+    overflow: hidden;
+    .pug-array {
+        @include flex-element(column);
+        justify-content: space-evenly;
+        position: absolute;    
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        width: 100vw;
+        max-height: 10em;
+        bottom: -75px;
+        z-index: -1;
+        .pug {
+            // width: auto;
+            @include for-phone-only {
+                max-height: 8em;
+                width: auto;
+            }
+        } 
+    }   
 }
 
 #circle {
