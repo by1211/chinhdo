@@ -174,7 +174,7 @@ $(document).ready(function () {
         // Add badge(s)
         for (j = 0; j < smallProjects[i].job.length; j++) {
             $('#' + currentProjectName + ' .card-content')
-            .append('<mark class="chip"><div id="circle" class="chip-' + smallProjects[i].job[j] + '"></div>' + smallProjects[i].job[j] +'</mark>');
+                .append('<mark class="chip"><div id="circle" class="chip-' + smallProjects[i].job[j] + '"></div>' + smallProjects[i].job[j] + '</mark>');
         }
         
         // Add tool used
