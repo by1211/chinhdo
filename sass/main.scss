@@ -216,6 +216,9 @@ section:first-child {
     @include for-phone-only {
         margin: 1.5em 0;
     }
+    img { 
+        width: 50%; 
+    }    
     h5 { 
         color: $input-disabled-color; 
     }    

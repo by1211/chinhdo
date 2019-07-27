@@ -8291,6 +8291,9 @@ section:first-child {
     margin: 1.5em 0;
   }
 }
+.collapsible img {
+  width: 50%;
+}
 .collapsible h5 {
   color: rgba(0, 0, 0, 0.42);
 }

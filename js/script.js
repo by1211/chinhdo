@@ -71,13 +71,11 @@ $(document).ready(function () {
     // Generate content for #portfolio
     for (i = 0; i < myProjects.length; i++) {
         // Create banner
-        $projectBanner = $('#' + myProjects[i].name)
-        .find('.p-banner').append('<img class="materialboxed">').children()
+        $projectBanner = $('#' + myProjects[i].name).find('.materialboxed')
         .attr({
             alt: myProjects[i].name + "'s Logo",
             'data-caption': myProjects[i].name + "'s Logo",
             src: 'images/' + myProjects[i].name + '/banner.jpg',
-            // class: 'materialboxed',
         });
         
         // Alternate clicking ripple effect's color
