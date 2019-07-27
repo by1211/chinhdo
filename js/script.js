@@ -206,7 +206,7 @@ $(document).ready(function () {
                 $('#' + currentProjectName).find('.card-image').addClass('materialboxed');
             break; 
         }
-        killEmptyParent();
+        // killEmptyParent();
     }
     
     function killEmptyParent() {
