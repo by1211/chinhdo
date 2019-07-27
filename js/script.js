@@ -42,7 +42,7 @@ $(document).ready(function () {
             name: "Neon Skies",
             job: ["logo"],
             tool: ["adobe-photoshop"],
-            link: ["https://youtu.be/O2VjoI1QUrg", "Youube"]
+            link: ["https://youtu.be/O2VjoI1QUrg", "Watch Demo"]
         },
         {
             name: "Rush",
@@ -78,7 +78,7 @@ $(document).ready(function () {
             src: 'images/' + myProjects[i].name + '/banner.jpg',
         });
         
-        // Alternate ripple effect's color
+        // Alternate clicking ripple effect's color
         $('#' + myProjects[i].name).children('.collapsible-header').addClass(function() {
             if (i % 2 === 0) {
                 return 'waves-effect waves-pink';
@@ -167,7 +167,7 @@ $(document).ready(function () {
         $('<div class="card">')
         .attr('id', currentProjectName)
         .append('<div class="card-image">')
-        .append('<span class="card-title">' + smallProjects[i].name + '</div>')
+        .append('<div class="card-title">' + smallProjects[i].name + '</div>')
         .append('<div class="card-content">')
         .appendTo($('#small-project'));
         
@@ -179,11 +179,11 @@ $(document).ready(function () {
         
         // Add tool used
         for (j = 0; j < smallProjects[i].tool.length; j++) {
-            $('#' + currentProjectName)
+            $('#' + currentProjectName + ' .card-content')
             .append('<img src="images/tool-icons/icons8-' + smallProjects[i].tool[j] + '-48.png">');
         }
         // Add link url to project
-        $('#' + currentProjectName).append('<div class="card-action"><a class="waves-effect waves-light btn btn-flat" href="' + smallProjects[i].link[0] + 'target="_blank"">' + smallProjects[i].link[1]);
+        $('#' + currentProjectName).append('<div class="card-action"><a class="waves-effect waves-light btn btn-flat" href="' + smallProjects[i].link[0] + '"target="_blank">' + smallProjects[i].link[1]);
         
         // Add image
         $('#' + currentProjectName).find('.card-image').append('<img src="images/misc/' + currentProjectName + '.png">');
@@ -191,7 +191,7 @@ $(document).ready(function () {
         switch (currentProjectName) {
             case "DrEggAdventure":
             // Correct the title
-            $('#' + currentProjectName + ' .card-title').text('Dr.Egg Adventure');
+            $('#' + currentProjectName + ' .card-title').text('Dr.Egg Adventure').css('font-size', '17px')
             $('#' + currentProjectName)
             .find('.card-image img')
             .addClass('materialboxed')
@@ -202,11 +202,11 @@ $(document).ready(function () {
             case "Rush":
             $('#' + currentProjectName).find('.card-action').remove();
             break;     
+            
             case "BlanketNinja":
-                $('#' + currentProjectName).find('.card-image').addClass('materialboxed');
+            $('#' + currentProjectName).find('.card-image').addClass('materialboxed');
             break; 
         }
-        
         killEmptyParent();
     }
     
@@ -217,12 +217,11 @@ $(document).ready(function () {
             $(this).parent().remove();
         });   
     }
-
+    
     // Spawn pug array
-    for (i = 0; i < 8; i++) {
+    for (i = 0; i < 6; i++) {
         $('.pug-array')
         .append('<img class="pug" src="images/cdPug-rgbPrimary.svg" alt="">');
-        
     }
     
     // Materialize JS components

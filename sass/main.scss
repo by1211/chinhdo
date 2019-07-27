@@ -144,11 +144,7 @@ footer {
     background-size: cover;
     z-index: -1;
     @include for-phone-only {
-        width: 100vw;
-        left: 50%;
-        right: 50%;
-        margin-left: -50vw;
-        margin-right: -50vw;
+        width: 100%;
     }
 }
 
@@ -187,6 +183,16 @@ section:first-child {
     @include for-phone-only {
         margin-top: 8em;
     }
+}
+
+.material-placeholder, .thumbnail, .materialboxed {
+    @include flex-element(row);
+    align-content: center;
+    justify-content: center;
+}
+
+.material-placeholder img, .material-placeholder .card-image img {
+    width: 150%;
 }
 
 #hero-banner {
@@ -282,9 +288,6 @@ section:first-child {
                 margin: map-get($spacers, 1); 
                 @extend .z-depth-2; 
                 overflow: hidden;
-                img {
-                    width: 150%;
-                }
             }
             @include for-phone-only {
                 @include flex-element(row);
@@ -351,32 +354,39 @@ section:first-child {
 
 #small-project {
     @include flex-element(row);
-    justify-content: center;
+    justify-content: space-between;
     .card {
-        width: 16em;
+        position: relative;
+        width: 12em;
         padding: map-get($spacers, 2);
-        margin: map-get($spacers, 2);
         .card-image {
-            @include flex-element(column);
-            justify-content: center;
-            height: 16em;
+            height: 8em;
             overflow: hidden;
-            img {
-                width: 100%;
-            }
+        }
+        .card-title {
+            font-size: 18px;
         }
         .card-content {
             padding: 0;
+            height: 9.5em;
+            .chip {
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
         }
         .card-action {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
             @include no-space();
             a {
                 width: 100%;
-                height: 100%;
             }
         }
     }
-} 
+}
 
 #contact {
     margin-top: 10em;
@@ -387,32 +397,33 @@ section:first-child {
     }
 } 
 
-
-
 .pug-container {
-    position: relative;
+    @include flex-element(row);
+    justify-content: center;
     width: 100%;
-    height: 5.5em;
+    height: 128px;
     overflow: hidden;
+    position: relative;
+    @include for-phone-only {
+        height: 72px;
+    }
     .pug-array {
-        @include flex-element(column);
-        justify-content: space-evenly;
-        position: absolute;    
-        left: 50%;
-        right: 50%;
-        margin-left: -50vw;
-        margin-right: -50vw;
-        width: 100vw;
-        max-height: 10em;
-        bottom: -75px;
-        z-index: -1;
-        .pug {
-            // width: auto;
-            @include for-phone-only {
-                max-height: 8em;
-                width: auto;
-            }
-        } 
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        position: absolute;
+        bottom: -4em;
+        height: inherit;
+        @include for-phone-only {
+            grid-template-columns: repeat(4, 1fr);
+            bottom: -2.5em;
+        }
+    } 
+    .pug {
+        width: 128px;
+        height: inherit;
+        @include for-phone-only {
+            width: 72px;
+        }
     }   
 }
 

@@ -8208,11 +8208,7 @@ footer .container .copyright-holder:before {
 }
 @media (max-width: 599px) {
   .parallax {
-    width: 100vw;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
+    width: 100%;
   }
 }
 
@@ -8257,6 +8253,18 @@ section:first-child {
   section:first-child {
     margin-top: 8em;
   }
+}
+
+.material-placeholder, .thumbnail, .materialboxed {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+}
+
+.material-placeholder img, .material-placeholder .card-image img {
+  width: 150%;
 }
 
 #hero-banner article {
@@ -8367,9 +8375,6 @@ section:first-child {
   margin: 0.25em;
   overflow: hidden;
 }
-.collapsible .collapsible-body .collection .thumbnail img {
-  width: 150%;
-}
 @media (max-width: 599px) {
   .collapsible .collapsible-body .collection {
     display: flex;
@@ -8445,34 +8450,39 @@ section:first-child {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
 }
 #small-project .card {
-  width: 16em;
+  position: relative;
+  width: 12em;
   padding: 0.5em;
-  margin: 0.5em;
 }
 #small-project .card .card-image {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
-  height: 16em;
+  height: 8em;
   overflow: hidden;
 }
-#small-project .card .card-image img {
-  width: 100%;
+#small-project .card .card-title {
+  font-size: 18px;
 }
 #small-project .card .card-content {
   padding: 0;
+  height: 9.5em;
+}
+#small-project .card .card-content .chip {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 #small-project .card .card-action {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   margin: 0;
   padding: 0;
 }
 #small-project .card .card-action a {
   width: 100%;
-  height: 100%;
 }
 
 #contact {
@@ -8485,30 +8495,40 @@ section:first-child {
 }
 
 .pug-container {
-  position: relative;
-  width: 100%;
-  height: 5.5em;
-  overflow: hidden;
-}
-.pug-container .pug-array {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: space-evenly;
-  position: absolute;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  width: 100vw;
-  max-height: 10em;
-  bottom: -75px;
-  z-index: -1;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: 128px;
+  overflow: hidden;
+  position: relative;
 }
 @media (max-width: 599px) {
-  .pug-container .pug-array .pug {
-    max-height: 8em;
-    width: auto;
+  .pug-container {
+    height: 72px;
+  }
+}
+.pug-container .pug-array {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  position: absolute;
+  bottom: -4em;
+  height: inherit;
+}
+@media (max-width: 599px) {
+  .pug-container .pug-array {
+    grid-template-columns: repeat(4, 1fr);
+    bottom: -2.5em;
+  }
+}
+.pug-container .pug {
+  width: 128px;
+  height: inherit;
+}
+@media (max-width: 599px) {
+  .pug-container .pug {
+    width: 72px;
   }
 }
 
