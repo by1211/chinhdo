@@ -8209,11 +8209,14 @@ footer .container .copyright-holder:before {
 }
 @media (max-width: 599px) {
   .parallax {
-    width: 100vw;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
+    background-position: center;
+    background-size: contain;
+  }
+}
+@media (min-width: 900px) {
+  .parallax {
+    background-position: right center;
+    background-size: cover;
   }
 }
 

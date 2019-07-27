@@ -145,11 +145,12 @@ footer {
     background-size: cover;
     z-index: -1;
     @include for-phone-only {
-        width: 100vw;
-        left: 50%;
-        right: 50%;
-        margin-left: -50vw;
-        margin-right: -50vw;
+        background-position: center;
+        background-size: contain;
+    }
+    @include for-tablet-landscape-up {
+        background-position: right center;
+        background-size: cover;
     }
 }
 
