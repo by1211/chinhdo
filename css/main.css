@@ -8232,6 +8232,7 @@ h3 {
 
 section {
   position: relative;
+  padding: 2em 0;
   margin: 8em 0;
 }
 @media (max-width: 599px) {
@@ -8242,8 +8243,7 @@ section {
 section h1 {
   position: absolute;
   margin: 0;
-  top: -104px;
-  right: -38px;
+  padding-top: 48px;
   font-weight: 700;
   text-transform: lowercase;
   color: #f50057;
@@ -8251,21 +8251,24 @@ section h1 {
 }
 @media (max-width: 599px) {
   section h1 {
-    top: -1em;
-    left: 0.1em;
-    font-size: 44px;
+    top: -2em;
+    left: 0;
+    font-size: 47px;
     text-shadow: -3px 2px 0 Snow, -7px 4px 0 #0000ff;
   }
 }
 @media (min-width: 600px) {
   section h1 {
+    top: -1.7em;
     font-size: 72px;
-    top: -1.2em;
+    text-shadow: -3.5px 2.5px 0 Snow, -9px 6px 0 #0000ff;
   }
 }
 @media (min-width: 900px) {
   section h1 {
+    top: -1.5em;
     font-size: 96px;
+    text-shadow: -4px 3px 0 Snow, -13px 6px 0 #0000ff;
   }
 }
 
@@ -8278,10 +8281,11 @@ section:first-child {
   }
 }
 
-#hero-banner article {
-  padding: 0 2em;
+article {
+  padding: 2em;
   background: white;
 }
+
 #hero-banner .social-media {
   display: flex;
   flex-wrap: wrap;
@@ -8292,6 +8296,10 @@ section:first-child {
   width: 32px;
   height: 32px;
   fill: #bdbdbd;
+}
+
+.portfolio ul:first-of-type, article p:first-of-type {
+  margin-top: 0;
 }
 
 .collapsible {
@@ -8460,38 +8468,38 @@ section:first-child {
   width: auto;
 }
 
-#project-list {
+.small-project {
   display: grid;
   margin-bottom: 2em;
 }
 @media (max-width: 599px) {
-  #project-list {
+  .small-project {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1em;
   }
 }
 @media (min-width: 600px) {
-  #project-list {
+  .small-project {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 1em;
   }
 }
 @media (min-width: 900px) {
-  #project-list {
+  .small-project {
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 1.5em;
   }
 }
-#project-list .card {
+.small-project .card {
   position: relative;
   max-width: 14em;
   margin: 0;
   padding: 0.5em;
 }
-#project-list .card .card-title {
+.small-project .card .card-title {
   height: 3em;
 }
-#project-list .card .card-image {
+.small-project .card .card-image {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -8499,32 +8507,27 @@ section:first-child {
   height: 10em;
   overflow: hidden;
 }
-#project-list .card .card-image img {
+.small-project .card .card-image img {
   width: 100%;
 }
-#project-list .card .card-content {
+.small-project .card .card-content {
   margin: 0;
   padding: 0;
   height: 10em;
 }
-#project-list .card .card-content .chip {
+.small-project .card .card-content .chip {
   position: absolute;
   top: 0;
   right: 0;
 }
-#project-list .card .card-action {
+.small-project .card .card-action {
   margin: 0;
   padding: 0;
 }
-#project-list .card .card-action a {
+.small-project .card .card-action a {
   position: absolute;
   bottom: 0;
   width: 100%;
-}
-
-#contact article {
-  padding: 2em;
-  background: white;
 }
 
 .pug-container {

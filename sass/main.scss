@@ -167,6 +167,7 @@ h3 {
 section {
     @extend .section;
     position: relative;
+    padding: 2em 0;
     margin: 8em 0;
     @include for-phone-only {
         margin: 4em 0;
@@ -174,24 +175,26 @@ section {
     h1 {
         position: absolute;
         margin: 0;
-        top: -104px;
-        right: -38px;
+        padding-top: 48px;
         font-weight: 700;
         text-transform: lowercase;
         color: $secondary-color;
         text-shadow: -4px 3px 0 Snow, -13px 6px 0 #0000ff;
-        @include for-phone-only {
-            top: -1em;
-            left: 0.1em;
-            font-size: 44px;
+        @include for-phone-only() {
+            top: -2em;
+            left: 0;
+            font-size: 47px;
             text-shadow: -3px 2px 0 Snow, -7px 4px 0 #0000ff;
         }
         @include for-tablet-portrait-up {
+            top: -1.7em;
             font-size: 72px;
-            top: -1.2em;
+            text-shadow: -3.5px 2.5px 0 Snow, -9px 6px 0 #0000ff;
         }
         @include for-tablet-landscape-up() {
+            top: -1.5em;
             font-size: 96px;
+            text-shadow: -4px 3px 0 Snow, -13px 6px 0 #0000ff;
         }
     }
 }
@@ -202,11 +205,12 @@ section:first-child {
     }
 }
 
+article {
+    padding: 2em; 
+    background: white;
+}
+
 #hero-banner {
-    article {
-        padding: 0 2em; 
-        background: white;
-    }
     .social-media {
         @include flex-element(row);
         justify-content: space-evenly;
@@ -216,6 +220,10 @@ section:first-child {
             fill: #bdbdbd ; 
         }
     }
+}
+
+.portfolio ul:first-of-type, article p:first-of-type {
+    margin-top: 0;
 }
 
 .collapsible {    
@@ -362,7 +370,7 @@ section:first-child {
     width: auto;
 }
 
-#project-list {
+.small-project {
     display: grid;
     margin-bottom: 2em;
     @include for-phone-only() {
@@ -411,13 +419,6 @@ section:first-child {
                 width: 100%;
             }
         }
-    }
-} 
-
-#contact {
-    article {
-        padding: 2em;
-        background: white;
     }
 } 
 

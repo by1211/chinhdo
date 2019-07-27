@@ -170,7 +170,7 @@ $(document).ready(function () {
             .append('<div class="card-image">')
             .append('<div class="card-title">' + smallProjects[i].name + '</div>')
             .append('<div class="card-content">')
-            .appendTo($('#project-list'));
+            .appendTo($('.small-project'));
 
         // Add badge(s)
         for (j = 0; j < smallProjects[i].job.length; j++) {
