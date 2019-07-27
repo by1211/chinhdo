@@ -383,15 +383,7 @@ section:first-child {
         margin: 0;
         padding: map-get($spacers, 2);
         .card-title {
-            @include for-phone-only() {
-                font-size: 15px;
-            }
-            @include for-tablet-portrait-up() {
-                font-size: 15px;
-            }
-            @include for-tablet-landscape-up() {
-                font-size: 16px;
-            }
+            height: 3em;
         }
         .card-image {
             @include flex-element(column);
@@ -438,10 +430,11 @@ section:first-child {
     position: relative;
     z-index: -1;
     height: 64px;
-    overflow: hidden;
+    // overflow: hidden;
     .pug-array {
         display: grid;
         position: absolute;
+        overflow: hidden;
         @include for-phone-only {
             grid-template-columns: repeat(3, 1fr);
             height: 104px;

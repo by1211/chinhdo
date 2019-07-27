@@ -8488,20 +8488,8 @@ section:first-child {
   margin: 0;
   padding: 0.5em;
 }
-@media (max-width: 599px) {
-  #project-list .card .card-title {
-    font-size: 15px;
-  }
-}
-@media (min-width: 600px) {
-  #project-list .card .card-title {
-    font-size: 15px;
-  }
-}
-@media (min-width: 900px) {
-  #project-list .card .card-title {
-    font-size: 16px;
-  }
+#project-list .card .card-title {
+  height: 3em;
 }
 #project-list .card .card-image {
   display: flex;
@@ -8548,11 +8536,11 @@ section:first-child {
   position: relative;
   z-index: -1;
   height: 64px;
-  overflow: hidden;
 }
 .pug-container .pug-array {
   display: grid;
   position: absolute;
+  overflow: hidden;
 }
 @media (max-width: 599px) {
   .pug-container .pug-array {
