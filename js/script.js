@@ -40,17 +40,23 @@ $(document).ready(function () {
     var otherProjects = [
         {
 <<<<<<< HEAD
+<<<<<<< HEAD
             name: "Neon Skies",
             job: ["logo"],
             tool: ["adobe-photoshop"],
             link: ["https://youtu.be/O2VjoI1QUrg", "Watch Demo"]
 =======
+=======
+>>>>>>> parent of 573b747... finished small project section, added pug array
             name: "HeliLabs",
             job: ["logo"]
         },
         {
             name: "NeonSkies",
             job: ["logo"]
+<<<<<<< HEAD
+>>>>>>> parent of 573b747... finished small project section, added pug array
+=======
 >>>>>>> parent of 573b747... finished small project section, added pug array
         },
         {
@@ -168,6 +174,7 @@ $(document).ready(function () {
     }    
     
 <<<<<<< HEAD
+<<<<<<< HEAD
     // Generate content for #small-projects
     for (i = 0; i < smallProjects.length; i++) {
         currentProjectName = smallProjects[i].name.replace(/\s/g, '');
@@ -231,6 +238,8 @@ $(document).ready(function () {
         .append('<img class="pug" src="images/cdPug-rgbPrimary.svg" alt="">');
     }
     
+=======
+>>>>>>> parent of 573b747... finished small project section, added pug array
 =======
 >>>>>>> parent of 573b747... finished small project section, added pug array
     // Materialize JS components

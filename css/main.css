@@ -8207,11 +8207,14 @@ footer .container .copyright-holder:before {
   z-index: -1;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 @media (max-width: 599px) {
   .parallax {
     width: 100%;
   }
 }
+=======
+>>>>>>> parent of 573b747... finished small project section, added pug array
 =======
 >>>>>>> parent of 573b747... finished small project section, added pug array
 
@@ -8463,6 +8466,7 @@ section:first-child {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .tool img {
   height: 48px;
   width: auto;
@@ -8490,11 +8494,17 @@ section:first-child {
   width: 12em;
   padding: 0.5em;
 >>>>>>> parent of 573b747... finished small project section, added pug array
+=======
+#small-project .card {
+  width: 12em;
+  padding: 0.5em;
+>>>>>>> parent of 573b747... finished small project section, added pug array
 }
 #small-project .card .card-content {
   padding: 0;
   height: 9.5em;
 }
+<<<<<<< HEAD
 #small-project .card .card-content .chip {
   position: absolute;
   top: 0;
@@ -8514,12 +8524,15 @@ section:first-child {
 }
 =======
 >>>>>>> parent of 573b747... finished small project section, added pug array
+=======
+>>>>>>> parent of 573b747... finished small project section, added pug array
 
 #contact article {
   padding: 2em;
   background: white;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 .pug-container {
   display: flex;
@@ -8559,6 +8572,8 @@ section:first-child {
   }
 }
 
+=======
+>>>>>>> parent of 573b747... finished small project section, added pug array
 =======
 >>>>>>> parent of 573b747... finished small project section, added pug array
 #circle {

@@ -145,9 +145,12 @@ footer {
     background-size: cover;
     z-index: -1;
 <<<<<<< HEAD
+<<<<<<< HEAD
     @include for-phone-only {
         width: 100%;
     }
+=======
+>>>>>>> parent of 573b747... finished small project section, added pug array
 =======
 >>>>>>> parent of 573b747... finished small project section, added pug array
 }
@@ -369,6 +372,7 @@ section:first-child {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .tool img {
     height: 48px;
     width: auto;
@@ -454,11 +458,22 @@ section:first-child {
     .card-content {
         padding: 0;
     }
+=======
+#small-project .card {
+    width: 12em;
+    padding: map-get($spacers, 2);
+    .card-content {
+        padding: 0;
+    }
+>>>>>>> parent of 573b747... finished small project section, added pug array
 }
 
 #contact article {
     padding: 2em;
     background: white;
+<<<<<<< HEAD
+>>>>>>> parent of 573b747... finished small project section, added pug array
+=======
 >>>>>>> parent of 573b747... finished small project section, added pug array
 }
 
